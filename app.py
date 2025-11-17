@@ -10,8 +10,11 @@ MASTER_CSV = "master_matches.csv"
 UPCOMING_CSV = "upcoming_matches.csv"
 
 # -----------------------------
-# Safe CSV Loader
+# Lazy CSV Loader
 # -----------------------------
+_df_master = None
+_df_upcoming = None
+
 def safe_load_csv(path):
     try:
         df = pd.read_csv(path, on_bad_lines="skip", encoding="utf-8")
@@ -24,27 +27,29 @@ def safe_load_csv(path):
     df = df.fillna("")
     return df
 
-# -----------------------------
-# Load CSVs
-# -----------------------------
-df_master = safe_load_csv(MASTER_CSV)
-print("MASTER LOADED:", df_master.shape)
+def get_master():
+    global _df_master
+    if _df_master is None:
+        _df_master = safe_load_csv(MASTER_CSV)
+        print("MASTER LOADED:", _df_master.shape)
+    return _df_master
 
-df_upcoming = safe_load_csv(UPCOMING_CSV)
-print("UPCOMING LOADED:", df_upcoming.shape)
-
-# Normalize league names
-df_upcoming["league"] = df_upcoming["league"].str.strip().str.title()
+def get_upcoming():
+    global _df_upcoming
+    if _df_upcoming is None:
+        _df_upcoming = safe_load_csv(UPCOMING_CSV)
+        _df_upcoming["league"] = _df_upcoming["league"].str.strip().str.title()
+        print("UPCOMING LOADED:", _df_upcoming.shape)
+    return _df_upcoming
 
 # -----------------------------
-# Prediction Engine
+# Prediction Engine (unchanged)
 # -----------------------------
 def realistic_prediction(home, away):
-    df = df_master.copy()
+    df = get_master().copy()
     for col in ["fthg","ftag"]:
         df[col] = pd.to_numeric(df.get(col,0), errors="coerce").fillna(0).astype(int)
 
-    # Last matches
     def last_matches(team, n=10):
         home_matches = df[df.home==team]
         away_matches = df[df.away==team]
@@ -57,7 +62,6 @@ def realistic_prediction(home, away):
     home_exp = max(0.2, min(3, home_recent["fthg"].mean() if not home_recent.empty else 1.2))
     away_exp = max(0.2, min(3, away_recent["ftag"].mean() if not away_recent.empty else 1.0))
 
-    # Poisson probability matrix
     def poisson_prob(lam,k):
         return math.exp(-lam) * lam**k / math.factorial(k)
 
@@ -71,7 +75,6 @@ def realistic_prediction(home, away):
     draw = min(100, round(draw_prob/total*100,1))
     away_win = min(100, round(away_prob/total*100,1))
 
-    # FT score estimate
     def xg_to_score(xg):
         if xg<0.5: return 0
         elif xg<1.2: return 1
@@ -83,7 +86,6 @@ def realistic_prediction(home, away):
     btts = "YES" if ft_home>0 and ft_away>0 else "NO"
     over25 = "YES" if (ft_home+ft_away)>2 else "NO"
 
-    # Last 4 matches with outcome on left, score on right
     def last4(team):
         home_matches = df[df.home==team]
         away_matches = df[df.away==team]
@@ -101,7 +103,6 @@ def realistic_prediction(home, away):
             res.append({"outcome": outcome, "score": score})
         return res
 
-    # Logos
     def logo(team):
         folder = "static/logos"
         for f in [f"{team}.png", f"{team.lower()}.png", f"{team.replace(' ','_')}.png", f"{team.lower().replace(' ','_')}.png"]:
@@ -133,28 +134,19 @@ def index():
 
 @app.route("/api/upcoming")
 def api_upcoming():
-    df = df_upcoming.copy()
+    df = get_upcoming().copy()
     
-    # Parse dates safely
-    df["date_sort"] = pd.to_datetime(df["date"], errors="coerce")
-    df["date_sort"] = df["date_sort"].fillna(pd.Timestamp("2099-12-31"))
+    df["date_sort"] = pd.to_datetime(df["date"], errors="coerce").fillna(pd.Timestamp("2099-12-31"))
     
-    # Normalize leagues
-    df["league"] = df["league"].str.strip().str.title()
-    
-    # Only today or later
     today = pd.Timestamp.now()
     df_filtered = df[df["date_sort"] >= today]
-    
-    print("UPCOMING AFTER DATE FILTER:", df_filtered.shape)
-    
+
     DOMINANT_LEAGUES = ["EPL", "Championship", "LaLiga", "SerieA", "Bundesliga"]
     league_priority = {l.lower(): i for i,l in enumerate(DOMINANT_LEAGUES)}
     default_priority = len(league_priority) + 1
-    
+
     out=[]
     for league, group in df_filtered.groupby("league"):
-        print(f"LEAGUE: {league}, MATCHES: {len(group)}")
         group_sorted = group.sort_values("date_sort", ascending=True).head(5)
         for _, r in group_sorted.iterrows():
             pred = realistic_prediction(r.home, r.away)
@@ -169,9 +161,8 @@ def api_upcoming():
                 "away_logo": pred["away_logo"],
                 "priority": league_priority.get(r.league.lower(), default_priority)
             })
-    
+
     out = sorted(out, key=lambda x: x["priority"])
-    print("TOTAL UPCOMING MATCHES RETURNED:", len(out))
     return jsonify(out)
 
 @app.route("/match")
