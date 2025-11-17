@@ -5,3 +5,4 @@ scipy>=1.16.3
 requests>=2.31.0
 beautifulsoup4>=4.14.2
 feedparser>=6.0.10
+gunicorn
