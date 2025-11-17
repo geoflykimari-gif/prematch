@@ -41,22 +41,22 @@ def realistic_prediction(home, away):
     for col in ["fthg", "ftag"]:
         if col not in df:
             df[col] = 0
-        df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0)
+        df[col] = pd.to_numeric(df[col], errors='coerce').fillna(0).astype(int)
 
-    # last 10 matches
+    # last matches
     def last_matches(team, n=10):
         home_matches = df[df.home==team]
         away_matches = df[df.away==team]
-        recent = pd.concat([home_matches, away_matches]).sort_values("date",ascending=False).drop_duplicates(subset=["home","away","date"])
+        recent = pd.concat([home_matches, away_matches]).sort_values("date", ascending=False).drop_duplicates(subset=["home","away","date"])
         return recent.head(n)
 
     home_recent = last_matches(home)
     away_recent = last_matches(away)
 
-    home_exp = max(0.2, min(3, home_recent["fthg"].mean() if not home_recent.empty else 1.2 + 0.25))
+    home_exp = max(0.2, min(3, home_recent["fthg"].mean() if not home_recent.empty else 1.2))
     away_exp = max(0.2, min(3, away_recent["ftag"].mean() if not away_recent.empty else 1.0))
 
-    # Poisson probability matrix
+    # Poisson probability
     def poisson_prob(lam, k):
         return math.exp(-lam) * lam**k / math.factorial(k)
 
@@ -65,11 +65,11 @@ def realistic_prediction(home, away):
     draw_prob = sum(prob_matrix[h][h] for h in range(6))
     away_prob = sum(prob_matrix[h][a] for h in range(6) for a in range(6) if h<a)
 
-    # normalize
+    # normalize and cap at 100%
     total = home_prob + draw_prob + away_prob
-    home_win = round(home_prob/total*100,1)
-    draw = round(draw_prob/total*100,1)
-    away_win = round(away_prob/total*100,1)
+    home_win = min(100, round(home_prob/total*100,1))
+    draw = min(100, round(draw_prob/total*100,1))
+    away_win = min(100, round(away_prob/total*100,1))
 
     # FT score estimate
     def xg_to_score(xg):
@@ -83,22 +83,21 @@ def realistic_prediction(home, away):
     btts = "YES" if ft_home>0 and ft_away>0 else "NO"
     over25 = "YES" if (ft_home+ft_away)>2 else "NO"
 
-    # recent form with actual scores
-    def last5(team):
+    # last 4 matches with W/L/D labels
+    def last4(team):
         home_matches = df[df.home==team]
         away_matches = df[df.away==team]
-        recent = pd.concat([home_matches, away_matches]).sort_values("date",ascending=False).head(5)
+        recent = pd.concat([home_matches, away_matches]).sort_values("date", ascending=False).head(4)
         res = []
         for _, r in recent.iterrows():
-            try:
-                hg = int(r["fthg"])
-                ag = int(r["ftag"])
-            except:
-                hg=ag=0
-            if r.home==team:
-                res.append(f"{r.home} {hg}-{ag} {r.away}")
+            hg = int(r.get("fthg",0))
+            ag = int(r.get("ftag",0))
+            if r.home == team:
+                outcome = "W" if hg>ag else "L" if hg<ag else "D"
+                res.append(f"{outcome} {r.home} {hg}-{ag} {r.away}")
             else:
-                res.append(f"{r.away} {ag}-{hg} {r.home}")
+                outcome = "W" if ag>hg else "L" if ag<hg else "D"
+                res.append(f"{outcome} {r.away} {ag}-{hg} {r.home}")
         return res
 
     # logos
@@ -116,8 +115,8 @@ def realistic_prediction(home, away):
         "draw": draw,
         "btts": btts,
         "over25": over25,
-        "home_form": last5(home),
-        "away_form": last5(away),
+        "home_form": last4(home),
+        "away_form": last4(away),
         "home_logo": logo(home),
         "away_logo": logo(away),
         "exp_home": round(home_exp,1),

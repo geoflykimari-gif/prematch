@@ -3,51 +3,132 @@
 <head>
 <title>Match Details</title>
 <style>
-body{font-family:Arial;background:#f4f4f4;margin:0;padding:20px}
-.card{background:#fff;padding:20px;border-radius:10px;max-width:600px;margin:auto;box-shadow:0 2px 6px rgba(0,0,0,0.1)}
-h1{text-align:center}
-.teams{display:flex;justify-content:space-between;margin-bottom:20px}
-.teams div{text-align:center;width:45%}
-img{width:70px;height:70px}
-.section{margin-top:20px}
-table{width:100%;border-collapse:collapse}
-td{padding:8px;border-bottom:1px solid #ddd}
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 650px;
+    margin: auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+h1 {
+    text-align: center;
+}
+.teams {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.teams div {
+    text-align: center;
+    width: 45%;
+}
+.teams img {
+    width: 70px;
+    height: 70px;
+}
+.section {
+    margin-top: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+.prog-container {
+    background: #ddd;
+    border-radius: 5px;
+    width: 100%;
+    height: 20px;
+    margin-top: 4px;
+    overflow: hidden;
+}
+.prog-bar {
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    line-height: 20px;
+    border-radius: 5px;
+}
+.home-bar { background: #4caf50; }  /* green */
+.draw-bar { background: #999; }     /* gray */
+.away-bar { background: #f44336; }  /* red */
 </style>
 </head>
 <body>
 <div class="card">
-<h1>{{ home }} vs {{ away }}</h1>
-<p style="text-align:center">{{ date }}</p>
-<div class="teams">
-  <div><img src="{{ pred.home_logo }}"><br>{{ home }}</div>
-  <div><img src="{{ pred.away_logo }}"><br>{{ away }}</div>
-</div>
-<div class="section">
-<h3>Full-Time Prediction</h3>
-<p style="font-size:22px;text-align:center;font-weight:bold">{{ pred.ft_score }}</p>
-</div>
-<div class="section">
-<h3>Win Probabilities</h3>
-<table>
-<tr><td>Home Win</td><td>{{ pred.home_win*100 }}%</td></tr>
-<tr><td>Draw</td><td>{{ pred.draw*100 }}%</td></tr>
-<tr><td>Away Win</td><td>{{ pred.away_win*100 }}%</td></tr>
-</table>
-</div>
-<div class="section">
-<h3>BTTS / Over 2.5</h3>
-<table>
-<tr><td>BTTS</td><td>{{ pred.btts }}</td></tr>
-<tr><td>Over 2.5 Goals</td><td>{{ pred.over25 }}</td></tr>
-</table>
-</div>
-<div class="section">
-<h3>Recent Form (Last 5)</h3>
-<table>
-<tr><td>{{ home }}</td><td>{{ pred.home_form|join(", ") }}</td></tr>
-<tr><td>{{ away }}</td><td>{{ pred.away_form|join(", ") }}</td></tr>
-</table>
-</div>
+    <h1>{{ home }} vs {{ away }}</h1>
+    <p style="text-align:center">{{ date }}</p>
+
+    <div class="teams">
+        <div>
+            <img src="{{ pred.home_logo }}"><br>{{ home }}
+        </div>
+        <div>
+            <img src="{{ pred.away_logo }}"><br>{{ away }}
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Full-Time Prediction</h3>
+        <p style="font-size:22px;text-align:center;font-weight:bold">{{ pred.ft_score }}</p>
+    </div>
+
+    <div class="section">
+        <h3>Win Probabilities</h3>
+        <table>
+            <tr>
+                <td>Home Win</td>
+                <td>
+                    <div class="prog-container">
+                        <div class="prog-bar home-bar" style="width:{{ pred.home_win }}%">{{ pred.home_win }}%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Draw</td>
+                <td>
+                    <div class="prog-container">
+                        <div class="prog-bar draw-bar" style="width:{{ pred.draw }}%">{{ pred.draw }}%</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Away Win</td>
+                <td>
+                    <div class="prog-container">
+                        <div class="prog-bar away-bar" style="width:{{ pred.away_win }}%">{{ pred.away_win }}%</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h3>BTTS / Over 2.5</h3>
+        <table>
+            <tr><td>BTTS</td><td>{{ pred.btts }}</td></tr>
+            <tr><td>Over 2.5 Goals</td><td>{{ pred.over25 }}</td></tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h3>Recent Form (Last 4 Matches)</h3>
+        <table>
+            <tr><td>{{ home }}</td><td>{{ pred.home_form|join(", ") }}</td></tr>
+            <tr><td>{{ away }}</td><td>{{ pred.away_form|join(", ") }}</td></tr>
+        </table>
+    </div>
 </div>
 </body>
 </html>
