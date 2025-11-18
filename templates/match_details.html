@@ -21,17 +21,14 @@ img{width:70px;height:70px}
 <div class="card">
 <h1>{{ home }} vs {{ away }}</h1>
 <p style="text-align:center">{{ date }}</p>
-
 <div class="teams">
   <div><img src="{{ pred.home_logo }}"><br>{{ home }}</div>
   <div><img src="{{ pred.away_logo }}"><br>{{ away }}</div>
 </div>
-
 <div class="section">
 <h3>Full-Time Prediction</h3>
 <p style="font-size:22px;text-align:center;font-weight:bold">{{ pred.ft_score }}</p>
 </div>
-
 <div class="section">
 <h3>Win Probabilities</h3>
 <table class="table">
@@ -40,7 +37,6 @@ img{width:70px;height:70px}
 <tr><td>Away Win</td><td>{{ pred.away_win }}%</td></tr>
 </table>
 </div>
-
 <div class="section">
 <h3>BTTS / Over 2.5</h3>
 <table class="table">
@@ -48,7 +44,6 @@ img{width:70px;height:70px}
 <tr><td>Over 2.5 Goals</td><td>{{ pred.over25 }}</td></tr>
 </table>
 </div>
-
 <div class="section">
 <h3>Recent Form (Last 4 Matches)</h3>
 <div>
@@ -70,7 +65,6 @@ img{width:70px;height:70px}
   {% endfor %}
 </div>
 </div>
-
 </div>
 </body>
 </html>

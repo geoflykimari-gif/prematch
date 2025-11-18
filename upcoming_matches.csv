@@ -1,4 +1,363 @@
 date,time,home,away,league
+2025-11-21 19:45,Standard Liège,SV Zulte Waregem,,,BelgianProLeague
+2025-11-22 15:00,Union Saint-Gilloise,Cercle Brugge,,,BelgianProLeague
+2025-11-22 17:15,KVC Westerlo,KAA Gent,,,BelgianProLeague
+2025-11-22 19:45,Club Brugge KV,Sporting Charleroi,,,BelgianProLeague
+2025-11-23 12:30,KRC Genk,KV Mechelen,,,BelgianProLeague
+2025-11-23 15:00,Royal Antwerp FC,FCV Dender EH,,,BelgianProLeague
+2025-11-23 17:30,RAAL La Louviére,RSC Anderlecht,,,BelgianProLeague
+2025-11-23 18:15,Oud-Heverlee Leuven,Sint-Truidense VV,,,BelgianProLeague
+2025-11-28 19:45,KV Mechelen,Standard Liège,,,BelgianProLeague
+2025-11-29 15:00,FCV Dender EH,KVC Westerlo,,,BelgianProLeague
+2025-11-29 17:15,SV Zulte Waregem,Cercle Brugge,,,BelgianProLeague
+2025-11-29 19:45,Sporting Charleroi,RAAL La Louviére,,,BelgianProLeague
+2025-11-30 12:30,Club Brugge KV,Royal Antwerp FC,,,BelgianProLeague
+2025-11-30 15:00,KRC Genk,Oud-Heverlee Leuven,,,BelgianProLeague
+2025-11-30 17:30,RSC Anderlecht,Union Saint-Gilloise,,,BelgianProLeague
+2025-11-30 18:15,KAA Gent,Sint-Truidense VV,,,BelgianProLeague
+2025-12-05 19:45,RAAL La Louviére,FCV Dender EH,,,BelgianProLeague
+2025-12-06 15:00,KVC Westerlo,RSC Anderlecht,,,BelgianProLeague
+2025-12-06 17:15,Union Saint-Gilloise,KAA Gent,,,BelgianProLeague
+2025-12-06 19:45,Sint-Truidense VV,Club Brugge KV,,,BelgianProLeague
+2025-12-07 12:30,KV Mechelen,Sporting Charleroi,,,BelgianProLeague
+2025-12-07 15:00,Cercle Brugge,Standard Liège,,,BelgianProLeague
+2025-12-07 17:30,Royal Antwerp FC,KRC Genk,,,BelgianProLeague
+2025-12-07 18:15,Oud-Heverlee Leuven,SV Zulte Waregem,,,BelgianProLeague
+2025-12-12 19:45,Standard Liège,Oud-Heverlee Leuven,,,BelgianProLeague
+2025-12-13 15:00,Cercle Brugge,KV Mechelen,,,BelgianProLeague
+2025-12-13 17:15,SV Zulte Waregem,RAAL La Louviére,,,BelgianProLeague
+2025-12-13 19:45,RSC Anderlecht,Sint-Truidense VV,,,BelgianProLeague
+2025-12-14 12:30,KAA Gent,Royal Antwerp FC,,,BelgianProLeague
+2025-12-14 15:00,FCV Dender EH,Club Brugge KV,,,BelgianProLeague
+2025-12-14 17:30,Sporting Charleroi,Union Saint-Gilloise,,,BelgianProLeague
+2025-12-14 18:15,KRC Genk,KVC Westerlo,,,BelgianProLeague
+2025-12-19 19:45,Sporting Charleroi,KRC Genk,,,BelgianProLeague
+2025-12-20 15:00,FCV Dender EH,Standard Liège,,,BelgianProLeague
+2025-12-20 17:15,KVC Westerlo,RAAL La Louviére,,,BelgianProLeague
+2025-12-20 19:45,Union Saint-Gilloise,SV Zulte Waregem,,,BelgianProLeague
+2025-12-21 12:30,Club Brugge KV,KAA Gent,,,BelgianProLeague
+2025-12-21 15:00,Sint-Truidense VV,KV Mechelen,,,BelgianProLeague
+2025-12-21 17:30,Royal Antwerp FC,RSC Anderlecht,,,BelgianProLeague
+2025-12-21 18:15,Oud-Heverlee Leuven,Cercle Brugge,,,BelgianProLeague
+2025-12-26 12:30,KRC Genk,Club Brugge KV,,,BelgianProLeague
+2025-12-26 15:00,Cercle Brugge,Union Saint-Gilloise,,,BelgianProLeague
+2025-12-26 17:30,Standard Liège,Sint-Truidense VV,,,BelgianProLeague
+2025-12-26 19:45,RSC Anderlecht,Sporting Charleroi,,,BelgianProLeague
+2025-12-27 12:30,Royal Antwerp FC,SV Zulte Waregem,,,BelgianProLeague
+2025-12-27 15:00,RAAL La Louviére,Oud-Heverlee Leuven,,,BelgianProLeague
+2025-12-27 17:15,KV Mechelen,FCV Dender EH,,,BelgianProLeague
+2025-12-27 19:45,KAA Gent,KVC Westerlo,,,BelgianProLeague
+2026-01-17 00:00,FCV Dender EH,Royal Antwerp FC,,,BelgianProLeague
+2026-01-17 00:00,Club Brugge KV,RAAL La Louviére,,,BelgianProLeague
+2026-01-17 00:00,KAA Gent,RSC Anderlecht,,,BelgianProLeague
+2026-01-17 00:00,KVC Westerlo,Cercle Brugge,,,BelgianProLeague
+2026-01-17 00:00,Sporting Charleroi,Standard Liège,,,BelgianProLeague
+2026-01-17 00:00,SV Zulte Waregem,KRC Genk,,,BelgianProLeague
+2026-01-17 00:00,Union Saint-Gilloise,KV Mechelen,,,BelgianProLeague
+2026-01-17 00:00,Sint-Truidense VV,Oud-Heverlee Leuven,,,BelgianProLeague
+2026-01-24 00:00,Club Brugge KV,SV Zulte Waregem,,,BelgianProLeague
+2026-01-24 00:00,KRC Genk,Cercle Brugge,,,BelgianProLeague
+2026-01-24 00:00,KV Mechelen,KVC Westerlo,,,BelgianProLeague
+2026-01-24 00:00,Oud-Heverlee Leuven,Union Saint-Gilloise,,,BelgianProLeague
+2026-01-24 00:00,RAAL La Louviére,Sint-Truidense VV,,,BelgianProLeague
+2026-01-24 00:00,Royal Antwerp FC,Sporting Charleroi,,,BelgianProLeague
+2026-01-24 00:00,RSC Anderlecht,FCV Dender EH,,,BelgianProLeague
+2026-01-24 00:00,Standard Liège,KAA Gent,,,BelgianProLeague
+2026-01-31 00:00,Cercle Brugge,Royal Antwerp FC,,,BelgianProLeague
+2026-01-31 00:00,FCV Dender EH,KRC Genk,,,BelgianProLeague
+2026-01-31 00:00,Oud-Heverlee Leuven,KV Mechelen,,,BelgianProLeague
+2026-01-31 00:00,RAAL La Louviére,KAA Gent,,,BelgianProLeague
+2026-01-31 00:00,Standard Liège,RSC Anderlecht,,,BelgianProLeague
+2026-01-31 00:00,SV Zulte Waregem,KVC Westerlo,,,BelgianProLeague
+2026-01-31 00:00,Union Saint-Gilloise,Club Brugge KV,,,BelgianProLeague
+2026-01-31 00:00,Sint-Truidense VV,Sporting Charleroi,,,BelgianProLeague
+2026-02-07 00:00,Club Brugge KV,Standard Liège,,,BelgianProLeague
+2026-02-07 00:00,KAA Gent,Oud-Heverlee Leuven,,,BelgianProLeague
+2026-02-07 00:00,KRC Genk,RSC Anderlecht,,,BelgianProLeague
+2026-02-07 00:00,KV Mechelen,Royal Antwerp FC,,,BelgianProLeague
+2026-02-07 00:00,KVC Westerlo,Sint-Truidense VV,,,BelgianProLeague
+2026-02-07 00:00,Sporting Charleroi,Cercle Brugge,,,BelgianProLeague
+2026-02-07 00:00,SV Zulte Waregem,FCV Dender EH,,,BelgianProLeague
+2026-02-07 00:00,Union Saint-Gilloise,RAAL La Louviére,,,BelgianProLeague
+2026-02-14 00:00,Cercle Brugge,Club Brugge KV,,,BelgianProLeague
+2026-02-14 00:00,KV Mechelen,KRC Genk,,,BelgianProLeague
+2026-02-14 00:00,Oud-Heverlee Leuven,FCV Dender EH,,,BelgianProLeague
+2026-02-14 00:00,Royal Antwerp FC,KVC Westerlo,,,BelgianProLeague
+2026-02-14 00:00,RSC Anderlecht,RAAL La Louviére,,,BelgianProLeague
+2026-02-14 00:00,Sporting Charleroi,KAA Gent,,,BelgianProLeague
+2026-02-14 00:00,Standard Liège,Union Saint-Gilloise,,,BelgianProLeague
+2026-02-14 00:00,Sint-Truidense VV,SV Zulte Waregem,,,BelgianProLeague
+2026-02-21 00:00,FCV Dender EH,Sint-Truidense VV,,,BelgianProLeague
+2026-02-21 00:00,Club Brugge KV,Oud-Heverlee Leuven,,,BelgianProLeague
+2026-02-21 00:00,KAA Gent,Cercle Brugge,,,BelgianProLeague
+2026-02-21 00:00,KRC Genk,Standard Liège,,,BelgianProLeague
+2026-02-21 00:00,KVC Westerlo,Sporting Charleroi,,,BelgianProLeague
+2026-02-21 00:00,RAAL La Louviére,KV Mechelen,,,BelgianProLeague
+2026-02-21 00:00,SV Zulte Waregem,RSC Anderlecht,,,BelgianProLeague
+2026-02-21 00:00,Union Saint-Gilloise,Royal Antwerp FC,,,BelgianProLeague
+2026-02-28 00:00,Cercle Brugge,FCV Dender EH,,,BelgianProLeague
+2026-02-28 00:00,KRC Genk,KAA Gent,,,BelgianProLeague
+2026-02-28 00:00,KV Mechelen,SV Zulte Waregem,,,BelgianProLeague
+2026-02-28 00:00,KVC Westerlo,Union Saint-Gilloise,,,BelgianProLeague
+2026-02-28 00:00,Royal Antwerp FC,Sint-Truidense VV,,,BelgianProLeague
+2026-02-28 00:00,RSC Anderlecht,Oud-Heverlee Leuven,,,BelgianProLeague
+2026-02-28 00:00,Sporting Charleroi,Club Brugge KV,,,BelgianProLeague
+2026-02-28 00:00,Standard Liège,RAAL La Louviére,,,BelgianProLeague
+2026-03-07 00:00,FCV Dender EH,Sporting Charleroi,,,BelgianProLeague
+2026-03-07 00:00,Club Brugge KV,RSC Anderlecht,,,BelgianProLeague
+2026-03-07 00:00,KAA Gent,KV Mechelen,,,BelgianProLeague
+2026-03-07 00:00,Oud-Heverlee Leuven,KVC Westerlo,,,BelgianProLeague
+2026-03-07 00:00,RAAL La Louviére,Royal Antwerp FC,,,BelgianProLeague
+2026-03-07 00:00,SV Zulte Waregem,Standard Liège,,,BelgianProLeague
+2026-03-07 00:00,Union Saint-Gilloise,KRC Genk,,,BelgianProLeague
+2026-03-07 00:00,Sint-Truidense VV,Cercle Brugge,,,BelgianProLeague
+2026-03-14 00:00,Cercle Brugge,RAAL La Louviére,,,BelgianProLeague
+2026-03-14 00:00,KAA Gent,SV Zulte Waregem,,,BelgianProLeague
+2026-03-14 00:00,KRC Genk,Sint-Truidense VV,,,BelgianProLeague
+2026-03-14 00:00,KV Mechelen,RSC Anderlecht,,,BelgianProLeague
+2026-03-14 00:00,KVC Westerlo,Club Brugge KV,,,BelgianProLeague
+2026-03-14 00:00,Royal Antwerp FC,Standard Liège,,,BelgianProLeague
+2026-03-14 00:00,Sporting Charleroi,Oud-Heverlee Leuven,,,BelgianProLeague
+2026-03-14 00:00,Union Saint-Gilloise,FCV Dender EH,,,BelgianProLeague
+2026-03-21 00:00,FCV Dender EH,KAA Gent,,,BelgianProLeague
+2026-03-21 00:00,Club Brugge KV,KV Mechelen,,,BelgianProLeague
+2026-03-21 00:00,Oud-Heverlee Leuven,Royal Antwerp FC,,,BelgianProLeague
+2026-03-21 00:00,RAAL La Louviére,KRC Genk,,,BelgianProLeague
+2026-03-21 00:00,RSC Anderlecht,Cercle Brugge,,,BelgianProLeague
+2026-03-21 00:00,Standard Liège,KVC Westerlo,,,BelgianProLeague
+2026-03-21 00:00,SV Zulte Waregem,Sporting Charleroi,,,BelgianProLeague
+2026-03-21 00:00,Sint-Truidense VV,Union Saint-Gilloise,,,BelgianProLeague
+
+
+
+
+
+
+
+
+
+
+2025-11-21 19:30,1. FSV Mainz 05,TSG Hoffenheim,,,Bundesliga
+2025-11-22 14:30,1. FC Heidenheim 1846,Borussia Mönchengladbach,,,Bundesliga
+2025-11-22 14:30,FC Augsburg,Hamburger SV,,,Bundesliga
+2025-11-22 14:30,VfL Wolfsburg,Bayer 04 Leverkusen,,,Bundesliga
+2025-11-22 14:30,Borussia Dortmund,VfB Stuttgart,,,Bundesliga
+2025-11-22 14:30,FC Bayern München,Sport-Club Freiburg,,,Bundesliga
+2025-11-22 17:30,1. FC Köln,Eintracht Frankfurt,,,Bundesliga
+2025-11-23 14:30,RB Leipzig,SV Werder Bremen,,,Bundesliga
+2025-11-23 16:30,FC St. Pauli,1. FC Union Berlin,,,Bundesliga
+2025-11-28 19:30,Borussia Mönchengladbach,RB Leipzig,,,Bundesliga
+2025-11-29 14:30,TSG Hoffenheim,FC Augsburg,,,Bundesliga
+2025-11-29 14:30,1. FC Union Berlin,1. FC Heidenheim 1846,,,Bundesliga
+2025-11-29 14:30,SV Werder Bremen,1. FC Köln,,,Bundesliga
+2025-11-29 14:30,FC Bayern München,FC St. Pauli,,,Bundesliga
+2025-11-29 17:30,Bayer 04 Leverkusen,Borussia Dortmund,,,Bundesliga
+2025-11-30 14:30,Hamburger SV,VfB Stuttgart,,,Bundesliga
+2025-11-30 16:30,Eintracht Frankfurt,VfL Wolfsburg,,,Bundesliga
+2025-11-30 18:30,Sport-Club Freiburg,1. FSV Mainz 05,,,Bundesliga
+2025-12-06 14:30,Hamburger SV,SV Werder Bremen,,,Bundesliga
+2025-12-06 14:30,1. FC Köln,FC St. Pauli,,,Bundesliga
+2025-12-06 14:30,1. FC Heidenheim 1846,Sport-Club Freiburg,,,Bundesliga
+2025-12-06 14:30,FC Augsburg,Bayer 04 Leverkusen,,,Bundesliga
+2025-12-06 14:30,VfL Wolfsburg,1. FC Union Berlin,,,Bundesliga
+2025-12-06 14:30,VfB Stuttgart,FC Bayern München,,,Bundesliga
+2025-12-06 14:30,RB Leipzig,Eintracht Frankfurt,,,Bundesliga
+2025-12-06 14:30,1. FSV Mainz 05,Borussia Mönchengladbach,,,Bundesliga
+2025-12-06 14:30,Borussia Dortmund,TSG Hoffenheim,,,Bundesliga
+2025-12-13 14:30,TSG Hoffenheim,Hamburger SV,,,Bundesliga
+2025-12-13 14:30,FC St. Pauli,1. FC Heidenheim 1846,,,Bundesliga
+2025-12-13 14:30,1. FC Union Berlin,RB Leipzig,,,Bundesliga
+2025-12-13 14:30,Borussia Mönchengladbach,VfL Wolfsburg,,,Bundesliga
+2025-12-13 14:30,SV Werder Bremen,VfB Stuttgart,,,Bundesliga
+2025-12-13 14:30,Sport-Club Freiburg,Borussia Dortmund,,,Bundesliga
+2025-12-13 14:30,Eintracht Frankfurt,FC Augsburg,,,Bundesliga
+2025-12-13 14:30,Bayer 04 Leverkusen,1. FC Köln,,,Bundesliga
+2025-12-13 14:30,FC Bayern München,1. FSV Mainz 05,,,Bundesliga
+2025-12-20 14:30,Hamburger SV,Eintracht Frankfurt,,,Bundesliga
+2025-12-20 14:30,1. FC Köln,1. FC Union Berlin,,,Bundesliga
+2025-12-20 14:30,1. FC Heidenheim 1846,FC Bayern München,,,Bundesliga
+2025-12-20 14:30,FC Augsburg,SV Werder Bremen,,,Bundesliga
+2025-12-20 14:30,VfL Wolfsburg,Sport-Club Freiburg,,,Bundesliga
+2025-12-20 14:30,VfB Stuttgart,TSG Hoffenheim,,,Bundesliga
+2025-12-20 14:30,RB Leipzig,Bayer 04 Leverkusen,,,Bundesliga
+2025-12-20 14:30,1. FSV Mainz 05,FC St. Pauli,,,Bundesliga
+2025-12-20 14:30,Borussia Dortmund,Borussia Mönchengladbach,,,Bundesliga
+2026-01-10 14:30,1. FC Heidenheim 1846,1. FC Köln,,,Bundesliga
+2026-01-10 14:30,FC St. Pauli,RB Leipzig,,,Bundesliga
+2026-01-10 14:30,1. FC Union Berlin,1. FSV Mainz 05,,,Bundesliga
+2026-01-10 14:30,Borussia Mönchengladbach,FC Augsburg,,,Bundesliga
+2026-01-10 14:30,SV Werder Bremen,TSG Hoffenheim,,,Bundesliga
+2026-01-10 14:30,Sport-Club Freiburg,Hamburger SV,,,Bundesliga
+2026-01-10 14:30,Eintracht Frankfurt,Borussia Dortmund,,,Bundesliga
+2026-01-10 14:30,Bayer 04 Leverkusen,VfB Stuttgart,,,Bundesliga
+2026-01-10 14:30,FC Bayern München,VfL Wolfsburg,,,Bundesliga
+2026-01-13 19:30,Hamburger SV,Bayer 04 Leverkusen,,,Bundesliga
+2026-01-13 19:30,1. FC Köln,FC Bayern München,,,Bundesliga
+2026-01-13 19:30,TSG Hoffenheim,Borussia Mönchengladbach,,,Bundesliga
+2026-01-13 19:30,FC Augsburg,1. FC Union Berlin,,,Bundesliga
+2026-01-13 19:30,VfL Wolfsburg,FC St. Pauli,,,Bundesliga
+2026-01-13 19:30,VfB Stuttgart,Eintracht Frankfurt,,,Bundesliga
+2026-01-13 19:30,RB Leipzig,Sport-Club Freiburg,,,Bundesliga
+2026-01-13 19:30,1. FSV Mainz 05,1. FC Heidenheim 1846,,,Bundesliga
+2026-01-13 19:30,Borussia Dortmund,SV Werder Bremen,,,Bundesliga
+2026-01-17 14:30,Hamburger SV,Borussia Mönchengladbach,,,Bundesliga
+2026-01-17 14:30,1. FC Köln,1. FSV Mainz 05,,,Bundesliga
+2026-01-17 14:30,TSG Hoffenheim,Bayer 04 Leverkusen,,,Bundesliga
+2026-01-17 14:30,FC Augsburg,Sport-Club Freiburg,,,Bundesliga
+2026-01-17 14:30,VfL Wolfsburg,1. FC Heidenheim 1846,,,Bundesliga
+2026-01-17 14:30,VfB Stuttgart,1. FC Union Berlin,,,Bundesliga
+2026-01-17 14:30,SV Werder Bremen,Eintracht Frankfurt,,,Bundesliga
+2026-01-17 14:30,RB Leipzig,FC Bayern München,,,Bundesliga
+2026-01-17 14:30,Borussia Dortmund,FC St. Pauli,,,Bundesliga
+2026-01-24 14:30,1. FC Heidenheim 1846,RB Leipzig,,,Bundesliga
+2026-01-24 14:30,FC St. Pauli,Hamburger SV,,,Bundesliga
+2026-01-24 14:30,1. FC Union Berlin,Borussia Dortmund,,,Bundesliga
+2026-01-24 14:30,Borussia Mönchengladbach,VfB Stuttgart,,,Bundesliga
+2026-01-24 14:30,1. FSV Mainz 05,VfL Wolfsburg,,,Bundesliga
+2026-01-24 14:30,Sport-Club Freiburg,1. FC Köln,,,Bundesliga
+2026-01-24 14:30,Eintracht Frankfurt,TSG Hoffenheim,,,Bundesliga
+2026-01-24 14:30,Bayer 04 Leverkusen,SV Werder Bremen,,,Bundesliga
+2026-01-24 14:30,FC Bayern München,FC Augsburg,,,Bundesliga
+2026-01-31 14:30,Hamburger SV,FC Bayern München,,,Bundesliga
+2026-01-31 14:30,1. FC Köln,VfL Wolfsburg,,,Bundesliga
+2026-01-31 14:30,TSG Hoffenheim,1. FC Union Berlin,,,Bundesliga
+2026-01-31 14:30,FC Augsburg,FC St. Pauli,,,Bundesliga
+2026-01-31 14:30,VfB Stuttgart,Sport-Club Freiburg,,,Bundesliga
+2026-01-31 14:30,SV Werder Bremen,Borussia Mönchengladbach,,,Bundesliga
+2026-01-31 14:30,RB Leipzig,1. FSV Mainz 05,,,Bundesliga
+2026-01-31 14:30,Borussia Dortmund,1. FC Heidenheim 1846,,,Bundesliga
+2026-01-31 14:30,Eintracht Frankfurt,Bayer 04 Leverkusen,,,Bundesliga
+2026-02-07 14:30,1. FC Köln,RB Leipzig,,,Bundesliga
+2026-02-07 14:30,1. FC Heidenheim 1846,Hamburger SV,,,Bundesliga
+2026-02-07 14:30,FC St. Pauli,VfB Stuttgart,,,Bundesliga
+2026-02-07 14:30,1. FC Union Berlin,Eintracht Frankfurt,,,Bundesliga
+2026-02-07 14:30,VfL Wolfsburg,Borussia Dortmund,,,Bundesliga
+2026-02-07 14:30,Borussia Mönchengladbach,Bayer 04 Leverkusen,,,Bundesliga
+2026-02-07 14:30,1. FSV Mainz 05,FC Augsburg,,,Bundesliga
+2026-02-07 14:30,Sport-Club Freiburg,SV Werder Bremen,,,Bundesliga
+2026-02-07 14:30,FC Bayern München,TSG Hoffenheim,,,Bundesliga
+2026-02-14 14:30,Hamburger SV,1. FC Union Berlin,,,Bundesliga
+2026-02-14 14:30,TSG Hoffenheim,Sport-Club Freiburg,,,Bundesliga
+2026-02-14 14:30,FC Augsburg,1. FC Heidenheim 1846,,,Bundesliga
+2026-02-14 14:30,VfB Stuttgart,1. FC Köln,,,Bundesliga
+2026-02-14 14:30,SV Werder Bremen,FC Bayern München,,,Bundesliga
+2026-02-14 14:30,RB Leipzig,VfL Wolfsburg,,,Bundesliga
+2026-02-14 14:30,Borussia Dortmund,1. FSV Mainz 05,,,Bundesliga
+2026-02-14 14:30,Eintracht Frankfurt,Borussia Mönchengladbach,,,Bundesliga
+2026-02-14 14:30,Bayer 04 Leverkusen,FC St. Pauli,,,Bundesliga
+2026-02-21 14:30,1. FC Köln,TSG Hoffenheim,,,Bundesliga
+2026-02-21 14:30,1. FC Heidenheim 1846,VfB Stuttgart,,,Bundesliga
+2026-02-21 14:30,FC St. Pauli,SV Werder Bremen,,,Bundesliga
+2026-02-21 14:30,1. FC Union Berlin,Bayer 04 Leverkusen,,,Bundesliga
+2026-02-21 14:30,VfL Wolfsburg,FC Augsburg,,,Bundesliga
+2026-02-21 14:30,RB Leipzig,Borussia Dortmund,,,Bundesliga
+2026-02-21 14:30,1. FSV Mainz 05,Hamburger SV,,,Bundesliga
+2026-02-21 14:30,Sport-Club Freiburg,Borussia Mönchengladbach,,,Bundesliga
+2026-02-21 14:30,FC Bayern München,Eintracht Frankfurt,,,Bundesliga
+2026-02-28 14:30,Hamburger SV,RB Leipzig,,,Bundesliga
+2026-02-28 14:30,TSG Hoffenheim,FC St. Pauli,,,Bundesliga
+2026-02-28 14:30,FC Augsburg,1. FC Köln,,,Bundesliga
+2026-02-28 14:30,Borussia Mönchengladbach,1. FC Union Berlin,,,Bundesliga
+2026-02-28 14:30,VfB Stuttgart,VfL Wolfsburg,,,Bundesliga
+2026-02-28 14:30,SV Werder Bremen,1. FC Heidenheim 1846,,,Bundesliga
+2026-02-28 14:30,Borussia Dortmund,FC Bayern München,,,Bundesliga
+2026-02-28 14:30,Eintracht Frankfurt,Sport-Club Freiburg,,,Bundesliga
+2026-02-28 14:30,Bayer 04 Leverkusen,1. FSV Mainz 05,,,Bundesliga
+2026-03-07 14:30,1. FC Köln,Borussia Dortmund,,,Bundesliga
+2026-03-07 14:30,1. FC Heidenheim 1846,TSG Hoffenheim,,,Bundesliga
+2026-03-07 14:30,FC St. Pauli,Eintracht Frankfurt,,,Bundesliga
+2026-03-07 14:30,1. FC Union Berlin,SV Werder Bremen,,,Bundesliga
+2026-03-07 14:30,VfL Wolfsburg,Hamburger SV,,,Bundesliga
+2026-03-07 14:30,RB Leipzig,FC Augsburg,,,Bundesliga
+2026-03-07 14:30,1. FSV Mainz 05,VfB Stuttgart,,,Bundesliga
+2026-03-07 14:30,Sport-Club Freiburg,Bayer 04 Leverkusen,,,Bundesliga
+2026-03-07 14:30,FC Bayern München,Borussia Mönchengladbach,,,Bundesliga
+2026-03-14 14:30,Hamburger SV,1. FC Köln,,,Bundesliga
+2026-03-14 14:30,TSG Hoffenheim,VfL Wolfsburg,,,Bundesliga
+2026-03-14 14:30,Borussia Mönchengladbach,FC St. Pauli,,,Bundesliga
+2026-03-14 14:30,VfB Stuttgart,RB Leipzig,,,Bundesliga
+2026-03-14 14:30,SV Werder Bremen,1. FSV Mainz 05,,,Bundesliga
+2026-03-14 14:30,Sport-Club Freiburg,1. FC Union Berlin,,,Bundesliga
+2026-03-14 14:30,Borussia Dortmund,FC Augsburg,,,Bundesliga
+2026-03-14 14:30,Eintracht Frankfurt,1. FC Heidenheim 1846,,,Bundesliga
+2026-03-14 14:30,Bayer 04 Leverkusen,FC Bayern München,,,Bundesliga
+2026-03-21 14:30,1. FC Köln,Borussia Mönchengladbach,,,Bundesliga
+2026-03-21 14:30,1. FC Heidenheim 1846,Bayer 04 Leverkusen,,,Bundesliga
+2026-03-21 14:30,FC St. Pauli,Sport-Club Freiburg,,,Bundesliga
+2026-03-21 14:30,FC Augsburg,VfB Stuttgart,,,Bundesliga
+2026-03-21 14:30,VfL Wolfsburg,SV Werder Bremen,,,Bundesliga
+2026-03-21 14:30,RB Leipzig,TSG Hoffenheim,,,Bundesliga
+2026-03-21 14:30,1. FSV Mainz 05,Eintracht Frankfurt,,,Bundesliga
+2026-03-21 14:30,Borussia Dortmund,Hamburger SV,,,Bundesliga
+2026-03-21 14:30,FC Bayern München,1. FC Union Berlin,,,Bundesliga
+2026-04-04 13:30,Hamburger SV,FC Augsburg,,,Bundesliga
+2026-04-04 13:30,TSG Hoffenheim,1. FSV Mainz 05,,,Bundesliga
+2026-04-04 13:30,1. FC Union Berlin,FC St. Pauli,,,Bundesliga
+2026-04-04 13:30,Borussia Mönchengladbach,1. FC Heidenheim 1846,,,Bundesliga
+2026-04-04 13:30,VfB Stuttgart,Borussia Dortmund,,,Bundesliga
+2026-04-04 13:30,SV Werder Bremen,RB Leipzig,,,Bundesliga
+2026-04-04 13:30,Sport-Club Freiburg,FC Bayern München,,,Bundesliga
+2026-04-04 13:30,Eintracht Frankfurt,1. FC Köln,,,Bundesliga
+2026-04-04 13:30,Bayer 04 Leverkusen,VfL Wolfsburg,,,Bundesliga
+2026-04-11 13:30,1. FC Köln,SV Werder Bremen,,,Bundesliga
+2026-04-11 13:30,1. FC Heidenheim 1846,1. FC Union Berlin,,,Bundesliga
+2026-04-11 13:30,FC St. Pauli,FC Bayern München,,,Bundesliga
+2026-04-11 13:30,FC Augsburg,TSG Hoffenheim,,,Bundesliga
+2026-04-11 13:30,VfL Wolfsburg,Eintracht Frankfurt,,,Bundesliga
+2026-04-11 13:30,VfB Stuttgart,Hamburger SV,,,Bundesliga
+2026-04-11 13:30,RB Leipzig,Borussia Mönchengladbach,,,Bundesliga
+2026-04-11 13:30,1. FSV Mainz 05,Sport-Club Freiburg,,,Bundesliga
+2026-04-11 13:30,Borussia Dortmund,Bayer 04 Leverkusen,,,Bundesliga
+2026-04-18 13:30,TSG Hoffenheim,Borussia Dortmund,,,Bundesliga
+2026-04-18 13:30,FC St. Pauli,1. FC Köln,,,Bundesliga
+2026-04-18 13:30,1. FC Union Berlin,VfL Wolfsburg,,,Bundesliga
+2026-04-18 13:30,Borussia Mönchengladbach,1. FSV Mainz 05,,,Bundesliga
+2026-04-18 13:30,SV Werder Bremen,Hamburger SV,,,Bundesliga
+2026-04-18 13:30,Sport-Club Freiburg,1. FC Heidenheim 1846,,,Bundesliga
+2026-04-18 13:30,Eintracht Frankfurt,RB Leipzig,,,Bundesliga
+2026-04-18 13:30,Bayer 04 Leverkusen,FC Augsburg,,,Bundesliga
+2026-04-18 13:30,FC Bayern München,VfB Stuttgart,,,Bundesliga
+2026-04-25 13:30,Hamburger SV,TSG Hoffenheim,,,Bundesliga
+2026-04-25 13:30,1. FC Köln,Bayer 04 Leverkusen,,,Bundesliga
+2026-04-25 13:30,1. FC Heidenheim 1846,FC St. Pauli,,,Bundesliga
+2026-04-25 13:30,FC Augsburg,Eintracht Frankfurt,,,Bundesliga
+2026-04-25 13:30,VfL Wolfsburg,Borussia Mönchengladbach,,,Bundesliga
+2026-04-25 13:30,VfB Stuttgart,SV Werder Bremen,,,Bundesliga
+2026-04-25 13:30,RB Leipzig,1. FC Union Berlin,,,Bundesliga
+2026-04-25 13:30,1. FSV Mainz 05,FC Bayern München,,,Bundesliga
+2026-04-25 13:30,Borussia Dortmund,Sport-Club Freiburg,,,Bundesliga
+2026-05-02 13:30,TSG Hoffenheim,VfB Stuttgart,,,Bundesliga
+2026-05-02 13:30,FC St. Pauli,1. FSV Mainz 05,,,Bundesliga
+2026-05-02 13:30,1. FC Union Berlin,1. FC Köln,,,Bundesliga
+2026-05-02 13:30,Borussia Mönchengladbach,Borussia Dortmund,,,Bundesliga
+2026-05-02 13:30,SV Werder Bremen,FC Augsburg,,,Bundesliga
+2026-05-02 13:30,Sport-Club Freiburg,VfL Wolfsburg,,,Bundesliga
+2026-05-02 13:30,Eintracht Frankfurt,Hamburger SV,,,Bundesliga
+2026-05-02 13:30,Bayer 04 Leverkusen,RB Leipzig,,,Bundesliga
+2026-05-02 13:30,FC Bayern München,1. FC Heidenheim 1846,,,Bundesliga
+2026-05-09 13:30,Hamburger SV,Sport-Club Freiburg,,,Bundesliga
+2026-05-09 13:30,1. FC Köln,1. FC Heidenheim 1846,,,Bundesliga
+2026-05-09 13:30,TSG Hoffenheim,SV Werder Bremen,,,Bundesliga
+2026-05-09 13:30,FC Augsburg,Borussia Mönchengladbach,,,Bundesliga
+2026-05-09 13:30,VfL Wolfsburg,FC Bayern München,,,Bundesliga
+2026-05-09 13:30,VfB Stuttgart,Bayer 04 Leverkusen,,,Bundesliga
+2026-05-09 13:30,RB Leipzig,FC St. Pauli,,,Bundesliga
+2026-05-09 13:30,1. FSV Mainz 05,1. FC Union Berlin,,,Bundesliga
+2026-05-09 13:30,Borussia Dortmund,Eintracht Frankfurt,,,Bundesliga
+2026-05-16 13:30,1. FC Heidenheim 1846,1. FSV Mainz 05,,,Bundesliga
+2026-05-16 13:30,FC St. Pauli,VfL Wolfsburg,,,Bundesliga
+2026-05-16 13:30,1. FC Union Berlin,FC Augsburg,,,Bundesliga
+2026-05-16 13:30,Borussia Mönchengladbach,TSG Hoffenheim,,,Bundesliga
+2026-05-16 13:30,SV Werder Bremen,Borussia Dortmund,,,Bundesliga
+2026-05-16 13:30,Sport-Club Freiburg,RB Leipzig,,,Bundesliga
+2026-05-16 13:30,Eintracht Frankfurt,VfB Stuttgart,,,Bundesliga
+2026-05-16 13:30,Bayer 04 Leverkusen,Hamburger SV,,,Bundesliga
+2026-05-16 13:30,FC Bayern München,1. FC Köln,,,Bundesliga
+
+
+
+
+
 2025-11-22,18:30,Burnley FC,Chelsea FC,EPL
 2025-11-22,18:00,AFC Bournemouth,West Ham United FC,EPL
 2025-11-22,,Brighton & Hove Albion FC,Brentford FC,EPL
@@ -269,6 +628,211 @@ date,time,home,away,league
 2026-05-24,,Nottingham Forest FC,AFC Bournemouth,EPL
 2026-05-24,,Tottenham Hotspur FC,Everton FC,EPL
 2026-05-24,,West Ham United FC,Leeds United FC,EPL
+
+
+2025-11-22 16:30,NAC Breda,PSV,,,Eredivisie
+2025-11-22 18:45,Ajax,Excelsior Rotterdam,,,Eredivisie
+2025-11-22 18:45,FC Volendam,FC Twente,,,Eredivisie
+2025-11-22 21:00,Heracles Almelo,Go Ahead Eagles,,,Eredivisie
+2025-11-22 21:00,Sparta Rotterdam,Fortuna Sittard,,,Eredivisie
+2025-11-23 12:15,sc Heerenveen,AZ,,,Eredivisie
+2025-11-23 14:30,Feyenoord,N.E.C. Nijmegen,,,Eredivisie
+2025-11-23 14:30,Telstar,FC Utrecht,,,Eredivisie
+2025-11-23 16:45,FC Groningen,PEC Zwolle,,,Eredivisie
+2025-11-28 20:00,PEC Zwolle,sc Heerenveen,,,Eredivisie
+2025-11-29 16:30,Excelsior Rotterdam,NAC Breda,,,Eredivisie
+2025-11-29 18:45,Fortuna Sittard,Heracles Almelo,,,Eredivisie
+2025-11-29 21:00,N.E.C. Nijmegen,Sparta Rotterdam,,,Eredivisie
+2025-11-30 12:15,PSV,FC Volendam,,,Eredivisie
+2025-11-30 14:30,Telstar,Feyenoord,,,Eredivisie
+2025-11-30 14:30,Go Ahead Eagles,FC Utrecht,,,Eredivisie
+2025-11-30 16:45,FC Twente,AZ,,,Eredivisie
+2025-11-30 20:00,Ajax,FC Groningen,,,Eredivisie
+2025-12-05 20:00,Excelsior Rotterdam,FC Groningen,,,Eredivisie
+2025-12-06 16:30,sc Heerenveen,PSV,,,Eredivisie
+2025-12-06 18:45,Fortuna Sittard,Ajax,,,Eredivisie
+2025-12-06 20:00,Heracles Almelo,Telstar,,,Eredivisie
+2025-12-06 21:00,Feyenoord,PEC Zwolle,,,Eredivisie
+2025-12-07 12:15,FC Utrecht,FC Twente,,,Eredivisie
+2025-12-07 14:30,AZ,Go Ahead Eagles,,,Eredivisie
+2025-12-07 14:30,FC Volendam,N.E.C. Nijmegen,,,Eredivisie
+2025-12-07 16:45,Sparta Rotterdam,NAC Breda,,,Eredivisie
+2025-12-13 16:30,Telstar,N.E.C. Nijmegen,,,Eredivisie
+2025-12-13 18:45,FC Groningen,FC Volendam,,,Eredivisie
+2025-12-13 20:00,PSV,Heracles Almelo,,,Eredivisie
+2025-12-13 21:00,PEC Zwolle,Fortuna Sittard,,,Eredivisie
+2025-12-14 12:15,Sparta Rotterdam,sc Heerenveen,,,Eredivisie
+2025-12-14 14:30,Ajax,Feyenoord,,,Eredivisie
+2025-12-14 14:30,FC Twente,Go Ahead Eagles,,,Eredivisie
+2025-12-14 16:45,AZ,Excelsior Rotterdam,,,Eredivisie
+2025-12-14 16:45,NAC Breda,FC Utrecht,,,Eredivisie
+2025-12-19 20:00,Heracles Almelo,sc Heerenveen,,,Eredivisie
+2025-12-20 16:30,FC Volendam,Sparta Rotterdam,,,Eredivisie
+2025-12-20 18:45,Excelsior Rotterdam,PEC Zwolle,,,Eredivisie
+2025-12-20 20:00,N.E.C. Nijmegen,Ajax,,,Eredivisie
+2025-12-20 21:00,NAC Breda,Telstar,,,Eredivisie
+2025-12-21 12:15,FC Utrecht,PSV,,,Eredivisie
+2025-12-21 14:30,Feyenoord,FC Twente,,,Eredivisie
+2025-12-21 14:30,Go Ahead Eagles,FC Groningen,,,Eredivisie
+2025-12-21 16:45,Fortuna Sittard,AZ,,,Eredivisie
+2026-01-09 20:00,N.E.C. Nijmegen,FC Utrecht,,,Eredivisie
+2026-01-10 16:30,AZ,FC Volendam,,,Eredivisie
+2026-01-10 18:45,FC Twente,PEC Zwolle,,,Eredivisie
+2026-01-10 20:00,PSV,Excelsior Rotterdam,,,Eredivisie
+2026-01-10 21:00,FC Groningen,NAC Breda,,,Eredivisie
+2026-01-11 12:15,sc Heerenveen,Feyenoord,,,Eredivisie
+2026-01-11 14:30,Telstar,Ajax,,,Eredivisie
+2026-01-11 14:30,Go Ahead Eagles,Fortuna Sittard,,,Eredivisie
+2026-01-11 16:45,Sparta Rotterdam,Heracles Almelo,,,Eredivisie
+2026-01-16 20:00,Excelsior Rotterdam,Telstar,,,Eredivisie
+2026-01-17 16:30,Ajax,Go Ahead Eagles,,,Eredivisie
+2026-01-17 18:45,PEC Zwolle,AZ,,,Eredivisie
+2026-01-17 20:00,Fortuna Sittard,PSV,,,Eredivisie
+2026-01-17 21:00,NAC Breda,N.E.C. Nijmegen,,,Eredivisie
+2026-01-18 12:15,sc Heerenveen,FC Groningen,,,Eredivisie
+2026-01-18 14:30,FC Volendam,FC Utrecht,,,Eredivisie
+2026-01-18 14:30,Heracles Almelo,FC Twente,,,Eredivisie
+2026-01-18 16:45,Feyenoord,Sparta Rotterdam,,,Eredivisie
+2026-01-24 16:30,Ajax,FC Volendam,,,Eredivisie
+2026-01-24 18:45,N.E.C. Nijmegen,PEC Zwolle,,,Eredivisie
+2026-01-24 20:00,PSV,NAC Breda,,,Eredivisie
+2026-01-24 21:00,FC Twente,Excelsior Rotterdam,,,Eredivisie
+2026-01-25 12:15,Telstar,AZ,,,Eredivisie
+2026-01-25 14:30,FC Groningen,Fortuna Sittard,,,Eredivisie
+2026-01-25 16:45,Feyenoord,Heracles Almelo,,,Eredivisie
+2026-01-25 16:45,FC Utrecht,Sparta Rotterdam,,,Eredivisie
+2026-01-25 20:00,Go Ahead Eagles,sc Heerenveen,,,Eredivisie
+2026-01-30 20:00,NAC Breda,FC Twente,,,Eredivisie
+2026-01-31 16:30,AZ,N.E.C. Nijmegen,,,Eredivisie
+2026-01-31 18:45,PEC Zwolle,Telstar,,,Eredivisie
+2026-01-31 21:00,Sparta Rotterdam,FC Groningen,,,Eredivisie
+2026-02-01 12:15,Excelsior Rotterdam,Ajax,,,Eredivisie
+2026-02-01 14:30,Heracles Almelo,Fortuna Sittard,,,Eredivisie
+2026-02-01 14:30,PSV,Feyenoord,,,Eredivisie
+2026-02-01 16:45,sc Heerenveen,FC Utrecht,,,Eredivisie
+2026-02-01 20:00,FC Volendam,Go Ahead Eagles,,,Eredivisie
+2026-02-07 01:00,FC Twente,sc Heerenveen,,,Eredivisie
+2026-02-07 01:00,Go Ahead Eagles,Telstar,,,Eredivisie
+2026-02-07 01:00,AZ,Ajax,,,Eredivisie
+2026-02-07 01:00,FC Utrecht,Feyenoord,,,Eredivisie
+2026-02-07 01:00,PEC Zwolle,FC Volendam,,,Eredivisie
+2026-02-07 01:00,FC Groningen,PSV,,,Eredivisie
+2026-02-07 01:00,N.E.C. Nijmegen,Heracles Almelo,,,Eredivisie
+2026-02-07 01:00,Fortuna Sittard,Sparta Rotterdam,,,Eredivisie
+2026-02-07 01:00,NAC Breda,Excelsior Rotterdam,,,Eredivisie
+2026-02-14 01:00,Ajax,Fortuna Sittard,,,Eredivisie
+2026-02-14 01:00,Sparta Rotterdam,N.E.C. Nijmegen,,,Eredivisie
+2026-02-14 01:00,Telstar,FC Twente,,,Eredivisie
+2026-02-14 01:00,Heracles Almelo,NAC Breda,,,Eredivisie
+2026-02-14 01:00,FC Groningen,FC Utrecht,,,Eredivisie
+2026-02-14 01:00,Excelsior Rotterdam,AZ,,,Eredivisie
+2026-02-14 01:00,FC Volendam,PSV,,,Eredivisie
+2026-02-14 01:00,Feyenoord,Go Ahead Eagles,,,Eredivisie
+2026-02-14 01:00,sc Heerenveen,PEC Zwolle,,,Eredivisie
+2026-02-21 01:00,FC Twente,FC Groningen,,,Eredivisie
+2026-02-21 01:00,Feyenoord,Telstar,,,Eredivisie
+2026-02-21 01:00,Fortuna Sittard,Excelsior Rotterdam,,,Eredivisie
+2026-02-21 01:00,AZ,Sparta Rotterdam,,,Eredivisie
+2026-02-21 01:00,Ajax,N.E.C. Nijmegen,,,Eredivisie
+2026-02-21 01:00,Go Ahead Eagles,Heracles Almelo,,,Eredivisie
+2026-02-21 01:00,NAC Breda,FC Volendam,,,Eredivisie
+2026-02-21 01:00,FC Utrecht,PEC Zwolle,,,Eredivisie
+2026-02-21 01:00,PSV,sc Heerenveen,,,Eredivisie
+2026-02-28 01:00,Heracles Almelo,PSV,,,Eredivisie
+2026-02-28 01:00,FC Utrecht,AZ,,,Eredivisie
+2026-02-28 01:00,PEC Zwolle,Ajax,,,Eredivisie
+2026-02-28 01:00,N.E.C. Nijmegen,Fortuna Sittard,,,Eredivisie
+2026-02-28 01:00,Telstar,NAC Breda,,,Eredivisie
+2026-02-28 01:00,sc Heerenveen,Sparta Rotterdam,,,Eredivisie
+2026-02-28 01:00,Excelsior Rotterdam,Go Ahead Eagles,,,Eredivisie
+2026-02-28 01:00,FC Volendam,FC Groningen,,,Eredivisie
+2026-02-28 01:00,FC Twente,Feyenoord,,,Eredivisie
+2026-03-07 01:00,N.E.C. Nijmegen,FC Volendam,,,Eredivisie
+2026-03-07 01:00,Go Ahead Eagles,FC Twente,,,Eredivisie
+2026-03-07 01:00,FC Groningen,Ajax,,,Eredivisie
+2026-03-07 01:00,Sparta Rotterdam,PEC Zwolle,,,Eredivisie
+2026-03-07 01:00,Excelsior Rotterdam,sc Heerenveen,,,Eredivisie
+2026-03-07 01:00,NAC Breda,Feyenoord,,,Eredivisie
+2026-03-07 01:00,Heracles Almelo,FC Utrecht,,,Eredivisie
+2026-03-07 01:00,PSV,AZ,,,Eredivisie
+2026-03-07 01:00,Fortuna Sittard,Telstar,,,Eredivisie
+2026-03-14 01:00,AZ,Heracles Almelo,,,Eredivisie
+2026-03-14 01:00,Feyenoord,Excelsior Rotterdam,,,Eredivisie
+2026-03-14 01:00,FC Volendam,Fortuna Sittard,,,Eredivisie
+2026-03-14 01:00,Ajax,Sparta Rotterdam,,,Eredivisie
+2026-03-14 01:00,FC Twente,FC Utrecht,,,Eredivisie
+2026-03-14 01:00,Go Ahead Eagles,NAC Breda,,,Eredivisie
+2026-03-14 01:00,PSV,N.E.C. Nijmegen,,,Eredivisie
+2026-03-14 01:00,PEC Zwolle,FC Groningen,,,Eredivisie
+2026-03-14 01:00,sc Heerenveen,Telstar,,,Eredivisie
+2026-03-21 01:00,Heracles Almelo,Excelsior Rotterdam,,,Eredivisie
+2026-03-21 01:00,PEC Zwolle,NAC Breda,,,Eredivisie
+2026-03-21 01:00,FC Groningen,AZ,,,Eredivisie
+2026-03-21 01:00,FC Utrecht,Go Ahead Eagles,,,Eredivisie
+2026-03-21 01:00,Feyenoord,Ajax,,,Eredivisie
+2026-03-21 01:00,Fortuna Sittard,FC Twente,,,Eredivisie
+2026-03-21 01:00,Sparta Rotterdam,FC Volendam,,,Eredivisie
+2026-03-21 01:00,N.E.C. Nijmegen,sc Heerenveen,,,Eredivisie
+2026-03-21 01:00,Telstar,PSV,,,Eredivisie
+2026-04-04 02:00,AZ,Fortuna Sittard,,,Eredivisie
+2026-04-04 02:00,sc Heerenveen,Heracles Almelo,,,Eredivisie
+2026-04-04 02:00,PSV,FC Utrecht,,,Eredivisie
+2026-04-04 02:00,Excelsior Rotterdam,N.E.C. Nijmegen,,,Eredivisie
+2026-04-04 02:00,FC Volendam,Feyenoord,,,Eredivisie
+2026-04-04 02:00,Telstar,FC Groningen,,,Eredivisie
+2026-04-04 02:00,Go Ahead Eagles,PEC Zwolle,,,Eredivisie
+2026-04-04 02:00,NAC Breda,Sparta Rotterdam,,,Eredivisie
+2026-04-04 02:00,Ajax,FC Twente,,,Eredivisie
+2026-04-11 02:00,Heracles Almelo,Ajax,,,Eredivisie
+2026-04-11 02:00,Sparta Rotterdam,PSV,,,Eredivisie
+2026-04-11 02:00,FC Groningen,Go Ahead Eagles,,,Eredivisie
+2026-04-11 02:00,FC Utrecht,Telstar,,,Eredivisie
+2026-04-11 02:00,PEC Zwolle,Excelsior Rotterdam,,,Eredivisie
+2026-04-11 02:00,Fortuna Sittard,NAC Breda,,,Eredivisie
+2026-04-11 02:00,N.E.C. Nijmegen,Feyenoord,,,Eredivisie
+2026-04-11 02:00,AZ,sc Heerenveen,,,Eredivisie
+2026-04-11 02:00,FC Twente,FC Volendam,,,Eredivisie
+2026-04-23 02:00,Go Ahead Eagles,AZ,,,Eredivisie
+2026-04-23 02:00,Feyenoord,FC Groningen,,,Eredivisie
+2026-04-23 02:00,NAC Breda,Ajax,,,Eredivisie
+2026-04-23 02:00,FC Twente,N.E.C. Nijmegen,,,Eredivisie
+2026-04-23 02:00,Heracles Almelo,FC Volendam,,,Eredivisie
+2026-04-23 02:00,sc Heerenveen,Fortuna Sittard,,,Eredivisie
+2026-04-23 02:00,PSV,PEC Zwolle,,,Eredivisie
+2026-04-23 02:00,Excelsior Rotterdam,FC Utrecht,,,Eredivisie
+2026-04-23 02:00,Telstar,Sparta Rotterdam,,,Eredivisie
+2026-05-02 02:00,Fortuna Sittard,Feyenoord,,,Eredivisie
+2026-05-02 02:00,Ajax,PSV,,,Eredivisie
+2026-05-02 02:00,FC Groningen,Excelsior Rotterdam,,,Eredivisie
+2026-05-02 02:00,Sparta Rotterdam,Go Ahead Eagles,,,Eredivisie
+2026-05-02 02:00,FC Utrecht,NAC Breda,,,Eredivisie
+2026-05-02 02:00,N.E.C. Nijmegen,Telstar,,,Eredivisie
+2026-05-02 02:00,PEC Zwolle,Heracles Almelo,,,Eredivisie
+2026-05-02 02:00,AZ,FC Twente,,,Eredivisie
+2026-05-02 02:00,FC Volendam,sc Heerenveen,,,Eredivisie
+2026-05-10 16:45,FC Groningen,N.E.C. Nijmegen,,,Eredivisie
+2026-05-10 16:45,Fortuna Sittard,PEC Zwolle,,,Eredivisie
+2026-05-10 16:45,Go Ahead Eagles,PSV,,,Eredivisie
+2026-05-10 16:45,Ajax,FC Utrecht,,,Eredivisie
+2026-05-10 16:45,FC Twente,Sparta Rotterdam,,,Eredivisie
+2026-05-10 16:45,NAC Breda,sc Heerenveen,,,Eredivisie
+2026-05-10 16:45,Telstar,Heracles Almelo,,,Eredivisie
+2026-05-10 16:45,Feyenoord,AZ,,,Eredivisie
+2026-05-10 16:45,Excelsior Rotterdam,FC Volendam,,,Eredivisie
+2026-05-17 14:30,Heracles Almelo,FC Groningen,,,Eredivisie
+2026-05-17 14:30,Sparta Rotterdam,Excelsior Rotterdam,,,Eredivisie
+2026-05-17 14:30,N.E.C. Nijmegen,Go Ahead Eagles,,,Eredivisie
+2026-05-17 14:30,FC Volendam,Telstar,,,Eredivisie
+2026-05-17 14:30,PEC Zwolle,Feyenoord,,,Eredivisie
+2026-05-17 14:30,FC Utrecht,Fortuna Sittard,,,Eredivisie
+2026-05-17 14:30,sc Heerenveen,Ajax,,,Eredivisie
+2026-05-17 14:30,PSV,FC Twente,,,Eredivisie
+2026-05-17 14:30,AZ,NAC Breda,,,Eredivisie
+
+
+
+
+
 
 
 
@@ -913,6 +1477,553 @@ date,time,home,away,league
 
 
 
+2025-11-22 16:00,RC Lens,RC Strasbourg Alsace,,,Ligue 1
+2025-11-22 18:00,Stade Rennais FC,AS Monaco,,,Ligue 1
+2025-11-22 20:05,Paris Saint-Germain,Havre Athletic Club,,,Ligue 1
+2025-11-23 14:00,AJ Auxerre,Olympique Lyonnais,,,Ligue 1
+2025-11-23 16:15,Stade Brestois 29,FC Metz,,,Ligue 1
+2025-11-23 16:15,FC Nantes,FC Lorient,,,Ligue 1
+2025-11-23 16:15,Toulouse FC,Angers SCO,,,Ligue 1
+2025-11-23 19:45,LOSC Lille,Paris FC,,,Ligue 1
+2025-11-28 19:45,FC Metz,Stade Rennais FC,,,Ligue 1
+2025-11-29 16:00,AS Monaco,Paris Saint-Germain,,,Ligue 1
+2025-11-29 18:00,Paris FC,AJ Auxerre,,,Ligue 1
+2025-11-29 20:05,Olympique de Marseille,Toulouse FC,,,Ligue 1
+2025-11-30 14:00,RC Strasbourg Alsace,Stade Brestois 29,,,Ligue 1
+2025-11-30 16:15,Angers SCO,RC Lens,,,Ligue 1
+2025-11-30 16:15,Havre Athletic Club,LOSC Lille,,,Ligue 1
+2025-11-30 16:15,FC Lorient,OGC Nice,,,Ligue 1
+2025-11-30 19:45,Olympique Lyonnais,FC Nantes,,,Ligue 1
+2025-12-05 18:00,Stade Brestois 29,AS Monaco,,,Ligue 1
+2025-12-05 20:00,LOSC Lille,Olympique de Marseille,,,Ligue 1
+2025-12-06 16:00,FC Nantes,RC Lens,,,Ligue 1
+2025-12-06 18:00,Toulouse FC,RC Strasbourg Alsace,,,Ligue 1
+2025-12-06 20:05,Paris Saint-Germain,Stade Rennais FC,,,Ligue 1
+2025-12-07 14:00,OGC Nice,Angers SCO,,,Ligue 1
+2025-12-07 16:15,AJ Auxerre,FC Metz,,,Ligue 1
+2025-12-07 16:15,Havre Athletic Club,Paris FC,,,Ligue 1
+2025-12-07 19:45,FC Lorient,Olympique Lyonnais,,,Ligue 1
+2025-12-12 19:45,Angers SCO,FC Nantes,,,Ligue 1
+2025-12-13 16:00,Stade Rennais FC,Stade Brestois 29,,,Ligue 1
+2025-12-13 18:00,FC Metz,Paris Saint-Germain,,,Ligue 1
+2025-12-13 20:05,Paris FC,Toulouse FC,,,Ligue 1
+2025-12-14 14:00,Olympique Lyonnais,Havre Athletic Club,,,Ligue 1
+2025-12-14 16:15,AJ Auxerre,LOSC Lille,,,Ligue 1
+2025-12-14 16:15,RC Lens,OGC Nice,,,Ligue 1
+2025-12-14 16:15,RC Strasbourg Alsace,FC Lorient,,,Ligue 1
+2025-12-14 19:45,Olympique de Marseille,AS Monaco,,,Ligue 1
+2026-01-02 19:45,Toulouse FC,RC Lens,,,Ligue 1
+2026-01-03 16:00,AS Monaco,Olympique Lyonnais,,,Ligue 1
+2026-01-03 18:00,OGC Nice,RC Strasbourg Alsace,,,Ligue 1
+2026-01-03 20:05,LOSC Lille,Stade Rennais FC,,,Ligue 1
+2026-01-04 14:00,Olympique de Marseille,FC Nantes,,,Ligue 1
+2026-01-04 16:15,Stade Brestois 29,AJ Auxerre,,,Ligue 1
+2026-01-04 16:15,Havre Athletic Club,Angers SCO,,,Ligue 1
+2026-01-04 16:15,FC Lorient,FC Metz,,,Ligue 1
+2026-01-04 19:45,Paris Saint-Germain,Paris FC,,,Ligue 1
+2026-01-16 18:00,AS Monaco,FC Lorient,,,Ligue 1
+2026-01-16 20:00,Paris Saint-Germain,LOSC Lille,,,Ligue 1
+2026-01-17 16:00,RC Lens,AJ Auxerre,,,Ligue 1
+2026-01-17 18:00,Toulouse FC,OGC Nice,,,Ligue 1
+2026-01-17 20:05,Angers SCO,Olympique de Marseille,,,Ligue 1
+2026-01-18 14:00,RC Strasbourg Alsace,FC Metz,,,Ligue 1
+2026-01-18 16:15,FC Nantes,Paris FC,,,Ligue 1
+2026-01-18 16:15,Stade Rennais FC,Havre Athletic Club,,,Ligue 1
+2026-01-18 19:45,Olympique Lyonnais,Stade Brestois 29,,,Ligue 1
+2026-01-23 19:00,AJ Auxerre,Paris Saint-Germain,,,Ligue 1
+2026-01-24 16:00,Stade Rennais FC,FC Lorient,,,Ligue 1
+2026-01-24 18:00,Havre Athletic Club,AS Monaco,,,Ligue 1
+2026-01-24 20:05,Olympique de Marseille,RC Lens,,,Ligue 1
+2026-01-25 14:00,FC Nantes,OGC Nice,,,Ligue 1
+2026-01-25 16:15,Stade Brestois 29,Toulouse FC,,,Ligue 1
+2026-01-25 16:15,FC Metz,Olympique Lyonnais,,,Ligue 1
+2026-01-25 16:15,Paris FC,Angers SCO,,,Ligue 1
+2026-01-25 19:45,LOSC Lille,RC Strasbourg Alsace,,,Ligue 1
+2026-01-30 19:45,RC Lens,Havre Athletic Club,,,Ligue 1
+2026-01-31 16:00,Paris FC,Olympique de Marseille,,,Ligue 1
+2026-01-31 18:00,FC Lorient,FC Nantes,,,Ligue 1
+2026-01-31 20:05,AS Monaco,Stade Rennais FC,,,Ligue 1
+2026-02-01 14:00,Olympique Lyonnais,LOSC Lille,,,Ligue 1
+2026-02-01 16:15,Angers SCO,FC Metz,,,Ligue 1
+2026-02-01 16:15,OGC Nice,Stade Brestois 29,,,Ligue 1
+2026-02-01 16:15,Toulouse FC,AJ Auxerre,,,Ligue 1
+2026-02-01 19:45,RC Strasbourg Alsace,Paris Saint-Germain,,,Ligue 1
+2026-02-07 23:00,Angers SCO,Toulouse FC,,,Ligue 1
+2026-02-07 23:00,AJ Auxerre,Paris FC,,,Ligue 1
+2026-02-07 23:00,Stade Brestois 29,FC Lorient,,,Ligue 1
+2026-02-07 23:00,Havre Athletic Club,RC Strasbourg Alsace,,,Ligue 1
+2026-02-07 23:00,RC Lens,Stade Rennais FC,,,Ligue 1
+2026-02-07 23:00,FC Metz,LOSC Lille,,,Ligue 1
+2026-02-07 23:00,FC Nantes,Olympique Lyonnais,,,Ligue 1
+2026-02-07 23:00,OGC Nice,AS Monaco,,,Ligue 1
+2026-02-07 23:00,Paris Saint-Germain,Olympique de Marseille,,,Ligue 1
+2026-02-14 23:00,Havre Athletic Club,Toulouse FC,,,Ligue 1
+2026-02-14 23:00,LOSC Lille,Stade Brestois 29,,,Ligue 1
+2026-02-14 23:00,FC Lorient,Angers SCO,,,Ligue 1
+2026-02-14 23:00,Olympique Lyonnais,OGC Nice,,,Ligue 1
+2026-02-14 23:00,Olympique de Marseille,RC Strasbourg Alsace,,,Ligue 1
+2026-02-14 23:00,FC Metz,AJ Auxerre,,,Ligue 1
+2026-02-14 23:00,AS Monaco,FC Nantes,,,Ligue 1
+2026-02-14 23:00,Paris FC,RC Lens,,,Ligue 1
+2026-02-14 23:00,Stade Rennais FC,Paris Saint-Germain,,,Ligue 1
+2026-02-21 23:00,Angers SCO,LOSC Lille,,,Ligue 1
+2026-02-21 23:00,AJ Auxerre,Stade Rennais FC,,,Ligue 1
+2026-02-21 23:00,Stade Brestois 29,Olympique de Marseille,,,Ligue 1
+2026-02-21 23:00,RC Lens,AS Monaco,,,Ligue 1
+2026-02-21 23:00,FC Nantes,Havre Athletic Club,,,Ligue 1
+2026-02-21 23:00,OGC Nice,FC Lorient,,,Ligue 1
+2026-02-21 23:00,Paris Saint-Germain,FC Metz,,,Ligue 1
+2026-02-21 23:00,RC Strasbourg Alsace,Olympique Lyonnais,,,Ligue 1
+2026-02-21 23:00,Toulouse FC,Paris FC,,,Ligue 1
+2026-02-28 23:00,Havre Athletic Club,Paris Saint-Germain,,,Ligue 1
+2026-02-28 23:00,LOSC Lille,FC Nantes,,,Ligue 1
+2026-02-28 23:00,FC Lorient,AJ Auxerre,,,Ligue 1
+2026-02-28 23:00,Olympique de Marseille,Olympique Lyonnais,,,Ligue 1
+2026-02-28 23:00,FC Metz,Stade Brestois 29,,,Ligue 1
+2026-02-28 23:00,AS Monaco,Angers SCO,,,Ligue 1
+2026-02-28 23:00,Paris FC,OGC Nice,,,Ligue 1
+2026-02-28 23:00,Stade Rennais FC,Toulouse FC,,,Ligue 1
+2026-02-28 23:00,RC Strasbourg Alsace,RC Lens,,,Ligue 1
+2026-03-07 23:00,AJ Auxerre,RC Strasbourg Alsace,,,Ligue 1
+2026-03-07 23:00,Stade Brestois 29,Havre Athletic Club,,,Ligue 1
+2026-03-07 23:00,RC Lens,FC Metz,,,Ligue 1
+2026-03-07 23:00,LOSC Lille,FC Lorient,,,Ligue 1
+2026-03-07 23:00,Olympique Lyonnais,Paris FC,,,Ligue 1
+2026-03-07 23:00,FC Nantes,Angers SCO,,,Ligue 1
+2026-03-07 23:00,OGC Nice,Stade Rennais FC,,,Ligue 1
+2026-03-07 23:00,Paris Saint-Germain,AS Monaco,,,Ligue 1
+2026-03-07 23:00,Toulouse FC,Olympique de Marseille,,,Ligue 1
+2026-03-14 23:00,Angers SCO,OGC Nice,,,Ligue 1
+2026-03-14 23:00,Havre Athletic Club,Olympique Lyonnais,,,Ligue 1
+2026-03-14 23:00,FC Lorient,RC Lens,,,Ligue 1
+2026-03-14 23:00,Olympique de Marseille,AJ Auxerre,,,Ligue 1
+2026-03-14 23:00,FC Metz,Toulouse FC,,,Ligue 1
+2026-03-14 23:00,AS Monaco,Stade Brestois 29,,,Ligue 1
+2026-03-14 23:00,Paris Saint-Germain,FC Nantes,,,Ligue 1
+2026-03-14 23:00,Stade Rennais FC,LOSC Lille,,,Ligue 1
+2026-03-14 23:00,RC Strasbourg Alsace,Paris FC,,,Ligue 1
+2026-03-21 23:00,AJ Auxerre,Stade Brestois 29,,,Ligue 1
+2026-03-21 23:00,RC Lens,Angers SCO,,,Ligue 1
+2026-03-21 23:00,Olympique Lyonnais,AS Monaco,,,Ligue 1
+2026-03-21 23:00,Olympique de Marseille,LOSC Lille,,,Ligue 1
+2026-03-21 23:00,FC Nantes,RC Strasbourg Alsace,,,Ligue 1
+2026-03-21 23:00,OGC Nice,Paris Saint-Germain,,,Ligue 1
+2026-03-21 23:00,Paris FC,Havre Athletic Club,,,Ligue 1
+2026-03-21 23:00,Stade Rennais FC,FC Metz,,,Ligue 1
+2026-03-21 23:00,Toulouse FC,FC Lorient,,,Ligue 1
+2026-04-04 22:00,Angers SCO,Olympique Lyonnais,,,Ligue 1
+2026-04-04 22:00,Stade Brestois 29,Stade Rennais FC,,,Ligue 1
+2026-04-04 22:00,Havre Athletic Club,AJ Auxerre,,,Ligue 1
+2026-04-04 22:00,LOSC Lille,RC Lens,,,Ligue 1
+2026-04-04 22:00,FC Lorient,Paris FC,,,Ligue 1
+2026-04-04 22:00,FC Metz,FC Nantes,,,Ligue 1
+2026-04-04 22:00,AS Monaco,Olympique de Marseille,,,Ligue 1
+2026-04-04 22:00,Paris Saint-Germain,Toulouse FC,,,Ligue 1
+2026-04-04 22:00,RC Strasbourg Alsace,OGC Nice,,,Ligue 1
+2026-04-11 22:00,AJ Auxerre,FC Nantes,,,Ligue 1
+2026-04-11 22:00,Stade Brestois 29,RC Strasbourg Alsace,,,Ligue 1
+2026-04-11 22:00,RC Lens,Paris Saint-Germain,,,Ligue 1
+2026-04-11 22:00,Olympique Lyonnais,FC Lorient,,,Ligue 1
+2026-04-11 22:00,Olympique de Marseille,FC Metz,,,Ligue 1
+2026-04-11 22:00,OGC Nice,Havre Athletic Club,,,Ligue 1
+2026-04-11 22:00,Paris FC,AS Monaco,,,Ligue 1
+2026-04-11 22:00,Stade Rennais FC,Angers SCO,,,Ligue 1
+2026-04-11 22:00,Toulouse FC,LOSC Lille,,,Ligue 1
+2026-04-18 22:00,Angers SCO,Havre Athletic Club,,,Ligue 1
+2026-04-18 22:00,RC Lens,Toulouse FC,,,Ligue 1
+2026-04-18 22:00,LOSC Lille,OGC Nice,,,Ligue 1
+2026-04-18 22:00,FC Lorient,Olympique de Marseille,,,Ligue 1
+2026-04-18 22:00,FC Metz,Paris FC,,,Ligue 1
+2026-04-18 22:00,AS Monaco,AJ Auxerre,,,Ligue 1
+2026-04-18 22:00,FC Nantes,Stade Brestois 29,,,Ligue 1
+2026-04-18 22:00,Paris Saint-Germain,Olympique Lyonnais,,,Ligue 1
+2026-04-18 22:00,RC Strasbourg Alsace,Stade Rennais FC,,,Ligue 1
+2026-04-25 22:00,Angers SCO,Paris Saint-Germain,,,Ligue 1
+2026-04-25 22:00,Stade Brestois 29,RC Lens,,,Ligue 1
+2026-04-25 22:00,Havre Athletic Club,FC Metz,,,Ligue 1
+2026-04-25 22:00,FC Lorient,RC Strasbourg Alsace,,,Ligue 1
+2026-04-25 22:00,Olympique Lyonnais,AJ Auxerre,,,Ligue 1
+2026-04-25 22:00,Olympique de Marseille,OGC Nice,,,Ligue 1
+2026-04-25 22:00,Paris FC,LOSC Lille,,,Ligue 1
+2026-04-25 22:00,Stade Rennais FC,FC Nantes,,,Ligue 1
+2026-04-25 22:00,Toulouse FC,AS Monaco,,,Ligue 1
+2026-05-02 22:00,AJ Auxerre,Angers SCO,,,Ligue 1
+2026-05-02 22:00,LOSC Lille,Havre Athletic Club,,,Ligue 1
+2026-05-02 22:00,Olympique Lyonnais,Stade Rennais FC,,,Ligue 1
+2026-05-02 22:00,FC Metz,AS Monaco,,,Ligue 1
+2026-05-02 22:00,FC Nantes,Olympique de Marseille,,,Ligue 1
+2026-05-02 22:00,OGC Nice,RC Lens,,,Ligue 1
+2026-05-02 22:00,Paris FC,Stade Brestois 29,,,Ligue 1
+2026-05-02 22:00,Paris Saint-Germain,FC Lorient,,,Ligue 1
+2026-05-02 22:00,RC Strasbourg Alsace,Toulouse FC,,,Ligue 1
+2026-05-08 22:00,Angers SCO,RC Strasbourg Alsace,,,Ligue 1
+2026-05-08 22:00,AJ Auxerre,OGC Nice,,,Ligue 1
+2026-05-08 22:00,Havre Athletic Club,Olympique de Marseille,,,Ligue 1
+2026-05-08 22:00,RC Lens,FC Nantes,,,Ligue 1
+2026-05-08 22:00,FC Metz,FC Lorient,,,Ligue 1
+2026-05-08 22:00,AS Monaco,LOSC Lille,,,Ligue 1
+2026-05-08 22:00,Paris Saint-Germain,Stade Brestois 29,,,Ligue 1
+2026-05-08 22:00,Stade Rennais FC,Paris FC,,,Ligue 1
+2026-05-08 22:00,Toulouse FC,Olympique Lyonnais,,,Ligue 1
+2026-05-15 22:00,Stade Brestois 29,Angers SCO,,,Ligue 1
+2026-05-15 22:00,LOSC Lille,AJ Auxerre,,,Ligue 1
+2026-05-15 22:00,FC Lorient,Havre Athletic Club,,,Ligue 1
+2026-05-15 22:00,Olympique Lyonnais,RC Lens,,,Ligue 1
+2026-05-15 22:00,Olympique de Marseille,Stade Rennais FC,,,Ligue 1
+2026-05-15 22:00,FC Nantes,Toulouse FC,,,Ligue 1
+2026-05-15 22:00,OGC Nice,FC Metz,,,Ligue 1
+2026-05-15 22:00,Paris FC,Paris Saint-Germain,,,Ligue 1
+2026-05-15 22:00,RC Strasbourg Alsace,AS Monaco,,,Ligue 1
+
+2025-11-28 20:15,Vitória SC,AFS,,,PrimeiraLiga
+2025-11-29 15:30,Casa Pia AC,FC Alverca,,,PrimeiraLiga
+2025-11-29 15:30,Moreirense FC,FC Famalicão,,,PrimeiraLiga
+2025-11-29 18:00,CD Nacional,SL Benfica,,,PrimeiraLiga
+2025-11-29 20:30,Gil Vicente FC,CD Tondela,,,PrimeiraLiga
+2025-11-30 15:30,Rio Ave FC,Santa Clara,,,PrimeiraLiga
+2025-11-30 18:00,Sporting CP,Estrela Amadora,,,PrimeiraLiga
+2025-11-30 20:30,FC Porto,Estoril Praia,,,PrimeiraLiga
+2025-12-01 20:15,FC Arouca,SC Braga,,,PrimeiraLiga
+2025-12-05 20:15,SL Benfica,Sporting CP,,,PrimeiraLiga
+2025-12-06 15:30,Santa Clara,Casa Pia AC,,,PrimeiraLiga
+2025-12-06 18:00,AFS,Rio Ave FC,,,PrimeiraLiga
+2025-12-06 20:30,FC Famalicão,SC Braga,,,PrimeiraLiga
+2025-12-07 15:30,Estoril Praia,Moreirense FC,,,PrimeiraLiga
+2025-12-07 18:00,FC Alverca,CD Nacional,,,PrimeiraLiga
+2025-12-07 18:00,Estrela Amadora,FC Arouca,,,PrimeiraLiga
+2025-12-07 20:30,CD Tondela,FC Porto,,,PrimeiraLiga
+2025-12-08 20:30,Vitória SC,Gil Vicente FC,,,PrimeiraLiga
+2025-12-14 15:30,Casa Pia AC,Gil Vicente FC,,,PrimeiraLiga
+2025-12-14 15:30,CD Nacional,CD Tondela,,,PrimeiraLiga
+2025-12-14 15:30,SC Braga,Santa Clara,,,PrimeiraLiga
+2025-12-14 15:30,Sporting CP,AFS,,,PrimeiraLiga
+2025-12-14 15:30,FC Famalicão,Estoril Praia,,,PrimeiraLiga
+2025-12-14 15:30,FC Porto,Estrela Amadora,,,PrimeiraLiga
+2025-12-14 15:30,FC Arouca,FC Alverca,,,PrimeiraLiga
+2025-12-14 15:30,Moreirense FC,SL Benfica,,,PrimeiraLiga
+2025-12-14 15:30,Rio Ave FC,Vitória SC,,,PrimeiraLiga
+2025-12-21 15:30,AFS,CD Nacional,,,PrimeiraLiga
+2025-12-21 15:30,Estrela Amadora,Moreirense FC,,,PrimeiraLiga
+2025-12-21 15:30,FC Alverca,FC Porto,,,PrimeiraLiga
+2025-12-21 15:30,Gil Vicente FC,Rio Ave FC,,,PrimeiraLiga
+2025-12-21 15:30,SL Benfica,FC Famalicão,,,PrimeiraLiga
+2025-12-21 15:30,Vitória SC,Sporting CP,,,PrimeiraLiga
+2025-12-21 15:30,CD Tondela,Casa Pia AC,,,PrimeiraLiga
+2025-12-21 15:30,Santa Clara,FC Arouca,,,PrimeiraLiga
+2025-12-21 15:30,Estoril Praia,SC Braga,,,PrimeiraLiga
+2025-12-28 15:30,Casa Pia AC,Vitória SC,,,PrimeiraLiga
+2025-12-28 15:30,FC Arouca,Gil Vicente FC,,,PrimeiraLiga
+2025-12-28 15:30,Moreirense FC,CD Tondela,,,PrimeiraLiga
+2025-12-28 15:30,FC Porto,AFS,,,PrimeiraLiga
+2025-12-28 15:30,FC Famalicão,Estrela Amadora,,,PrimeiraLiga
+2025-12-28 15:30,Estoril Praia,FC Alverca,,,PrimeiraLiga
+2025-12-28 15:30,Sporting CP,Rio Ave FC,,,PrimeiraLiga
+2025-12-28 15:30,CD Nacional,Santa Clara,,,PrimeiraLiga
+2025-12-28 15:30,SC Braga,SL Benfica,,,PrimeiraLiga
+2026-01-04 15:30,AFS,Moreirense FC,,,PrimeiraLiga
+2026-01-04 15:30,FC Alverca,FC Famalicão,,,PrimeiraLiga
+2026-01-04 15:30,Gil Vicente FC,Sporting CP,,,PrimeiraLiga
+2026-01-04 15:30,Santa Clara,FC Porto,,,PrimeiraLiga
+2026-01-04 15:30,SL Benfica,Estoril Praia,,,PrimeiraLiga
+2026-01-04 15:30,Vitória SC,CD Nacional,,,PrimeiraLiga
+2026-01-04 15:30,Rio Ave FC,Casa Pia AC,,,PrimeiraLiga
+2026-01-04 15:30,CD Tondela,FC Arouca,,,PrimeiraLiga
+2026-01-04 15:30,Estrela Amadora,SC Braga,,,PrimeiraLiga
+2026-01-18 15:30,Sporting CP,Casa Pia AC,,,PrimeiraLiga
+2026-01-18 15:30,CD Tondela,SC Braga,,,PrimeiraLiga
+2026-01-18 15:30,Rio Ave FC,SL Benfica,,,PrimeiraLiga
+2026-01-18 15:30,AFS,FC Arouca,,,PrimeiraLiga
+2026-01-18 15:30,Estrela Amadora,Estoril Praia,,,PrimeiraLiga
+2026-01-18 15:30,FC Alverca,Moreirense FC,,,PrimeiraLiga
+2026-01-18 15:30,Gil Vicente FC,CD Nacional,,,PrimeiraLiga
+2026-01-18 15:30,Santa Clara,FC Famalicão,,,PrimeiraLiga
+2026-01-18 15:30,Vitória SC,FC Porto,,,PrimeiraLiga
+2026-01-25 15:30,Casa Pia AC,AFS,,,PrimeiraLiga
+2026-01-25 15:30,SC Braga,FC Alverca,,,PrimeiraLiga
+2026-01-25 15:30,FC Porto,Gil Vicente FC,,,PrimeiraLiga
+2026-01-25 15:30,Moreirense FC,Santa Clara,,,PrimeiraLiga
+2026-01-25 15:30,CD Nacional,Rio Ave FC,,,PrimeiraLiga
+2026-01-25 15:30,Estoril Praia,Vitória SC,,,PrimeiraLiga
+2026-01-25 15:30,FC Arouca,Sporting CP,,,PrimeiraLiga
+2026-01-25 15:30,FC Famalicão,CD Tondela,,,PrimeiraLiga
+2026-01-25 15:30,SL Benfica,Estrela Amadora,,,PrimeiraLiga
+2026-02-01 15:30,Sporting CP,CD Nacional,,,PrimeiraLiga
+2026-02-01 15:30,Rio Ave FC,FC Arouca,,,PrimeiraLiga
+2026-02-01 15:30,Gil Vicente FC,FC Famalicão,,,PrimeiraLiga
+2026-02-01 15:30,CD Tondela,SL Benfica,,,PrimeiraLiga
+2026-02-01 15:30,AFS,SC Braga,,,PrimeiraLiga
+2026-02-01 15:30,Casa Pia AC,FC Porto,,,PrimeiraLiga
+2026-02-01 15:30,FC Alverca,Estrela Amadora,,,PrimeiraLiga
+2026-02-01 15:30,Santa Clara,Estoril Praia,,,PrimeiraLiga
+2026-02-01 15:30,Vitória SC,Moreirense FC,,,PrimeiraLiga
+2026-02-08 15:30,FC Famalicão,AFS,,,PrimeiraLiga
+2026-02-08 15:30,CD Nacional,Casa Pia AC,,,PrimeiraLiga
+2026-02-08 15:30,SL Benfica,FC Alverca,,,PrimeiraLiga
+2026-02-08 15:30,Moreirense FC,Gil Vicente FC,,,PrimeiraLiga
+2026-02-08 15:30,Estrela Amadora,Santa Clara,,,PrimeiraLiga
+2026-02-08 15:30,Estoril Praia,CD Tondela,,,PrimeiraLiga
+2026-02-08 15:30,FC Arouca,Vitória SC,,,PrimeiraLiga
+2026-02-08 15:30,FC Porto,Sporting CP,,,PrimeiraLiga
+2026-02-08 15:30,SC Braga,Rio Ave FC,,,PrimeiraLiga
+2026-02-15 15:30,Vitória SC,Estrela Amadora,,,PrimeiraLiga
+2026-02-15 15:30,CD Tondela,FC Alverca,,,PrimeiraLiga
+2026-02-15 15:30,Casa Pia AC,FC Arouca,,,PrimeiraLiga
+2026-02-15 15:30,Sporting CP,FC Famalicão,,,PrimeiraLiga
+2026-02-15 15:30,Rio Ave FC,Moreirense FC,,,PrimeiraLiga
+2026-02-15 15:30,Gil Vicente FC,SC Braga,,,PrimeiraLiga
+2026-02-15 15:30,Santa Clara,SL Benfica,,,PrimeiraLiga
+2026-02-15 15:30,AFS,Estoril Praia,,,PrimeiraLiga
+2026-02-15 15:30,CD Nacional,FC Porto,,,PrimeiraLiga
+2026-02-22 15:30,SL Benfica,AFS,,,PrimeiraLiga
+2026-02-22 15:30,FC Famalicão,Casa Pia AC,,,PrimeiraLiga
+2026-02-22 15:30,Estoril Praia,Gil Vicente FC,,,PrimeiraLiga
+2026-02-22 15:30,Estrela Amadora,CD Tondela,,,PrimeiraLiga
+2026-02-22 15:30,FC Alverca,Santa Clara,,,PrimeiraLiga
+2026-02-22 15:30,FC Arouca,CD Nacional,,,PrimeiraLiga
+2026-02-22 15:30,FC Porto,Rio Ave FC,,,PrimeiraLiga
+2026-02-22 15:30,Moreirense FC,Sporting CP,,,PrimeiraLiga
+2026-02-22 15:30,SC Braga,Vitória SC,,,PrimeiraLiga
+2026-03-01 15:30,Sporting CP,Estoril Praia,,,PrimeiraLiga
+2026-03-01 15:30,Vitória SC,FC Alverca,,,PrimeiraLiga
+2026-03-01 15:30,FC Porto,FC Arouca,,,PrimeiraLiga
+2026-03-01 15:30,Rio Ave FC,FC Famalicão,,,PrimeiraLiga
+2026-03-01 15:30,CD Tondela,Santa Clara,,,PrimeiraLiga
+2026-03-01 15:30,CD Nacional,SC Braga,,,PrimeiraLiga
+2026-03-01 15:30,Gil Vicente FC,SL Benfica,,,PrimeiraLiga
+2026-03-01 15:30,AFS,Estrela Amadora,,,PrimeiraLiga
+2026-03-01 15:30,Casa Pia AC,Moreirense FC,,,PrimeiraLiga
+2026-03-08 15:30,FC Alverca,AFS,,,PrimeiraLiga
+2026-03-08 15:30,Estoril Praia,Casa Pia AC,,,PrimeiraLiga
+2026-03-08 15:30,FC Famalicão,FC Arouca,,,PrimeiraLiga
+2026-03-08 15:30,CD Tondela,Rio Ave FC,,,PrimeiraLiga
+2026-03-08 15:30,Estrela Amadora,Gil Vicente FC,,,PrimeiraLiga
+2026-03-08 15:30,Moreirense FC,CD Nacional,,,PrimeiraLiga
+2026-03-08 15:30,Santa Clara,Vitória SC,,,PrimeiraLiga
+2026-03-08 15:30,SC Braga,Sporting CP,,,PrimeiraLiga
+2026-03-08 15:30,SL Benfica,FC Porto,,,PrimeiraLiga
+2026-03-15 15:30,CD Nacional,Estoril Praia,,,PrimeiraLiga
+2026-03-15 15:30,Rio Ave FC,Estrela Amadora,,,PrimeiraLiga
+2026-03-15 15:30,Gil Vicente FC,FC Alverca,,,PrimeiraLiga
+2026-03-15 15:30,Vitória SC,FC Famalicão,,,PrimeiraLiga
+2026-03-15 15:30,FC Porto,Moreirense FC,,,PrimeiraLiga
+2026-03-15 15:30,Casa Pia AC,SC Braga,,,PrimeiraLiga
+2026-03-15 15:30,AFS,Santa Clara,,,PrimeiraLiga
+2026-03-15 15:30,FC Arouca,SL Benfica,,,PrimeiraLiga
+2026-03-15 15:30,Sporting CP,CD Tondela,,,PrimeiraLiga
+2026-03-22 15:30,CD Tondela,AFS,,,PrimeiraLiga
+2026-03-22 15:30,Estrela Amadora,Casa Pia AC,,,PrimeiraLiga
+2026-03-22 15:30,Moreirense FC,FC Arouca,,,PrimeiraLiga
+2026-03-22 15:30,Estoril Praia,Rio Ave FC,,,PrimeiraLiga
+2026-03-22 15:30,FC Alverca,Sporting CP,,,PrimeiraLiga
+2026-03-22 15:30,FC Famalicão,CD Nacional,,,PrimeiraLiga
+2026-03-22 15:30,Santa Clara,Gil Vicente FC,,,PrimeiraLiga
+2026-03-22 15:30,SC Braga,FC Porto,,,PrimeiraLiga
+2026-03-22 15:30,SL Benfica,Vitória SC,,,PrimeiraLiga
+2026-04-03 15:30,Gil Vicente FC,AFS,,,PrimeiraLiga
+2026-04-03 15:30,CD Nacional,Estrela Amadora,,,PrimeiraLiga
+2026-04-03 15:30,Rio Ave FC,FC Alverca,,,PrimeiraLiga
+2026-04-03 15:30,FC Porto,FC Famalicão,,,PrimeiraLiga
+2026-04-03 15:30,Sporting CP,Santa Clara,,,PrimeiraLiga
+2026-04-03 15:30,Moreirense FC,SC Braga,,,PrimeiraLiga
+2026-04-03 15:30,Casa Pia AC,SL Benfica,,,PrimeiraLiga
+2026-04-03 15:30,FC Arouca,Estoril Praia,,,PrimeiraLiga
+2026-04-03 15:30,Vitória SC,CD Tondela,,,PrimeiraLiga
+2026-04-11 15:30,SC Braga,FC Arouca,,,PrimeiraLiga
+2026-04-11 15:30,CD Tondela,Gil Vicente FC,,,PrimeiraLiga
+2026-04-11 15:30,AFS,Vitória SC,,,PrimeiraLiga
+2026-04-11 15:30,Estoril Praia,FC Porto,,,PrimeiraLiga
+2026-04-11 15:30,Estrela Amadora,Sporting CP,,,PrimeiraLiga
+2026-04-11 15:30,FC Alverca,Casa Pia AC,,,PrimeiraLiga
+2026-04-11 15:30,FC Famalicão,Moreirense FC,,,PrimeiraLiga
+2026-04-11 15:30,Santa Clara,Rio Ave FC,,,PrimeiraLiga
+2026-04-11 15:30,SL Benfica,CD Nacional,,,PrimeiraLiga
+2026-04-18 15:30,Rio Ave FC,AFS,,,PrimeiraLiga
+2026-04-18 15:30,Moreirense FC,Estoril Praia,,,PrimeiraLiga
+2026-04-18 15:30,CD Nacional,FC Alverca,,,PrimeiraLiga
+2026-04-18 15:30,Casa Pia AC,Santa Clara,,,PrimeiraLiga
+2026-04-18 15:30,Sporting CP,SL Benfica,,,PrimeiraLiga
+2026-04-18 15:30,Gil Vicente FC,Vitória SC,,,PrimeiraLiga
+2026-04-18 15:30,FC Arouca,Estrela Amadora,,,PrimeiraLiga
+2026-04-18 15:30,FC Porto,CD Tondela,,,PrimeiraLiga
+2026-04-18 15:30,SC Braga,FC Famalicão,,,PrimeiraLiga
+2026-04-25 15:30,Gil Vicente FC,Casa Pia AC,,,PrimeiraLiga
+2026-04-25 15:30,CD Tondela,CD Nacional,,,PrimeiraLiga
+2026-04-25 15:30,Santa Clara,SC Braga,,,PrimeiraLiga
+2026-04-25 15:30,AFS,Sporting CP,,,PrimeiraLiga
+2026-04-25 15:30,Estoril Praia,FC Famalicão,,,PrimeiraLiga
+2026-04-25 15:30,Estrela Amadora,FC Porto,,,PrimeiraLiga
+2026-04-25 15:30,FC Alverca,FC Arouca,,,PrimeiraLiga
+2026-04-25 15:30,SL Benfica,Moreirense FC,,,PrimeiraLiga
+2026-04-25 15:30,Vitória SC,Rio Ave FC,,,PrimeiraLiga
+2026-05-02 15:30,CD Nacional,AFS,,,PrimeiraLiga
+2026-05-02 15:30,Moreirense FC,Estrela Amadora,,,PrimeiraLiga
+2026-05-02 15:30,FC Porto,FC Alverca,,,PrimeiraLiga
+2026-05-02 15:30,Rio Ave FC,Gil Vicente FC,,,PrimeiraLiga
+2026-05-02 15:30,FC Famalicão,SL Benfica,,,PrimeiraLiga
+2026-05-02 15:30,Sporting CP,Vitória SC,,,PrimeiraLiga
+2026-05-02 15:30,Casa Pia AC,CD Tondela,,,PrimeiraLiga
+2026-05-02 15:30,FC Arouca,Santa Clara,,,PrimeiraLiga
+2026-05-02 15:30,SC Braga,Estoril Praia,,,PrimeiraLiga
+2026-05-09 15:30,Vitória SC,Casa Pia AC,,,PrimeiraLiga
+2026-05-09 15:30,Gil Vicente FC,FC Arouca,,,PrimeiraLiga
+2026-05-09 15:30,CD Tondela,Moreirense FC,,,PrimeiraLiga
+2026-05-09 15:30,AFS,FC Porto,,,PrimeiraLiga
+2026-05-09 15:30,Estrela Amadora,FC Famalicão,,,PrimeiraLiga
+2026-05-09 15:30,FC Alverca,Estoril Praia,,,PrimeiraLiga
+2026-05-09 15:30,Rio Ave FC,Sporting CP,,,PrimeiraLiga
+2026-05-09 15:30,Santa Clara,CD Nacional,,,PrimeiraLiga
+2026-05-09 15:30,SL Benfica,SC Braga,,,PrimeiraLiga
+2026-05-16 15:30,Moreirense FC,AFS,,,PrimeiraLiga
+2026-05-16 15:30,FC Famalicão,FC Alverca,,,PrimeiraLiga
+2026-05-16 15:30,Sporting CP,Gil Vicente FC,,,PrimeiraLiga
+2026-05-16 15:30,FC Porto,Santa Clara,,,PrimeiraLiga
+2026-05-16 15:30,Estoril Praia,SL Benfica,,,PrimeiraLiga
+2026-05-16 15:30,CD Nacional,Vitória SC,,,PrimeiraLiga
+2026-05-16 15:30,Casa Pia AC,Rio Ave FC,,,PrimeiraLiga
+2026-05-16 15:30,FC Arouca,CD Tondela,,,PrimeiraLiga
+2026-05-16 15:30,SC Braga,Estrela Amadora,,,PrimeiraLiga
+
+2025-11-25 18:45,Motherwell FC,Hibernian FC,,,ScottishPremiership
+2025-12-17 19:00,Dundee United,Celtic FC,,,ScottishPremiership
+2025-01-06 18:45,Livingston FC,St. Mirren FC,,,ScottishPremiership
+2025-01-06 19:00,Rangers FC,Aberdeen FC,,,ScottishPremiership
+2025-11-08 14:00,Falkirk FC,Livingston FC,,,ScottishPremiership
+2025-11-08 16:45,St. Mirren FC,Hibernian FC,,,ScottishPremiership
+2025-11-09 14:00,Dundee FC,Rangers FC,,,ScottishPremiership
+2025-11-09,Aberdeen FC,Motherwell FC,,,ScottishPremiership
+2025-11-09,Heart of Midlothian,Dundee United,,,ScottishPremiership
+2025-11-09 15:00,Celtic FC,Kilmarnock FC,,,ScottishPremiership
+2025-11-22 14:00,Dundee United,Falkirk FC,,,ScottishPremiership
+2025-11-22,Kilmarnock FC,Motherwell FC,,,ScottishPremiership
+2025-11-22,Rangers FC,Livingston FC,,,ScottishPremiership
+2025-11-22,Hibernian FC,Dundee FC,,,ScottishPremiership
+2025-11-22 19:00,St. Mirren FC,Celtic FC,,,ScottishPremiership
+2025-11-23 14:00,Aberdeen FC,Heart of Midlothian,,,ScottishPremiership
+2025-11-29 14:00,Dundee FC,St. Mirren FC,,,ScottishPremiership
+2025-11-29,Motherwell FC,Heart of Midlothian,,,ScottishPremiership
+2025-11-29 16:45,Kilmarnock FC,Dundee United,,,ScottishPremiership
+2025-11-30 11:00,Hibernian FC,Celtic FC,,,ScottishPremiership
+2025-11-30 13:00,Rangers FC,Falkirk FC,,,ScottishPremiership
+2025-11-30 14:00,Livingston FC,Aberdeen FC,,,ScottishPremiership
+2025-11-01 14:00,Livingston FC,Hibernian FC             2-2 (1-1),,,ScottishPremiership
+2025-12-03 18:45,Celtic FC,Dundee FC,,,ScottishPremiership
+2025-12-03,Dundee United,Rangers FC,,,ScottishPremiership
+2025-12-03,Falkirk FC,Motherwell FC,,,ScottishPremiership
+2025-12-03,Aberdeen FC,St. Mirren FC,,,ScottishPremiership
+2025-12-03,Heart of Midlothian,Kilmarnock FC,,,ScottishPremiership
+2025-12-06 14:00,Dundee FC,Aberdeen FC,,,ScottishPremiership
+2025-12-06,Kilmarnock FC,Rangers FC,,,ScottishPremiership
+2025-12-06,St. Mirren FC,Dundee United,,,ScottishPremiership
+2025-12-06,Hibernian FC,Falkirk FC,,,ScottishPremiership
+2025-12-06,Motherwell FC,Livingston FC,,,ScottishPremiership
+2025-12-07 14:00,Celtic FC,Heart of Midlothian,,,ScottishPremiership
+2025-12-13 14:00,Dundee United,Motherwell FC,,,ScottishPremiership
+2025-12-13,Heart of Midlothian,St. Mirren FC,,,ScottishPremiership
+2025-12-13,Livingston FC,Dundee FC,,,ScottishPremiership
+2025-12-14 14:00,Falkirk FC,Celtic FC,,,ScottishPremiership
+2025-12-14,Aberdeen FC,Kilmarnock FC,,,ScottishPremiership
+2025-12-14,Rangers FC,Hibernian FC,,,ScottishPremiership
+2025-12-20 14:00,Dundee United,Hibernian FC,,,ScottishPremiership
+2025-12-20,Kilmarnock FC,Falkirk FC,,,ScottishPremiership
+2025-12-20,St. Mirren FC,Livingston FC,,,ScottishPremiership
+2025-12-20,Heart of Midlothian,Rangers FC,,,ScottishPremiership
+2025-12-20,Motherwell FC,Dundee FC,,,ScottishPremiership
+2025-12-21 14:00,Celtic FC,Aberdeen FC,,,ScottishPremiership
+2025-12-27 11:30,Hibernian FC,Heart of Midlothian,,,ScottishPremiership
+2025-12-27 14:00,Dundee FC,Falkirk FC,,,ScottishPremiership
+2025-12-27,St. Mirren FC,Kilmarnock FC,,,ScottishPremiership
+2025-12-27,Rangers FC,Motherwell FC,,,ScottishPremiership
+2025-12-27,Livingston FC,Celtic FC,,,ScottishPremiership
+2025-12-27 16:45,Aberdeen FC,Dundee United,,,ScottishPremiership
+2025-12-30 18:45,Dundee FC,Kilmarnock FC,,,ScottishPremiership
+2025-12-30,Falkirk FC,Heart of Midlothian,,,ScottishPremiership
+2025-12-30,Rangers FC,St. Mirren FC,,,ScottishPremiership
+2025-12-30,Hibernian FC,Aberdeen FC,,,ScottishPremiership
+2025-12-30,Livingston FC,Dundee United,,,ScottishPremiership
+2025-12-30 19:00,Motherwell FC,Celtic FC,,,ScottishPremiership
+2026-01-03 11:30,Celtic FC,Rangers FC,,,ScottishPremiership
+2026-01-03 14:00,Dundee United,Dundee FC,,,ScottishPremiership
+2026-01-03,Falkirk FC,Aberdeen FC,,,ScottishPremiership
+2026-01-03,Kilmarnock FC,Hibernian FC,,,ScottishPremiership
+2026-01-03,Heart of Midlothian,Livingston FC,,,ScottishPremiership
+2026-01-03,Motherwell FC,St. Mirren FC,,,ScottishPremiership
+2026-01-10 14:00,Celtic FC,Dundee United,,,ScottishPremiership
+2026-01-10,Dundee FC,Heart of Midlothian,,,ScottishPremiership
+2026-01-10,Aberdeen FC,Rangers FC,,,ScottishPremiership
+2026-01-10,St. Mirren FC,Falkirk FC,,,ScottishPremiership
+2026-01-10,Hibernian FC,Motherwell FC,,,ScottishPremiership
+2026-01-10,Livingston FC,Kilmarnock FC,,,ScottishPremiership
+2026-01-24 14:00,Dundee United,St. Mirren FC,,,ScottishPremiership
+2026-01-24,Falkirk FC,Hibernian FC,,,ScottishPremiership
+2026-01-24,Aberdeen FC,Livingston FC,,,ScottishPremiership
+2026-01-24,Motherwell FC,Kilmarnock FC,,,ScottishPremiership
+2026-01-25 14:00,Rangers FC,Dundee FC,,,ScottishPremiership
+2026-01-25,Heart of Midlothian,Celtic FC,,,ScottishPremiership
+2026-01-31 14:00,Dundee United,Heart of Midlothian,,,ScottishPremiership
+2026-01-31,Kilmarnock FC,Aberdeen FC,,,ScottishPremiership
+2026-01-31,St. Mirren FC,Dundee FC,,,ScottishPremiership
+2026-01-31,Livingston FC,Motherwell FC,,,ScottishPremiership
+2026-02-01 14:00,Celtic FC,Falkirk FC,,,ScottishPremiership
+2026-02-01,Hibernian FC,Rangers FC,,,ScottishPremiership
+2026-02-04,Dundee FC,Motherwell FC,,,ScottishPremiership
+2026-02-04,Aberdeen FC,Celtic FC,,,ScottishPremiership
+2026-02-04,St. Mirren FC,Heart of Midlothian,,,ScottishPremiership
+2026-02-04,Rangers FC,Kilmarnock FC,,,ScottishPremiership
+2026-02-04,Hibernian FC,Dundee United,,,ScottishPremiership
+2026-02-04,Livingston FC,Falkirk FC,,,ScottishPremiership
+2026-02-11,Celtic FC,Livingston FC,,,ScottishPremiership
+2026-02-11,Dundee United,Aberdeen FC,,,ScottishPremiership
+2026-02-11,Falkirk FC,Dundee FC,,,ScottishPremiership
+2026-02-11,Kilmarnock FC,St. Mirren FC,,,ScottishPremiership
+2026-02-11,Heart of Midlothian,Hibernian FC,,,ScottishPremiership
+2026-02-11,Motherwell FC,Rangers FC,,,ScottishPremiership
+2026-02-14,Dundee FC,Livingston FC,,,ScottishPremiership
+2026-02-14,Falkirk FC,Dundee United,,,ScottishPremiership
+2026-02-14,Kilmarnock FC,Celtic FC,,,ScottishPremiership
+2026-02-14,Rangers FC,Heart of Midlothian,,,ScottishPremiership
+2026-02-14,Hibernian FC,St. Mirren FC,,,ScottishPremiership
+2026-02-14,Motherwell FC,Aberdeen FC,,,ScottishPremiership
+2026-02-21,Celtic FC,Hibernian FC,,,ScottishPremiership
+2026-02-21,Dundee United,Kilmarnock FC,,,ScottishPremiership
+2026-02-21,Aberdeen FC,Dundee FC,,,ScottishPremiership
+2026-02-21,St. Mirren FC,Motherwell FC,,,ScottishPremiership
+2026-02-21,Heart of Midlothian,Falkirk FC,,,ScottishPremiership
+2026-02-21,Livingston FC,Rangers FC,,,ScottishPremiership
+2026-02-28,Dundee FC,Hibernian FC,,,ScottishPremiership
+2026-02-28,Falkirk FC,Kilmarnock FC,,,ScottishPremiership
+2026-02-28,Rangers FC,Celtic FC,,,ScottishPremiership
+2026-02-28,Heart of Midlothian,Aberdeen FC,,,ScottishPremiership
+2026-02-28,Livingston FC,St. Mirren FC,,,ScottishPremiership
+2026-02-28,Motherwell FC,Dundee United,,,ScottishPremiership
+2026-03-14,Celtic FC,Motherwell FC,,,ScottishPremiership
+2026-03-14,Dundee FC,Dundee United,,,ScottishPremiership
+2026-03-14,Aberdeen FC,Falkirk FC,,,ScottishPremiership
+2026-03-14,Kilmarnock FC,Heart of Midlothian,,,ScottishPremiership
+2026-03-14,St. Mirren FC,Rangers FC,,,ScottishPremiership
+2026-03-14,Hibernian FC,Livingston FC,,,ScottishPremiership
+2026-03-21,Dundee United,Celtic FC,,,ScottishPremiership
+2026-03-21,Falkirk FC,St. Mirren FC,,,ScottishPremiership
+2026-03-21,Kilmarnock FC,Livingston FC,,,ScottishPremiership
+2026-03-21,Rangers FC,Aberdeen FC,,,ScottishPremiership
+2026-03-21,Heart of Midlothian,Dundee FC,,,ScottishPremiership
+2026-03-21,Motherwell FC,Hibernian FC,,,ScottishPremiership
+2026-04-04,Dundee FC,Celtic FC,,,ScottishPremiership
+2026-04-04,St. Mirren FC,Aberdeen FC,,,ScottishPremiership
+2026-04-04,Rangers FC,Dundee United,,,ScottishPremiership
+2026-04-04,Hibernian FC,Kilmarnock FC,,,ScottishPremiership
+2026-04-04,Livingston FC,Heart of Midlothian,,,ScottishPremiership
+2026-04-04,Motherwell FC,Falkirk FC,,,ScottishPremiership
+2026-04-11,Celtic FC,St. Mirren FC,,,ScottishPremiership
+2026-04-11,Dundee United,Livingston FC,,,ScottishPremiership
+2026-04-11,Falkirk FC,Rangers FC,,,ScottishPremiership
+2026-04-11,Aberdeen FC,Hibernian FC,,,ScottishPremiership
+2026-04-11,Kilmarnock FC,Dundee FC,,,ScottishPremiership
+2026-04-11,Heart of Midlothian,Motherwell FC,,,ScottishPremiership
+
+
+
+
+
 2025-11-22,,Udinese Calcio,Bologna FC 1909,Serie A
 2025-11-22,18:00,ACF Fiorentina,Juventus FC,Serie A
 2025-11-22,20:45,SSC Napoli,Atalanta BC,Serie A
@@ -1182,3 +2293,204 @@ date,time,home,away,league
 2026-05-24,,SSC Napoli,Udinese Calcio,Serie A
 2026-05-24,,US Cremonese,Como 1907,Serie A
 2026-05-24,,US Lecce,Genoa CFC,Serie A
+
+
+2025-11-22 14:30,Kayserispor,Gaziantep,TurkishSuperLig
+2025-11-22 17:00,Eyüpspor,Fatih Karagümrük,TurkishSuperLig
+2025-11-22 20:00,Galatasaray,Gençlerbirligi,TurkishSuperLig
+2025-11-23 14:30,Göztepe,Kocaelispor,TurkishSuperLig
+2025-11-23 17:00,Besiktas,Samsunspor,TurkishSuperLig
+2025-11-23 17:00,Alanyaspor,Kasimpasa,TurkishSuperLig
+2025-11-23 20:00,Çaykur Rizespor,Fenerbahçe,TurkishSuperLig
+2025-11-24 20:00,Konyaspor,Antalyaspor,TurkishSuperLig
+2025-11-24 20:00,Istanbul Basaksehir,Trabzonspor,TurkishSuperLig
+2025-11-28 20:00,Kocaelispor,Gençlerbirligi,TurkishSuperLig
+2025-11-29 14:30,Çaykur Rizespor,Kayserispor,TurkishSuperLig
+2025-11-29 17:00,Gaziantep,Eyüpspor,TurkishSuperLig
+2025-11-29 20:00,Kasimpasa,Istanbul Basaksehir,TurkishSuperLig
+2025-11-29 20:00,Trabzonspor,Konyaspor,TurkishSuperLig
+2025-11-30 17:00,Antalyaspor,Göztepe,TurkishSuperLig
+2025-11-30 20:00,Fatih Karagümrük,Besiktas,TurkishSuperLig
+2025-12-01 20:00,Samsunspor,Alanyaspor,TurkishSuperLig
+2025-12-01 20:00,Fenerbahçe,Galatasaray,TurkishSuperLig
+2025-12-05 20:00,Galatasaray,Samsunspor,TurkishSuperLig
+2025-12-06 14:30,Eyüpspor,Kayserispor,TurkishSuperLig
+2025-12-06 17:00,Konyaspor,Çaykur Rizespor,TurkishSuperLig
+2025-12-06 20:00,Istanbul Basaksehir,Fenerbahçe,TurkishSuperLig
+2025-12-07 14:30,Gençlerbirligi,Fatih Karagümrük,TurkishSuperLig
+2025-12-07 17:00,Kocaelispor,Kasimpasa,TurkishSuperLig
+2025-12-07 20:00,Göztepe,Trabzonspor,TurkishSuperLig
+2025-12-08 20:00,Besiktas,Gaziantep,TurkishSuperLig
+2025-12-08 20:00,Alanyaspor,Antalyaspor,TurkishSuperLig
+2025-12-12 20:00,Kasimpasa,Gençlerbirligi,TurkishSuperLig
+2025-12-13 14:30,Çaykur Rizespor,Eyüpspor,TurkishSuperLig
+2025-12-13 17:00,Kayserispor,Alanyaspor,TurkishSuperLig
+2025-12-13 20:00,Antalyaspor,Galatasaray,TurkishSuperLig
+2025-12-14 14:30,Gaziantep,Göztepe,TurkishSuperLig
+2025-12-14 17:00,Fatih Karagümrük,Kocaelispor,TurkishSuperLig
+2025-12-14 20:00,Trabzonspor,Besiktas,TurkishSuperLig
+2025-12-14 20:00,Samsunspor,Istanbul Basaksehir,TurkishSuperLig
+2025-12-15 20:00,Fenerbahçe,Konyaspor,TurkishSuperLig
+2025-12-21 16:00,Eyüpspor,Fenerbahçe,TurkishSuperLig
+2025-12-21 16:00,Konyaspor,Kayserispor,TurkishSuperLig
+2025-12-21 16:00,Besiktas,Çaykur Rizespor,TurkishSuperLig
+2025-12-21 16:00,Alanyaspor,Fatih Karagümrük,TurkishSuperLig
+2025-12-21 16:00,Istanbul Basaksehir,Gaziantep,TurkishSuperLig
+2025-12-21 16:00,Göztepe,Samsunspor,TurkishSuperLig
+2025-12-21 16:00,Galatasaray,Kasimpasa,TurkishSuperLig
+2025-12-21 16:00,Gençlerbirligi,Trabzonspor,TurkishSuperLig
+2025-12-21 16:00,Kocaelispor,Antalyaspor,TurkishSuperLig
+2026-01-18 16:00,Konyaspor,Eyüpspor,TurkishSuperLig
+2026-01-18 16:00,Kasimpasa,Antalyaspor,TurkishSuperLig
+2026-01-18 16:00,Kocaelispor,Trabzonspor,TurkishSuperLig
+2026-01-18 16:00,Gençlerbirligi,Samsunspor,TurkishSuperLig
+2026-01-18 16:00,Istanbul Basaksehir,Fatih Karagümrük,TurkishSuperLig
+2026-01-18 16:00,Galatasaray,Gaziantep,TurkishSuperLig
+2026-01-18 16:00,Alanyaspor,Fenerbahçe,TurkishSuperLig
+2026-01-18 16:00,Göztepe,Çaykur Rizespor,TurkishSuperLig
+2026-01-18 16:00,Besiktas,Kayserispor,TurkishSuperLig
+2026-01-25 16:00,Eyüpspor,Besiktas,TurkishSuperLig
+2026-01-25 16:00,Trabzonspor,Kasimpasa,TurkishSuperLig
+2026-01-25 16:00,Gaziantep,Konyaspor,TurkishSuperLig
+2026-01-25 16:00,Çaykur Rizespor,Alanyaspor,TurkishSuperLig
+2026-01-25 16:00,Kayserispor,Istanbul Basaksehir,TurkishSuperLig
+2026-01-25 16:00,Fenerbahçe,Göztepe,TurkishSuperLig
+2026-01-25 16:00,Fatih Karagümrük,Galatasaray,TurkishSuperLig
+2026-01-25 16:00,Antalyaspor,Gençlerbirligi,TurkishSuperLig
+2026-01-25 16:00,Samsunspor,Kocaelispor,TurkishSuperLig
+2026-02-01 16:00,Alanyaspor,Eyüpspor,TurkishSuperLig
+2026-02-01 16:00,Besiktas,Konyaspor,TurkishSuperLig
+2026-02-01 16:00,Antalyaspor,Trabzonspor,TurkishSuperLig
+2026-02-01 16:00,Kasimpasa,Samsunspor,TurkishSuperLig
+2026-02-01 16:00,Göztepe,Fatih Karagümrük,TurkishSuperLig
+2026-02-01 16:00,Gençlerbirligi,Gaziantep,TurkishSuperLig
+2026-02-01 16:00,Kocaelispor,Fenerbahçe,TurkishSuperLig
+2026-02-01 16:00,Istanbul Basaksehir,Çaykur Rizespor,TurkishSuperLig
+2026-02-01 16:00,Galatasaray,Kayserispor,TurkishSuperLig
+2026-02-08 16:00,Eyüpspor,Istanbul Basaksehir,TurkishSuperLig
+2026-02-08 16:00,Gaziantep,Kasimpasa,TurkishSuperLig
+2026-02-08 16:00,Fatih Karagümrük,Antalyaspor,TurkishSuperLig
+2026-02-08 16:00,Samsunspor,Trabzonspor,TurkishSuperLig
+2026-02-08 16:00,Besiktas,Alanyaspor,TurkishSuperLig
+2026-02-08 16:00,Konyaspor,Göztepe,TurkishSuperLig
+2026-02-08 16:00,Çaykur Rizespor,Galatasaray,TurkishSuperLig
+2026-02-08 16:00,Fenerbahçe,Gençlerbirligi,TurkishSuperLig
+2026-02-08 16:00,Kayserispor,Kocaelispor,TurkishSuperLig
+2026-02-15 16:00,Galatasaray,Eyüpspor,TurkishSuperLig
+2026-02-15 16:00,Alanyaspor,Konyaspor,TurkishSuperLig
+2026-02-15 16:00,Istanbul Basaksehir,Besiktas,TurkishSuperLig
+2026-02-15 16:00,Antalyaspor,Samsunspor,TurkishSuperLig
+2026-02-15 16:00,Kasimpasa,Fatih Karagümrük,TurkishSuperLig
+2026-02-15 16:00,Kocaelispor,Gaziantep,TurkishSuperLig
+2026-02-15 16:00,Trabzonspor,Fenerbahçe,TurkishSuperLig
+2026-02-15 16:00,Gençlerbirligi,Çaykur Rizespor,TurkishSuperLig
+2026-02-15 16:00,Göztepe,Kayserispor,TurkishSuperLig
+2026-02-22 16:00,Eyüpspor,Gençlerbirligi,TurkishSuperLig
+2026-02-22 16:00,Fenerbahçe,Kasimpasa,TurkishSuperLig
+2026-02-22 16:00,Kayserispor,Antalyaspor,TurkishSuperLig
+2026-02-22 16:00,Gaziantep,Trabzonspor,TurkishSuperLig
+2026-02-22 16:00,Fatih Karagümrük,Samsunspor,TurkishSuperLig
+2026-02-22 16:00,Alanyaspor,Istanbul Basaksehir,TurkishSuperLig
+2026-02-22 16:00,Besiktas,Göztepe,TurkishSuperLig
+2026-02-22 16:00,Konyaspor,Galatasaray,TurkishSuperLig
+2026-02-22 16:00,Çaykur Rizespor,Kocaelispor,TurkishSuperLig
+2026-03-01 16:00,Göztepe,Eyüpspor,TurkishSuperLig
+2026-03-01 16:00,Istanbul Basaksehir,Konyaspor,TurkishSuperLig
+2026-03-01 16:00,Kocaelispor,Besiktas,TurkishSuperLig
+2026-03-01 16:00,Galatasaray,Alanyaspor,TurkishSuperLig
+2026-03-01 16:00,Trabzonspor,Fatih Karagümrük,TurkishSuperLig
+2026-03-01 16:00,Samsunspor,Gaziantep,TurkishSuperLig
+2026-03-01 16:00,Antalyaspor,Fenerbahçe,TurkishSuperLig
+2026-03-01 16:00,Kasimpasa,Çaykur Rizespor,TurkishSuperLig
+2026-03-01 16:00,Gençlerbirligi,Kayserispor,TurkishSuperLig
+2026-03-08 16:00,Eyüpspor,Kocaelispor,TurkishSuperLig
+2026-03-08 16:00,Konyaspor,Kasimpasa,TurkishSuperLig
+2026-03-08 16:00,Çaykur Rizespor,Antalyaspor,TurkishSuperLig
+2026-03-08 16:00,Kayserispor,Trabzonspor,TurkishSuperLig
+2026-03-08 16:00,Fenerbahçe,Samsunspor,TurkishSuperLig
+2026-03-08 16:00,Gaziantep,Fatih Karagümrük,TurkishSuperLig
+2026-03-08 16:00,Istanbul Basaksehir,Göztepe,TurkishSuperLig
+2026-03-08 16:00,Besiktas,Galatasaray,TurkishSuperLig
+2026-03-08 16:00,Alanyaspor,Gençlerbirligi,TurkishSuperLig
+2026-03-15 16:00,Kasimpasa,Eyüpspor,TurkishSuperLig
+2026-03-15 16:00,Kocaelispor,Konyaspor,TurkishSuperLig
+2026-03-15 16:00,Gençlerbirligi,Besiktas,TurkishSuperLig
+2026-03-15 16:00,Göztepe,Alanyaspor,TurkishSuperLig
+2026-03-15 16:00,Galatasaray,Istanbul Basaksehir,TurkishSuperLig
+2026-03-15 16:00,Antalyaspor,Gaziantep,TurkishSuperLig
+2026-03-15 16:00,Fatih Karagümrük,Fenerbahçe,TurkishSuperLig
+2026-03-15 16:00,Trabzonspor,Çaykur Rizespor,TurkishSuperLig
+2026-03-15 16:00,Samsunspor,Kayserispor,TurkishSuperLig
+2026-03-22 16:00,Eyüpspor,Trabzonspor,TurkishSuperLig
+2026-03-22 16:00,Besiktas,Kasimpasa,TurkishSuperLig
+2026-03-22 16:00,Istanbul Basaksehir,Antalyaspor,TurkishSuperLig
+2026-03-22 16:00,Çaykur Rizespor,Samsunspor,TurkishSuperLig
+2026-03-22 16:00,Kayserispor,Fatih Karagümrük,TurkishSuperLig
+2026-03-22 16:00,Fenerbahçe,Gaziantep,TurkishSuperLig
+2026-03-22 16:00,Göztepe,Galatasaray,TurkishSuperLig
+2026-03-22 16:00,Konyaspor,Gençlerbirligi,TurkishSuperLig
+2026-03-22 16:00,Alanyaspor,Kocaelispor,TurkishSuperLig
+2026-04-05 16:00,Antalyaspor,Eyüpspor,TurkishSuperLig
+2026-04-05 16:00,Samsunspor,Konyaspor,TurkishSuperLig
+2026-04-05 16:00,Fenerbahçe,Besiktas,TurkishSuperLig
+2026-04-05 16:00,Gaziantep,Alanyaspor,TurkishSuperLig
+2026-04-05 16:00,Kocaelispor,Istanbul Basaksehir,TurkishSuperLig
+2026-04-05 16:00,Gençlerbirligi,Göztepe,TurkishSuperLig
+2026-04-05 16:00,Trabzonspor,Galatasaray,TurkishSuperLig
+2026-04-05 16:00,Fatih Karagümrük,Çaykur Rizespor,TurkishSuperLig
+2026-04-05 16:00,Kasimpasa,Kayserispor,TurkishSuperLig
+2026-04-12 16:00,Eyüpspor,Samsunspor,TurkishSuperLig
+2026-04-12 16:00,Göztepe,Kasimpasa,TurkishSuperLig
+2026-04-12 16:00,Besiktas,Antalyaspor,TurkishSuperLig
+2026-04-12 16:00,Alanyaspor,Trabzonspor,TurkishSuperLig
+2026-04-12 16:00,Konyaspor,Fatih Karagümrük,TurkishSuperLig
+2026-04-12 16:00,Çaykur Rizespor,Gaziantep,TurkishSuperLig
+2026-04-12 16:00,Kayserispor,Fenerbahçe,TurkishSuperLig
+2026-04-12 16:00,Istanbul Basaksehir,Gençlerbirligi,TurkishSuperLig
+2026-04-12 16:00,Galatasaray,Kocaelispor,TurkishSuperLig
+2026-04-19 16:00,Fatih Karagümrük,Eyüpspor,TurkishSuperLig
+2026-04-19 16:00,Antalyaspor,Konyaspor,TurkishSuperLig
+2026-04-19 16:00,Samsunspor,Besiktas,TurkishSuperLig
+2026-04-19 16:00,Kasimpasa,Alanyaspor,TurkishSuperLig
+2026-04-19 16:00,Trabzonspor,Istanbul Basaksehir,TurkishSuperLig
+2026-04-19 16:00,Kocaelispor,Göztepe,TurkishSuperLig
+2026-04-19 16:00,Gençlerbirligi,Galatasaray,TurkishSuperLig
+2026-04-19 16:00,Fenerbahçe,Çaykur Rizespor,TurkishSuperLig
+2026-04-19 16:00,Gaziantep,Kayserispor,TurkishSuperLig
+2026-04-26 16:00,Eyüpspor,Gaziantep,TurkishSuperLig
+2026-04-26 16:00,Istanbul Basaksehir,Kasimpasa,TurkishSuperLig
+2026-04-26 16:00,Göztepe,Antalyaspor,TurkishSuperLig
+2026-04-26 16:00,Konyaspor,Trabzonspor,TurkishSuperLig
+2026-04-26 16:00,Alanyaspor,Samsunspor,TurkishSuperLig
+2026-04-26 16:00,Besiktas,Fatih Karagümrük,TurkishSuperLig
+2026-04-26 16:00,Galatasaray,Fenerbahçe,TurkishSuperLig
+2026-04-26 16:00,Kayserispor,Çaykur Rizespor,TurkishSuperLig
+2026-04-26 16:00,Gençlerbirligi,Kocaelispor,TurkishSuperLig
+2026-05-03 16:00,Kayserispor,Eyüpspor,TurkishSuperLig
+2026-05-03 16:00,Çaykur Rizespor,Konyaspor,TurkishSuperLig
+2026-05-03 16:00,Gaziantep,Besiktas,TurkishSuperLig
+2026-05-03 16:00,Antalyaspor,Alanyaspor,TurkishSuperLig
+2026-05-03 16:00,Fenerbahçe,Istanbul Basaksehir,TurkishSuperLig
+2026-05-03 16:00,Trabzonspor,Göztepe,TurkishSuperLig
+2026-05-03 16:00,Samsunspor,Galatasaray,TurkishSuperLig
+2026-05-03 16:00,Fatih Karagümrük,Gençlerbirligi,TurkishSuperLig
+2026-05-03 16:00,Kasimpasa,Kocaelispor,TurkishSuperLig
+2026-05-10 16:00,Eyüpspor,Çaykur Rizespor,TurkishSuperLig
+2026-05-10 16:00,Gençlerbirligi,Kasimpasa,TurkishSuperLig
+2026-05-10 16:00,Galatasaray,Antalyaspor,TurkishSuperLig
+2026-05-10 16:00,Besiktas,Trabzonspor,TurkishSuperLig
+2026-05-10 16:00,Istanbul Basaksehir,Samsunspor,TurkishSuperLig
+2026-05-10 16:00,Kocaelispor,Fatih Karagümrük,TurkishSuperLig
+2026-05-10 16:00,Göztepe,Gaziantep,TurkishSuperLig
+2026-05-10 16:00,Konyaspor,Fenerbahçe,TurkishSuperLig
+2026-05-10 16:00,Alanyaspor,Kayserispor,TurkishSuperLig
+2026-05-17 16:00,Fenerbahçe,Eyüpspor,TurkishSuperLig
+2026-05-17 16:00,Kayserispor,Konyaspor,TurkishSuperLig
+2026-05-17 16:00,Çaykur Rizespor,Besiktas,TurkishSuperLig
+2026-05-17 16:00,Fatih Karagümrük,Alanyaspor,TurkishSuperLig
+2026-05-17 16:00,Gaziantep,Istanbul Basaksehir,TurkishSuperLig
+2026-05-17 16:00,Samsunspor,Göztepe,TurkishSuperLig
+2026-05-17 16:00,Kasimpasa,Galatasaray,TurkishSuperLig
+2026-05-17 16:00,Trabzonspor,Gençlerbirligi,TurkishSuperLig
+2026-05-17 16:00,Antalyaspor,Kocaelispor,TurkishSuperLig
+
