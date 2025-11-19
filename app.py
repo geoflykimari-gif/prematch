@@ -22,17 +22,17 @@ TEAM_ALIASES = {
     "MU": "Manchester United",
     "PSG": "Paris Saint-Germain",
     "Inter": "Inter Milan",
-    # add more aliases as needed
 }
 
 def normalize_team(name):
     if not name: return ""
     name = name.strip()
-    # Handle title-case variations
+    # Handle title-case + aliases
     return TEAM_ALIASES.get(name, TEAM_ALIASES.get(name.title(), name))
 
+
 # ------------------------------------------------------------
-# CSV LOADING
+# SAFE CSV LOADING
 # ------------------------------------------------------------
 def safe_load_csv(path):
     try:
@@ -48,165 +48,171 @@ def safe_load_csv(path):
 
     df = df.fillna("")
 
-    # Normalize team names
     df["home"] = df["home"].apply(normalize_team)
     df["away"] = df["away"].apply(normalize_team)
+
     return df
 
 
+# ------------------------------------------------------------
+# MASTER DATA LOADER
+# ------------------------------------------------------------
 def get_master():
     global _df_master
     if _df_master is None:
-        _df_master = safe_load_csv(MASTER_CSV)
-        for col in ["fthg", "ftag"]:
-            if col in _df_master:
-                _df_master[col] = pd.to_numeric(_df_master[col], errors="coerce").fillna(0).astype(float)
-        if "date" in _df_master:
-            _df_master["date"] = pd.to_datetime(_df_master["date"], errors="coerce")
-        print("MASTER LOADED:", _df_master.shape)
+        df = safe_load_csv(MASTER_CSV)
+
+        if "fthg" in df:
+            df["fthg"] = pd.to_numeric(df["fthg"], errors="coerce").fillna(0)
+        if "ftag" in df:
+            df["ftag"] = pd.to_numeric(df["ftag"], errors="coerce").fillna(0)
+
+        df["date"] = pd.to_datetime(df["date"], errors="coerce", dayfirst=True)
+
+        _df_master = df
+        print("MASTER LOADED:", df.shape)
+
     return _df_master
 
 
+# ------------------------------------------------------------
+# UPCOMING MATCHES LOADER
+# ------------------------------------------------------------
 def get_upcoming():
     global _df_upcoming
     if _df_upcoming is None:
         df = safe_load_csv(UPCOMING_CSV)
         df["league"] = df["league"].str.title().fillna("Unknown")
 
-        def parse_datetime(row):
-            date_str = str(row.get("date", "")).strip()
-            time_str = str(row.get("time", "")).strip() or "00:00"
-            formats = ["%Y-%m-%d %H:%M", "%d/%m/%Y %H:%M", "%Y-%m-%d", "%d/%m/%Y"]
-            for fmt in formats:
+        # Parse datetime
+        def parse_dt(row):
+            d = str(row["date"]).strip()
+            t = str(row["time"]).strip() or "00:00"
+            fmts = ["%d/%m/%Y %H:%M", "%Y-%m-%d %H:%M", "%d/%m/%Y", "%Y-%m-%d"]
+            for f in fmts:
                 try:
-                    return datetime.strptime(f"{date_str} {time_str}", fmt)
+                    return datetime.strptime(f"{d} {t}", f)
                 except:
-                    continue
-            print(f"[WARN] Failed to parse date/time: '{date_str} {time_str}'")
+                    pass
             return None
 
-        df["datetime"] = df.apply(parse_datetime, axis=1)
+        df["datetime"] = df.apply(parse_dt, axis=1)
         df = df[df["datetime"].notna()]
 
         df["home"] = df["home"].apply(normalize_team)
         df["away"] = df["away"].apply(normalize_team)
 
         _df_upcoming = df[["home", "away", "league", "datetime"]]
-        print(f"UPCOMING LOADED: {_df_upcoming.shape}")
-        print(_df_upcoming.head())
+        print("UPCOMING LOADED:", _df_upcoming.shape)
 
     return _df_upcoming
 
-# ------------------------------------------------------------
-# LEAGUE ORDER
-# ------------------------------------------------------------
-LEAGUE_ORDER = [
-    "Epl", "Championship", "La Liga", "Serie A", "Ligue 1",
-    "Bundesliga", "Eredivisie", "Scottish Premiership",
-    "Turkish Super Lig", "Primera División", "Argentina Primera"
-]
-
-def league_rank(league):
-    try:
-        return LEAGUE_ORDER.index(str(league).strip())
-    except ValueError:
-        return 999
 
 # ------------------------------------------------------------
-# PERFORMANCE-BASED PREDICTION ENGINE
+# LEAGUE DETECTION FOR LAST MATCHES
+# ------------------------------------------------------------
+def detect_league(home, away):
+    df = get_master()
+    rows = df[((df.home == home) & (df.away == away)) |
+              ((df.home == away) & (df.away == home))]
+    if len(rows) == 0:
+        return None
+    return rows.iloc[0].league
+
+
+# ------------------------------------------------------------
+# PREDICTION ENGINE
 # ------------------------------------------------------------
 def realistic_prediction(home, away):
     home = normalize_team(home)
     away = normalize_team(away)
-    df = get_master().copy()
-    df = df.dropna(subset=["date"])
+    df = get_master().dropna(subset=["date"]).copy()
 
-    # ---- Last N matches for form ----
+    # Last N matches
     def last_matches(team, n=10):
-        home_m = df[df.home == team]
-        away_m = df[df.away == team]
-        recent = pd.concat([home_m, away_m]).sort_values("date", ascending=False)
-        return recent.head(n)
+        h = df[df.home == team]
+        a = df[df.away == team]
+        return pd.concat([h, a]).sort_values("date", ascending=False).head(n)
 
-    # ---- Season performance stats ----
+    # Team stats
     def team_stats(team):
-        home_m = df[df.home == team]
-        away_m = df[df.away == team]
-        matches = pd.concat([home_m, away_m])
-        scored = home_m["fthg"].sum() + away_m["ftag"].sum()
-        conceded = home_m["ftag"].sum() + away_m["fthg"].sum()
-        games = len(matches)
+        h = df[df.home == team]
+        a = df[df.away == team]
+        matches = pd.concat([h, a])
+        scored = h["fthg"].sum() + a["ftag"].sum()
+        conceded = h["ftag"].sum() + a["fthg"].sum()
+        g = len(matches)
         return {
-            "avg_scored": scored / games if games else 0.8,
-            "avg_conceded": conceded / games if games else 1.0
+            "avg_scored": scored / g if g else 0.8,
+            "avg_conceded": conceded / g if g else 1.0
         }
 
-    home_stats = team_stats(home)
-    away_stats = team_stats(away)
+    hs = team_stats(home)
+    aw = team_stats(away)
 
-    # ---- Expected goals ----
-    home_exp = 0.6 * home_stats["avg_scored"] + 0.4 * away_stats["avg_conceded"]
-    away_exp = 0.6 * away_stats["avg_scored"] + 0.4 * home_stats["avg_conceded"]
+    home_exp = 0.6 * hs["avg_scored"] + 0.4 * aw["avg_conceded"]
+    away_exp = 0.6 * aw["avg_scored"] + 0.4 * hs["avg_conceded"]
 
-    # Optional: home advantage
-    home_exp *= 1.1
+    home_exp *= 1.1  # home advantage
 
-    # ---- Poisson probability ----
-    def poisson_prob(lam, k):
+    # Poisson model
+    def pois(lam, k):
         return math.exp(-lam) * lam**k / math.factorial(k)
 
-    prob_matrix = [
-        [poisson_prob(home_exp, h) * poisson_prob(away_exp, a) for a in range(6)]
-        for h in range(6)
-    ]
+    home_p = sum(pois(home_exp, h) * pois(away_exp, a) for h in range(6) for a in range(6) if h > a)
+    draw_p = sum(pois(home_exp, h) * pois(away_exp, h) for h in range(6))
+    away_p = sum(pois(home_exp, h) * pois(away_exp, a) for h in range(6) for a in range(6) if h < a)
 
-    home_prob = sum(prob_matrix[h][a] for h in range(6) for a in range(6) if h > a)
-    draw_prob = sum(prob_matrix[h][h] for h in range(6))
-    away_prob = sum(prob_matrix[h][a] for h in range(6) for a in range(6) if h < a)
+    total = home_p + draw_p + away_p
+    home_pct = round(home_p / total * 100, 1)
+    draw_pct = round(draw_p / total * 100, 1)
+    away_pct = round(away_p / total * 100, 1)
 
-    total = home_prob + draw_prob + away_prob
-    home_win = round(home_prob / total * 100, 1)
-    draw = round(draw_prob / total * 100, 1)
-    away_win = round(away_prob / total * 100, 1)
+    # Expected goal → rounded score
+    def xg_to_score(x):
+        if x < 0.5: return 0
+        if x < 1.2: return 1
+        if x < 2.0: return 2
+        return 3
 
-    # ---- Full-time predicted score (rounded from expected goals) ----
-    def xg_to_score(xg):
-        if xg < 0.5: return 0
-        elif xg < 1.2: return 1
-        elif xg < 2: return 2
-        else: return 3
+    ft_h = xg_to_score(home_exp)
+    ft_a = xg_to_score(away_exp)
+    btts = "YES" if (ft_h > 0 and ft_a > 0) else "NO"
+    over25 = "YES" if (ft_h + ft_a) > 2 else "NO"
 
-    ft_home = xg_to_score(home_exp)
-    ft_away = xg_to_score(away_exp)
-    btts = "YES" if ft_home > 0 and ft_away > 0 else "NO"
-    over25 = "YES" if (ft_home + ft_away) > 2 else "NO"
+    # ---- LAST 4 MATCHES (LEAGUE FILTERED) ----
+    league = detect_league(home, away)
+    df_l = df[df["league"].str.lower() == league.lower()] if league else df
 
-    # ---- Last 4 matches ----
     def last4(team):
-        recent = last_matches(team, n=4)
-        res = []
-        for _, r in recent.iterrows():
-            hg, ag = int(r.fthg), int(r.ftag)
-            match_date = r.date.strftime("%d/%m/%Y") if pd.notna(r.date) else ""
-            if r.home == team:
-                outcome = "W" if hg>ag else "L" if hg<ag else "D"
-                score = f"{r.home} {hg}-{ag} {r.away} ({match_date})"
+        h = df_l[df_l.home == team]
+        a = df_l[df_l.away == team]
+        r = pd.concat([h, a]).sort_values("date", ascending=False).head(4)
+
+        out = []
+        for _, row in r.iterrows():
+            hg, ag = int(row.fthg), int(row.ftag)
+            d = row.date.strftime("%d/%m/%Y") if pd.notna(row.date) else ""
+            if row.home == team:
+                outcome = "W" if hg > ag else "L" if hg < ag else "D"
+                score = f"{row.home} {hg}-{ag} {row.away} ({d})"
             else:
-                outcome = "W" if ag>hg else "L" if ag<hg else "D"
-                score = f"{r.away} {ag}-{hg} {r.home} ({match_date})"
-            res.append({"outcome": outcome, "score": score})
-        return res
+                outcome = "W" if ag > hg else "L" if ag < hg else "D"
+                score = f"{row.away} {ag}-{hg} {row.home} ({d})"
+            out.append({"outcome": outcome, "score": score})
+        return out
 
     return {
-        "ft_score": f"{ft_home} - {ft_away}",
-        "home_win": home_win,
-        "away_win": away_win,
-        "draw": draw,
+        "ft_score": f"{ft_h} - {ft_a}",
+        "home_win": home_pct,
+        "draw": draw_pct,
+        "away_win": away_pct,
         "btts": btts,
         "over25": over25,
         "home_form": last4(home),
         "away_form": last4(away),
     }
+
 
 # ------------------------------------------------------------
 # ROUTES
@@ -222,21 +228,21 @@ def api_upcoming():
     today = pd.Timestamp.now().normalize()
     df = df[df["datetime"].dt.normalize() >= today]
 
-    out = []
-    for league, group in df.groupby("league"):
-        group_sorted = group.sort_values("datetime").head(5)
-        for _, r in group_sorted.iterrows():
-            pred = realistic_prediction(r.home, r.away)
-            out.append({
-                "home": r.home,
-                "away": r.away,
-                "date": r.datetime.strftime("%Y-%m-%d"),
-                "time": r.datetime.strftime("%H:%M") if r.datetime.time() != datetime.min.time() else "",
-                "league": league,
-                "prediction": pred
-            })
+    # TRUE GLOBAL CHRONOLOGY
+    df = df.sort_values("datetime")
 
-    out = sorted(out, key=lambda x: (league_rank(x["league"]), x["date"], x["time"]))
+    out = []
+    for _, r in df.iterrows():
+        pred = realistic_prediction(r.home, r.away)
+        out.append({
+            "home": r.home,
+            "away": r.away,
+            "date": r.datetime.strftime("%Y-%m-%d"),
+            "time": r.datetime.strftime("%H:%M"),
+            "league": r.league,
+            "prediction": pred
+        })
+
     return jsonify(out)
 
 
@@ -253,7 +259,7 @@ def match_page():
 
 
 # ------------------------------------------------------------
-# RUN
+# RUN APP
 # ------------------------------------------------------------
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
