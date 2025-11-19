@@ -16,6 +16,16 @@ _df_upcoming = None
 # TEAM ALIASES
 # ------------------------------------------------------------
 TEAM_ALIASES = {
+    # Championship
+    "Preston": "Preston North End",
+    "Bristol City FC": "Bristol City",
+    "Charlton": "Charlton Athletic",
+    "Sheffield Wed": "Sheffield Wednesday",
+    "Blackburn": "Blackburn Rovers",
+    "Middlesbrough FC": "Middlesbrough",
+    "Portsmouth FC": "Portsmouth",
+    "Hull": "Hull City",
+    # EPL examples
     "Man City": "Manchester City",
     "ManCity": "Manchester City",
     "Man Utd": "Manchester United",
@@ -25,14 +35,13 @@ TEAM_ALIASES = {
 }
 
 def normalize_team(name):
-    if not name: return ""
-    name = name.strip()
-    # Handle title-case + aliases
-    return TEAM_ALIASES.get(name, TEAM_ALIASES.get(name.title(), name))
-
+    if not name:
+        return ""
+    name = str(name).strip()
+    return TEAM_ALIASES.get(name, name.title())
 
 # ------------------------------------------------------------
-# SAFE CSV LOADING
+# CSV LOADING
 # ------------------------------------------------------------
 def safe_load_csv(path):
     try:
@@ -41,178 +50,165 @@ def safe_load_csv(path):
         df = pd.read_csv(path, on_bad_lines="skip", encoding="latin1")
 
     df.columns = [c.lower().strip() for c in df.columns]
-
     for col in ["date", "time", "home", "away", "league"]:
         if col not in df:
             df[col] = ""
-
     df = df.fillna("")
-
-    df["home"] = df["home"].apply(normalize_team)
-    df["away"] = df["away"].apply(normalize_team)
-
     return df
 
-
-# ------------------------------------------------------------
-# MASTER DATA LOADER
-# ------------------------------------------------------------
 def get_master():
     global _df_master
     if _df_master is None:
-        df = safe_load_csv(MASTER_CSV)
-
-        if "fthg" in df:
-            df["fthg"] = pd.to_numeric(df["fthg"], errors="coerce").fillna(0)
-        if "ftag" in df:
-            df["ftag"] = pd.to_numeric(df["ftag"], errors="coerce").fillna(0)
-
-        df["date"] = pd.to_datetime(df["date"], errors="coerce", dayfirst=True)
-
-        _df_master = df
-        print("MASTER LOADED:", df.shape)
-
+        _df_master = safe_load_csv(MASTER_CSV)
+        for col in ["fthg", "ftag"]:
+            if col in _df_master:
+                _df_master[col] = pd.to_numeric(_df_master[col], errors="coerce").fillna(0).astype(float)
+        if "date" in _df_master:
+            _df_master["date"] = pd.to_datetime(_df_master["date"], errors="coerce")
+        # Normalize team names
+        _df_master["home"] = _df_master["home"].apply(normalize_team)
+        _df_master["away"] = _df_master["away"].apply(normalize_team)
+        print("MASTER LOADED:", _df_master.shape)
     return _df_master
 
-
-# ------------------------------------------------------------
-# UPCOMING MATCHES LOADER
-# ------------------------------------------------------------
 def get_upcoming():
     global _df_upcoming
     if _df_upcoming is None:
         df = safe_load_csv(UPCOMING_CSV)
         df["league"] = df["league"].str.title().fillna("Unknown")
 
-        # Parse datetime
-        def parse_dt(row):
-            d = str(row["date"]).strip()
-            t = str(row["time"]).strip() or "00:00"
-            fmts = ["%d/%m/%Y %H:%M", "%Y-%m-%d %H:%M", "%d/%m/%Y", "%Y-%m-%d"]
-            for f in fmts:
+        def parse_datetime(row):
+            date_str = str(row.get("date", "")).strip()
+            time_str = str(row.get("time", "")).strip() or "00:00"
+            formats = ["%Y-%m-%d %H:%M", "%d/%m/%Y %H:%M", "%Y-%m-%d", "%d/%m/%Y"]
+            for fmt in formats:
                 try:
-                    return datetime.strptime(f"{d} {t}", f)
+                    return pd.to_datetime(f"{date_str} {time_str}", format=fmt)
                 except:
-                    pass
+                    continue
             return None
 
-        df["datetime"] = df.apply(parse_dt, axis=1)
+        df["datetime"] = df.apply(parse_datetime, axis=1)
         df = df[df["datetime"].notna()]
 
+        # Normalize team names
         df["home"] = df["home"].apply(normalize_team)
         df["away"] = df["away"].apply(normalize_team)
 
         _df_upcoming = df[["home", "away", "league", "datetime"]]
-        print("UPCOMING LOADED:", _df_upcoming.shape)
-
+        print(f"UPCOMING LOADED: {_df_upcoming.shape}")
     return _df_upcoming
 
+# ------------------------------------------------------------
+# LEAGUE ORDER
+# ------------------------------------------------------------
+LEAGUE_ORDER = [
+    "Epl", "Championship", "La Liga", "Serie A", "Ligue 1",
+    "Bundesliga", "Eredivisie", "Scottish Premiership",
+    "Turkish Super Lig", "Primera División", "Argentina Primera"
+]
+
+def league_rank(league):
+    try:
+        return LEAGUE_ORDER.index(str(league).strip())
+    except ValueError:
+        return 999
 
 # ------------------------------------------------------------
-# LEAGUE DETECTION FOR LAST MATCHES
-# ------------------------------------------------------------
-def detect_league(home, away):
-    df = get_master()
-    rows = df[((df.home == home) & (df.away == away)) |
-              ((df.home == away) & (df.away == home))]
-    if len(rows) == 0:
-        return None
-    return rows.iloc[0].league
-
-
-# ------------------------------------------------------------
-# PREDICTION ENGINE
+# PERFORMANCE-BASED PREDICTION ENGINE
 # ------------------------------------------------------------
 def realistic_prediction(home, away):
     home = normalize_team(home)
     away = normalize_team(away)
-    df = get_master().dropna(subset=["date"]).copy()
+    df = get_master().copy()
+    df = df.dropna(subset=["date"])
 
-    # Last N matches
+    # ---- Last N matches for form ----
     def last_matches(team, n=10):
-        h = df[df.home == team]
-        a = df[df.away == team]
-        return pd.concat([h, a]).sort_values("date", ascending=False).head(n)
+        home_m = df[df.home == team]
+        away_m = df[df.away == team]
+        recent = pd.concat([home_m, away_m]).sort_values("date", ascending=False)
+        return recent.head(n)
 
-    # Team stats
+    # ---- Season performance stats ----
     def team_stats(team):
-        h = df[df.home == team]
-        a = df[df.away == team]
-        matches = pd.concat([h, a])
-        scored = h["fthg"].sum() + a["ftag"].sum()
-        conceded = h["ftag"].sum() + a["fthg"].sum()
-        g = len(matches)
+        home_m = df[df.home == team]
+        away_m = df[df.away == team]
+        matches = pd.concat([home_m, away_m])
+        scored = home_m["fthg"].sum() + away_m["ftag"].sum()
+        conceded = home_m["ftag"].sum() + away_m["fthg"].sum()
+        games = len(matches)
         return {
-            "avg_scored": scored / g if g else 0.8,
-            "avg_conceded": conceded / g if g else 1.0
+            "avg_scored": scored / games if games else 0.8,
+            "avg_conceded": conceded / games if games else 1.0
         }
 
-    hs = team_stats(home)
-    aw = team_stats(away)
+    home_stats = team_stats(home)
+    away_stats = team_stats(away)
 
-    home_exp = 0.6 * hs["avg_scored"] + 0.4 * aw["avg_conceded"]
-    away_exp = 0.6 * aw["avg_scored"] + 0.4 * hs["avg_conceded"]
+    # ---- Expected goals ----
+    home_exp = 0.6 * home_stats["avg_scored"] + 0.4 * away_stats["avg_conceded"]
+    away_exp = 0.6 * away_stats["avg_scored"] + 0.4 * home_stats["avg_conceded"]
 
-    home_exp *= 1.1  # home advantage
+    # Optional: home advantage
+    home_exp *= 1.1
 
-    # Poisson model
-    def pois(lam, k):
+    # ---- Poisson probability ----
+    def poisson_prob(lam, k):
         return math.exp(-lam) * lam**k / math.factorial(k)
 
-    home_p = sum(pois(home_exp, h) * pois(away_exp, a) for h in range(6) for a in range(6) if h > a)
-    draw_p = sum(pois(home_exp, h) * pois(away_exp, h) for h in range(6))
-    away_p = sum(pois(home_exp, h) * pois(away_exp, a) for h in range(6) for a in range(6) if h < a)
+    prob_matrix = [
+        [poisson_prob(home_exp, h) * poisson_prob(away_exp, a) for a in range(6)]
+        for h in range(6)
+    ]
 
-    total = home_p + draw_p + away_p
-    home_pct = round(home_p / total * 100, 1)
-    draw_pct = round(draw_p / total * 100, 1)
-    away_pct = round(away_p / total * 100, 1)
+    home_prob = sum(prob_matrix[h][a] for h in range(6) for a in range(6) if h > a)
+    draw_prob = sum(prob_matrix[h][h] for h in range(6))
+    away_prob = sum(prob_matrix[h][a] for h in range(6) for a in range(6) if h < a)
 
-    # Expected goal → rounded score
-    def xg_to_score(x):
-        if x < 0.5: return 0
-        if x < 1.2: return 1
-        if x < 2.0: return 2
-        return 3
+    total = home_prob + draw_prob + away_prob
+    home_win = round(home_prob / total * 100, 1)
+    draw = round(draw_prob / total * 100, 1)
+    away_win = round(away_prob / total * 100, 1)
 
-    ft_h = xg_to_score(home_exp)
-    ft_a = xg_to_score(away_exp)
-    btts = "YES" if (ft_h > 0 and ft_a > 0) else "NO"
-    over25 = "YES" if (ft_h + ft_a) > 2 else "NO"
+    # ---- Full-time predicted score (rounded from expected goals) ----
+    def xg_to_score(xg):
+        if xg < 0.5: return 0
+        elif xg < 1.2: return 1
+        elif xg < 2: return 2
+        else: return 3
 
-    # ---- LAST 4 MATCHES (LEAGUE FILTERED) ----
-    league = detect_league(home, away)
-    df_l = df[df["league"].str.lower() == league.lower()] if league else df
+    ft_home = xg_to_score(home_exp)
+    ft_away = xg_to_score(away_exp)
+    btts = "YES" if ft_home > 0 and ft_away > 0 else "NO"
+    over25 = "YES" if (ft_home + ft_away) > 2 else "NO"
 
+    # ---- Last 4 matches
     def last4(team):
-        h = df_l[df_l.home == team]
-        a = df_l[df_l.away == team]
-        r = pd.concat([h, a]).sort_values("date", ascending=False).head(4)
-
-        out = []
-        for _, row in r.iterrows():
-            hg, ag = int(row.fthg), int(row.ftag)
-            d = row.date.strftime("%d/%m/%Y") if pd.notna(row.date) else ""
-            if row.home == team:
-                outcome = "W" if hg > ag else "L" if hg < ag else "D"
-                score = f"{row.home} {hg}-{ag} {row.away} ({d})"
+        recent = last_matches(team, n=4)
+        res = []
+        for _, r in recent.iterrows():
+            hg, ag = int(r.fthg), int(r.ftag)
+            match_date = r.date.strftime("%d/%m/%Y") if pd.notna(r.date) else ""
+            if r.home == team:
+                outcome = "W" if hg>ag else "L" if hg<ag else "D"
+                score = f"{r.home} {hg}-{ag} {r.away} ({match_date})"
             else:
-                outcome = "W" if ag > hg else "L" if ag < hg else "D"
-                score = f"{row.away} {ag}-{hg} {row.home} ({d})"
-            out.append({"outcome": outcome, "score": score})
-        return out
+                outcome = "W" if ag>hg else "L" if ag<hg else "D"
+                score = f"{r.away} {ag}-{hg} {r.home} ({match_date})"
+            res.append({"outcome": outcome, "score": score})
+        return res
 
     return {
-        "ft_score": f"{ft_h} - {ft_a}",
-        "home_win": home_pct,
-        "draw": draw_pct,
-        "away_win": away_pct,
+        "ft_score": f"{ft_home} - {ft_away}",
+        "home_win": home_win,
+        "away_win": away_win,
+        "draw": draw,
         "btts": btts,
         "over25": over25,
         "home_form": last4(home),
         "away_form": last4(away),
     }
-
 
 # ------------------------------------------------------------
 # ROUTES
@@ -221,30 +217,28 @@ def realistic_prediction(home, away):
 def index():
     return render_template("index.html")
 
-
 @app.route("/api/upcoming")
 def api_upcoming():
     df = get_upcoming().copy()
     today = pd.Timestamp.now().normalize()
     df = df[df["datetime"].dt.normalize() >= today]
 
-    # TRUE GLOBAL CHRONOLOGY
-    df = df.sort_values("datetime")
-
     out = []
-    for _, r in df.iterrows():
-        pred = realistic_prediction(r.home, r.away)
-        out.append({
-            "home": r.home,
-            "away": r.away,
-            "date": r.datetime.strftime("%Y-%m-%d"),
-            "time": r.datetime.strftime("%H:%M"),
-            "league": r.league,
-            "prediction": pred
-        })
+    for league, group in df.groupby("league"):
+        group_sorted = group.sort_values("datetime").head(5)
+        for _, r in group_sorted.iterrows():
+            pred = realistic_prediction(r.home, r.away)
+            out.append({
+                "home": r.home,
+                "away": r.away,
+                "date": r.datetime.strftime("%Y-%m-%d"),
+                "time": r.datetime.strftime("%H:%M") if r.datetime.time() != datetime.min.time() else "",
+                "league": league,
+                "prediction": pred
+            })
 
+    out = sorted(out, key=lambda x: (league_rank(x["league"]), x["date"], x["time"]))
     return jsonify(out)
-
 
 @app.route("/match")
 def match_page():
@@ -257,9 +251,8 @@ def match_page():
     pred = realistic_prediction(home, away)
     return render_template("match_details.html", home=home, away=away, date=date, pred=pred)
 
-
 # ------------------------------------------------------------
-# RUN APP
+# RUN
 # ------------------------------------------------------------
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
