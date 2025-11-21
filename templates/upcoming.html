@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Upcoming Matches</title>
+<style>
+body { font-family: Arial, sans-serif; background:#f3f3f3; margin:20px; }
+h1 { text-align:center; color:#0b3d91; }
+h2 { background:#0b3d91; color:white; padding:10px 15px; border-radius:8px; margin-top:20px; }
+.match-card { background:white; padding:15px; margin:10px 0; border-radius:10px; box-shadow:0 2px 4px rgba(0,0,0,0.1); display:flex; justify-content: space-between; align-items:center; }
+a { text-decoration:none; color:#0b3d91; font-weight:bold; }
+.time { color:#444; font-size:0.9em; }
+</style>
+</head>
+<body>
+
+<h1>Upcoming Matches</h1>
+
+{% for league, matches in matches_by_league.items() %}
+    {% if matches|length > 0 %}
+        <h2>{{ league }}</h2>
+        {% for m in matches %}
+        <div class="match-card">
+            <div>
+                <a href="/match?home={{ m.home }}&away={{ m.away }}&league={{ m.league }}&date={{ m.date }}">
+                    {{ m.home }} vs {{ m.away }}
+                </a>
+            </div>
+            <div class="time">{{ m.date }} {{ m.time }}</div>
+        </div>
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+
+</body>
+</html>

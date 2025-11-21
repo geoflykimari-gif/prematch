@@ -1,29 +1,54 @@
 import pandas as pd
+import unicodedata
 
-# -------------------------------
-# Load master CSV
-# -------------------------------
-df_master = pd.read_csv("master_matches.csv")
-
-# -------------------------------
-# Normalize team names
-# -------------------------------
-TEAM_ALIASES = {
-    "Preston": "Preston North End",
-    # Add other aliases as needed
+# ---------------------------
+# Championship Teams to Fix
+# ---------------------------
+CHAMP_TEAMS = {
+    "portsmouth": "Portsmouth",
+    "millwall": "Millwall",
+    "oxfordunited": "Oxford United",
+    "wrexham": "Wrexham",
 }
 
-def normalize_team(name):
-    if not name: 
+# ---------------------------
+# Normalize strings for matching
+# ---------------------------
+def normalize_str(s):
+    if pd.isna(s):
         return ""
-    name = str(name).strip()
-    return TEAM_ALIASES.get(name, name.title())
+    s = str(s).strip().lower()
+    # remove accents
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    # remove fc/afc, hyphens, spaces
+    s = s.replace("fc", "").replace("afc", "").replace("-", "").replace(" ", "")
+    return s
 
-df_master["home"] = df_master["home"].apply(normalize_team)
-df_master["away"] = df_master["away"].apply(normalize_team)
+# ---------------------------
+# Fix team name
+# ---------------------------
+def fix_team_name(name):
+    norm = normalize_str(name)
+    if norm in CHAMP_TEAMS:
+        return CHAMP_TEAMS[norm]
+    return name  # leave everything else unchanged
 
-# -------------------------------
-# Save back the master CSV
-# -------------------------------
-df_master.to_csv("master_matches.csv", index=False)
-print("Master CSV updated with normalized team names")
+# ---------------------------
+# Apply to CSV
+# ---------------------------
+def fix_championship_aliases(input_csv, output_csv):
+    df = pd.read_csv(input_csv, dtype=str)
+
+    if "home" in df.columns:
+        df["home"] = df["home"].apply(fix_team_name)
+    if "away" in df.columns:
+        df["away"] = df["away"].apply(fix_team_name)
+
+    df.to_csv(output_csv, index=False)
+    print(f"Saved cleaned CSV → {output_csv}")
+
+# ---------------------------
+# Run
+# ---------------------------
+if __name__ == "__main__":
+    fix_championship_aliases("master_matches.csv", "master_matches_cleaned.csv")
