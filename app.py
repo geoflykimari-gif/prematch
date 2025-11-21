@@ -9,8 +9,8 @@ app = Flask(__name__)
 # File paths (Render-friendly)
 # -----------------------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MASTER_CSV = os.path.join(BASE_DIR, "master_matches_cleaned.csv")
-UPCOMING_CSV = os.path.join(BASE_DIR, "upcoming_cleaned.csv")
+MASTER_CSV = os.path.join(BASE_DIR, "master_matches.csv")
+UPCOMING_CSV = os.path.join(BASE_DIR, "upcoming_matches.csv")
 
 df_master = None
 df_upcoming = None
@@ -31,10 +31,9 @@ LEAGUE_ORDER = [
 ]
 
 # -----------------------------
-# Team normalization (expand aliases)
+# Team normalization (aliases)
 # -----------------------------
 TEAM_ALIASES = {
-    # EPL
     "Man City": "Manchester City",
     "ManCity": "Manchester City",
     "Manchester City FC": "Manchester City",
@@ -46,14 +45,7 @@ TEAM_ALIASES = {
     "Liverpool": "Liverpool",
     "Arsenal FC": "Arsenal",
     "Arsenal": "Arsenal",
-    "Brighton & Hove Albion": "Brighton",
-    # Championship (minimal robust aliases)
-    "PortsmouthFC": "Portsmouth",
-    "Millwall FC": "Millwall",
-    "Oxford United FC": "Oxford United",
-    "Wrexham AFC": "Wrexham",
-    # Bundesliga example
-    "Sport Club Freiburg": "SC Freiburg",
+    # Add any additional aliases here
 }
 
 def normalize_team(name):
@@ -65,46 +57,52 @@ def normalize_team(name):
 # -----------------------------
 def load_master():
     global df_master
-    try:
-        df_master = pd.read_csv(MASTER_CSV)
-    except FileNotFoundError:
-        raise FileNotFoundError(f"Master CSV not found: {MASTER_CSV}")
-
-    # Clean column names
+    df_master = pd.read_csv(MASTER_CSV)
     df_master.columns = [c.strip() for c in df_master.columns]
 
-    # Fill missing goal values
-    for col in ["fthg", "ftag"]:
-        if col in df_master.columns:
-            df_master[col] = pd.to_numeric(df_master[col], errors="coerce").fillna(0).astype(int)
-    
-    # Rename for consistency
-    if "fthg" in df_master.columns: df_master.rename(columns={"fthg":"home_goals"}, inplace=True)
-    if "ftag" in df_master.columns: df_master.rename(columns={"ftag":"away_goals"}, inplace=True)
+    # Fill missing time
+    if "time" not in df_master.columns:
+        df_master["time"] = "00:00"
+    else:
+        df_master["time"] = df_master["time"].fillna("00:00")
+
+    # Combine date and time
+    df_master["datetime"] = pd.to_datetime(
+        df_master["date"].astype(str) + " " + df_master["time"].astype(str),
+        errors="coerce"
+    )
+    df_master["date"] = df_master["datetime"].dt.date.astype(str)
+
+    # Rename goal columns
+    if "fthg" in df_master.columns:
+        df_master.rename(columns={"fthg": "home_goals"}, inplace=True)
+    if "ftag" in df_master.columns:
+        df_master.rename(columns={"ftag": "away_goals"}, inplace=True)
+
+    # Convert goals to integers safely
+    df_master["home_goals"] = pd.to_numeric(df_master["home_goals"], errors="coerce").fillna(0).astype(int)
+    df_master["away_goals"] = pd.to_numeric(df_master["away_goals"], errors="coerce").fillna(0).astype(int)
 
     # Normalize team names
     df_master["home"] = df_master["home"].apply(normalize_team)
     df_master["away"] = df_master["away"].apply(normalize_team)
-
-    # Combine date and optional time
-    if "time" not in df_master.columns: df_master["time"] = "00:00"
-    df_master["time"] = df_master["time"].fillna("00:00")
-    df_master["datetime"] = pd.to_datetime(df_master["date"].astype(str) + " " + df_master["time"], errors="coerce")
 
 # -----------------------------
 # Load upcoming CSV
 # -----------------------------
 def load_upcoming():
     global df_upcoming
-    try:
-        df_upcoming = pd.read_csv(UPCOMING_CSV)
-    except FileNotFoundError:
+    if not os.path.exists(UPCOMING_CSV):
         raise FileNotFoundError(f"Upcoming CSV not found: {UPCOMING_CSV}")
 
+    df_upcoming = pd.read_csv(UPCOMING_CSV)
     df_upcoming.columns = [c.strip() for c in df_upcoming.columns]
+
     df_upcoming["datetime"] = pd.to_datetime(df_upcoming["datetime"], errors="coerce")
     df_upcoming["date"] = df_upcoming["datetime"].dt.date.astype(str)
     df_upcoming["time"] = df_upcoming["datetime"].dt.strftime("%H:%M")
+
+    # Normalize team names
     df_upcoming["home"] = df_upcoming["home"].apply(normalize_team)
     df_upcoming["away"] = df_upcoming["away"].apply(normalize_team)
 
@@ -112,9 +110,6 @@ def load_upcoming():
 # Last N matches function
 # -----------------------------
 def get_last_n_matches(team, n=10):
-    if df_master is None or df_master.empty:
-        return []
-
     matches = df_master[
         (df_master["home"] == team) | (df_master["away"] == team)
     ].sort_values("datetime", ascending=False).head(n)
@@ -129,6 +124,7 @@ def get_last_n_matches(team, n=10):
             ga = row["home_goals"]
 
         outcome = "W" if gf > ga else "D" if gf == ga else "L"
+
         results.append({
             "date": row["date"],
             "home": row["home"],
@@ -139,17 +135,84 @@ def get_last_n_matches(team, n=10):
     return results
 
 # -----------------------------
-# Prediction function (unchanged)
+# Match prediction
 # -----------------------------
-# (keep your existing predict_match() here, unchanged)
+def predict_match(home, away):
+    home_form = get_last_n_matches(home, 10)
+    away_form = get_last_n_matches(away, 10)
+
+    def weighted_score(form):
+        score_map = {"W":3, "D":1, "L":0}
+        weights = [1.5,1.4,1.3,1.2,1.1,1,1,1,1,1][:len(form)]
+        return sum(score_map[m["outcome"]]*w for m,w in zip(form,weights))
+
+    home_score = weighted_score(home_form)
+    away_score = weighted_score(away_form)
+
+    # Average goals
+    def avg_goals(team):
+        matches = get_last_n_matches(team,10)
+        gf=ga=0
+        for m in matches:
+            if m["home"]==team:
+                gf += int(m["score"].split("-")[0])
+                ga += int(m["score"].split("-")[1])
+            else:
+                gf += int(m["score"].split("-")[1])
+                ga += int(m["score"].split("-")[0])
+        n=len(matches)
+        return (gf/n if n>0 else 1.0, ga/n if n>0 else 1.0)
+
+    home_gf, home_ga = avg_goals(home)
+    away_gf, away_ga = avg_goals(away)
+
+    home_power = home_score*0.7 + home_gf*0.5 - home_ga*0.3
+    away_power = away_score*0.7 + away_gf*0.5 - away_ga*0.3
+    home_power *= 1.1
+
+    total = home_power + away_power + 0.01
+    home_win = round(home_power/total*100,1)
+    away_win = round(away_power/total*100,1)
+    draw = round(100 - home_win - away_win,1)
+
+    predicted_gf = (home_gf + away_ga*0.8)/2
+    predicted_ga = (away_gf + home_ga*0.8)/2
+    if home_win > away_win:
+        ft_score = f"{max(1,round(predicted_gf))}-{max(0,round(predicted_ga))}"
+    elif away_win > home_win:
+        ft_score = f"{max(1,round(predicted_ga))}-{max(0,round(predicted_gf))}"
+    else:
+        ft_score = "1-1"
+
+    btts = "Likely" if home_gf+away_gf>2.5 else "Unlikely"
+    over25 = "Likely" if predicted_gf+predicted_ga>2.5 else "Unlikely"
+
+    return {
+        "prediction":{"home_win":f"{home_win}%", "draw":f"{draw}%", "away_win":f"{away_win}%"},
+        "home_form": home_form[:4],
+        "away_form": away_form[:4],
+        "btts":btts,
+        "over25":over25,
+        "ft_score":ft_score
+    }
 
 # -----------------------------
-# Flask routes
+# Order upcoming matches
+# -----------------------------
+def order_upcoming():
+    grouped = {}
+    for league in LEAGUE_ORDER:
+        df_l = df_upcoming[df_upcoming["league"]==league].sort_values("datetime").head(5)
+        grouped[league] = df_l.to_dict(orient="records")
+    return grouped
+
+# -----------------------------
+# Routes
 # -----------------------------
 @app.route("/")
 def upcoming():
     load_upcoming()
-    matches_by_league = {league: df_upcoming[df_upcoming["league"]==league].sort_values("datetime").head(5).to_dict(orient="records") for league in LEAGUE_ORDER}
+    matches_by_league = order_upcoming()
     return render_template("upcoming.html", matches_by_league=matches_by_league)
 
 @app.route("/match")
@@ -160,7 +223,14 @@ def match_detail():
     date = request.args.get("date")
 
     pred = predict_match(home, away)
-    return render_template("match_detail.html", home=home, away=away, league=league, date=date, pred=pred)
+    return render_template(
+        "match_detail.html",
+        home=home,
+        away=away,
+        league=league,
+        date=date,
+        pred=pred
+    )
 
 # -----------------------------
 if __name__ == "__main__":
