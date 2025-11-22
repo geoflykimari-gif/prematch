@@ -1,70 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>{{ home }} vs {{ away }}</title>
-<style>
-body { font-family: Arial, sans-serif; background:#f3f3f3; margin:20px; }
-h1,h2 { color:#0b3d91; }
-.section { background:white; padding:20px; margin-bottom:20px; border-radius:10px; box-shadow:0 2px 4px rgba(0,0,0,0.1); }
-table { width:100%; border-collapse: collapse; }
-th, td { border-bottom:1px solid #ccc; padding:8px; text-align:left; }
-th { background:#eef3ff; }
-.prediction-box { background:#eef3ff; padding:10px; border-radius:6px; margin-top:8px; font-weight:bold; }
-.outcome-W { color:green; font-weight:bold; }
-.outcome-D { color:orange; font-weight:bold; }
-.outcome-L { color:red; font-weight:bold; }
-.btts-Likely, .over-Likely { color:green; font-weight:bold; }
-.btts-Unlikely, .over-Unlikely { color:red; font-weight:bold; }
-</style>
+  <meta charset="UTF-8">
+  <title>{{ home }} vs {{ away }}</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #1e1e2f; color: #fff; margin: 20px; }
+    h1, h2, h3 { color: #ffa500; }
+    ul { list-style-type: none; padding: 0; }
+    li { background: #2c2c44; margin: 5px 0; padding: 10px; border-radius: 8px; }
+    p { font-size: 16px; margin: 5px 0; }
+    .prediction { background: #333366; padding: 10px; border-radius: 8px; margin-bottom: 15px; }
+    .highlight { color: #00ff99; font-weight: bold; }
+  </style>
+  <script data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
+  <h1>{{ home }} vs {{ away }}</h1>
+  <p>League: {{ league }} | Date: {{ date }}</p>
 
-<h1>{{ home }} vs {{ away }}</h1>
-<p><b>League:</b> {{ league }} — <b>Date:</b> {{ date }}</p>
+  <ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-<div class="section">
-<h2>Prediction</h2>
-<p><b>Home Win:</b> {{ pred.prediction.home_win }}</p>
-<p><b>Draw:</b> {{ pred.prediction.draw }}</p>
-<p><b>Away Win:</b> {{ pred.prediction.away_win }}</p>
-<p><b>BTTS:</b> <span class="btts-{{ pred.btts }}">{{ pred.btts }}</span></p>
-<p><b>Over 2.5 Goals:</b> <span class="over-{{ pred.over25 }}">{{ pred.over25 }}</span></p>
-<h3>Predicted Full-Time Score:</h3>
-<div class="prediction-box">{{ pred.ft_score }}</div>
-</div>
+  <h2>Prediction</h2>
+  <div class="prediction">
+    <p>Home Win: <span class="highlight">{{ pred.prediction.home_win }}</span></p>
+    <p>Draw: <span class="highlight">{{ pred.prediction.draw }}</span></p>
+    <p>Away Win: <span class="highlight">{{ pred.prediction.away_win }}</span></p>
+    <p>Predicted Score: <span class="highlight">{{ pred.ft_score }}</span></p>
+    <p>BTTS: <span class="highlight">{{ pred.btts }}</span></p>
+    <p>Over 2.5 Goals: <span class="highlight">{{ pred.over25 }}</span></p>
+  </div>
 
-<div class="section">
-<h2>{{ home }} — Last 4 Matches</h2>
-<table>
-<tr><th>Date</th><th>Home</th><th>Away</th><th>Score</th><th>Result</th></tr>
-{% for m in pred.home_form %}
-<tr>
-<td>{{ m.date }}</td>
-<td>{{ m.home }}</td>
-<td>{{ m.away }}</td>
-<td>{{ m.score }}</td>
-<td class="outcome-{{ m.outcome }}">{{ m.outcome }}</td>
-</tr>
-{% endfor %}
-</table>
-</div>
+  <h2>Form (Last 4 Matches)</h2>
+  <h3>{{ home }}:</h3>
+  <ul>
+    {% for m in pred.home_form %}
+      <li>{{ m.date }} - {{ m.home }} {{ m.score }} {{ m.away }} ({{ m.outcome }})</li>
+    {% endfor %}
+  </ul>
 
-<div class="section">
-<h2>{{ away }} — Last 4 Matches</h2>
-<table>
-<tr><th>Date</th><th>Home</th><th>Away</th><th>Score</th><th>Result</th></tr>
-{% for m in pred.away_form %}
-<tr>
-<td>{{ m.date }}</td>
-<td>{{ m.home }}</td>
-<td>{{ m.away }}</td>
-<td>{{ m.score }}</td>
-<td class="outcome-{{ m.outcome }}">{{ m.outcome }}</td>
-</tr>
-{% endfor %}
-</table>
-</div>
+  <h3>{{ away }}:</h3>
+  <ul>
+    {% for m in pred.away_form %}
+      <li>{{ m.date }} - {{ m.home }} {{ m.score }} {{ m.away }} ({{ m.outcome }})</li>
+    {% endfor %}
+  </ul>
 
+  <ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </body>
 </html>
