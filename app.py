@@ -157,7 +157,7 @@ def get_last_n_matches(team, n=10):
     return results
 
 # -----------------------------
-# Predict match (boosted realistic goals)
+# Predict match
 # -----------------------------
 def predict_match(home, away):
     home_form = get_last_n_matches(home, 10)
@@ -199,8 +199,6 @@ def predict_match(home, away):
     away_win = round(away_power/total*100,1)
     draw = round(100 - home_win - away_win,1)
 
-    # -----------------------------
-    # Boost expected goals minimally
     home_base_exp = (home_gf + away_ga*0.9)/2
     away_base_exp = (away_gf + home_ga*0.9)/2
 
@@ -208,10 +206,9 @@ def predict_match(home, away):
     home_exp = home_base_exp + 0.02*strength_diff
     away_exp = away_base_exp - 0.01*strength_diff
 
-    # -----------------------------
-    # Minimal boost to make goals more realistic
-    home_exp = min(max(home_exp + 0.6, 1.2), 4.5)  # +0.6 boost
-    away_exp = min(max(away_exp + 0.4, 0.8), 3.5)  # +0.4 boost
+    # Minimal boost to goals
+    home_exp = min(max(home_exp + 0.6, 1.2), 4.5)
+    away_exp = min(max(away_exp + 0.4, 0.8), 3.5)
 
     sims = 1000
     home_goals_sims = np.random.poisson(home_exp, sims)
@@ -260,7 +257,7 @@ def order_upcoming():
 def upcoming():
     load_upcoming()
     matches_by_league = order_upcoming()
-    return render_template("upcoming.html", matches_by_league=matches_by_league)
+    return render_template("index.html", matches_by_league=matches_by_league)
 
 @app.route("/match")
 def match_detail():
@@ -277,6 +274,24 @@ def match_detail():
         date=date,
         pred=pred
     )
+
+# -----------------------------
+# New AdSense-friendly info page
+# -----------------------------
+@app.route("/info")
+def info():
+    return render_template("info.html")
+
+# -----------------------------
+# Privacy and Terms routes
+# -----------------------------
+@app.route("/privacy")
+def privacy():
+    return render_template("privacy.html")
+
+@app.route("/terms")
+def terms():
+    return render_template("terms.html")
 
 # -----------------------------
 if __name__ == "__main__":
