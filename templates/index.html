@@ -5,36 +5,29 @@
   <title>Upcoming Matches</title>
   <style>
     body { font-family: Arial, sans-serif; background: #1e1e2f; color: #fff; margin: 20px; }
-    h2 { color: #ffa500; }
+    h1 { color: #ffa500; text-align: center; margin-bottom: 20px; }
+    h2 { color: #ffa500; margin-top: 40px; }
     ul { list-style-type: none; padding: 0; }
     li { background: #2c2c44; margin: 5px 0; padding: 10px; border-radius: 8px; }
     a { color: #00d8ff; text-decoration: none; font-weight: bold; }
     a:hover { text-decoration: underline; }
+    .match-time { font-size: 14px; color: #ccc; margin-left: 10px; }
   </style>
-  <script data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
   <h1>Upcoming Matches</h1>
-
-  <ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
   {% for league, matches in matches_by_league.items() %}
     <h2>{{ league }}</h2>
     <ul>
       {% for m in matches %}
         <li>
-          {{ m.date }} {{ m.time }} - 
-          <a href="{{ url_for('match_detail') }}?home={{ m.home }}&away={{ m.away }}&league={{ m.league }}&date={{ m.date }}">
+          {{ m.datetime.strftime("%Y-%m-%d %H:%M") }} - 
+          <a href="{{ url_for('match_detail') }}?home={{ m.home }}&away={{ m.away }}&league={{ m.league }}&date={{ m.datetime }}">
             {{ m.home }} vs {{ m.away }}
           </a>
         </li>
       {% endfor %}
     </ul>
   {% endfor %}
-
-  <ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </body>
 </html>

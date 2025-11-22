@@ -1,53 +1,201 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>{{ home }} vs {{ away }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ home_team }} vs {{ away_team }} - Match Details</title>
+
   <style>
-    body { font-family: Arial, sans-serif; background: #1e1e2f; color: #fff; margin: 20px; }
-    h1, h2, h3 { color: #ffa500; }
-    ul { list-style-type: none; padding: 0; }
-    li { background: #2c2c44; margin: 5px 0; padding: 10px; border-radius: 8px; }
-    p { font-size: 16px; margin: 5px 0; }
-    .prediction { background: #333366; padding: 10px; border-radius: 8px; margin-bottom: 15px; }
-    .highlight { color: #00ff99; font-weight: bold; }
+    body {
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .match-header {
+      text-align: center;
+      padding: 25px;
+      background: #1a1a1a;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .match-header h1 {
+      font-size: 34px;
+      color: #ffa500;
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    .match-meta {
+      color: #66b3ff;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    h2 {
+      margin-top: 35px;
+      font-size: 26px;
+      color: #ffa500;
+      border-left: 4px solid #66b3ff;
+      padding-left: 10px;
+    }
+
+    .prob-box { margin-top: 10px; }
+
+    .prob-bar {
+      height: 26px;
+      border-radius: 10px;
+      margin: 10px 0;
+      background: #222;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .prob-fill {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      font-size: 13px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .home { background: #66b3ff; }
+    .draw { background: #FFC107; color: #000; }
+    .away { background: #F44336; }
+
+    .pred-score {
+      font-size: 40px;
+      font-weight: bold;
+      color: #ffa500;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .expected-goals {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 18px;
+      color: #ccc;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      background: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #2b2b3c;
+    }
+
+    th { background: #222; color: #ffa500; }
+
+    tr:hover { background: #27273d; }
+
+    .win { color: #4CAF50; font-weight: bold; }
+    .draw { color: #FFC107; font-weight: bold; }
+    .loss { color: #F44336; font-weight: bold; }
+
+    @media(max-width: 768px) {
+      .match-header h1 { font-size: 24px; }
+      .pred-score { font-size: 28px; }
+    }
   </style>
-  <script data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
+
 <body>
-  <h1>{{ home }} vs {{ away }}</h1>
-  <p>League: {{ league }} | Date: {{ date }}</p>
+<div class="container">
 
-  <ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-
-  <h2>Prediction</h2>
-  <div class="prediction">
-    <p>Home Win: <span class="highlight">{{ pred.prediction.home_win }}</span></p>
-    <p>Draw: <span class="highlight">{{ pred.prediction.draw }}</span></p>
-    <p>Away Win: <span class="highlight">{{ pred.prediction.away_win }}</span></p>
-    <p>Predicted Score: <span class="highlight">{{ pred.ft_score }}</span></p>
-    <p>BTTS: <span class="highlight">{{ pred.btts }}</span></p>
-    <p>Over 2.5 Goals: <span class="highlight">{{ pred.over25 }}</span></p>
+  <div class="match-header">
+    <h1>{{ home_team }} vs {{ away_team }}</h1>
+    <div class="match-meta">{{ league }} • {{ match_date }}</div>
   </div>
 
-  <h2>Form (Last 4 Matches)</h2>
-  <h3>{{ home }}:</h3>
-  <ul>
-    {% for m in pred.home_form %}
-      <li>{{ m.date }} - {{ m.home }} {{ m.score }} {{ m.away }} ({{ m.outcome }})</li>
-    {% endfor %}
-  </ul>
+  <!-- Predictions -->
+  <h2>Match Predictions</h2>
+  <div class="prob-box">
+    <div class="prob-bar">
+      <div class="prob-fill home" style="width: {{ pred.home_pct }}%;">{{ pred.home_pct }}% Home Win</div>
+    </div>
+    <div class="prob-bar">
+      <div class="prob-fill draw" style="width: {{ pred.draw_pct }}%;">{{ pred.draw_pct }}% Draw</div>
+    </div>
+    <div class="prob-bar">
+      <div class="prob-fill away" style="width: {{ pred.away_pct }}%;">{{ pred.away_pct }}% Away Win</div>
+    </div>
+  </div>
 
-  <h3>{{ away }}:</h3>
-  <ul>
-    {% for m in pred.away_form %}
-      <li>{{ m.date }} - {{ m.home }} {{ m.score }} {{ m.away }} ({{ m.outcome }})</li>
-    {% endfor %}
-  </ul>
+  <!-- Predicted Score -->
+  <h2>Predicted Final Score</h2>
+  <div class="pred-score">
+    {{ home_team }} {{ pred.exp_home_goals|round(0, 'floor')|int }} - {{ pred.exp_away_goals|round(0, 'floor')|int }} {{ away_team }}
+  </div>
+  <div class="expected-goals">
+    Expected Home Goals: <strong>{{ pred.exp_home_goals }}</strong> • 
+    Expected Away Goals: <strong>{{ pred.exp_away_goals }}</strong>
+  </div>
 
-  <ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  <!-- Last 5 Matches Home -->
+  <h2>{{ home_team }} – Last 5 Matches</h2>
+  <table>
+    <tr><th>Date</th><th>Opponent</th><th>Venue</th><th>Score</th><th>Result</th></tr>
+    {% for m in last_home %}
+    <tr>
+      <td>{{ m.date }}</td>
+      <td>{{ m.opponent }}</td>
+      <td>{{ m.venue }}</td>
+      <td>{{ m.score }}</td>
+      <td class="{{ 'win' if m.result=='W' else 'draw' if m.result=='D' else 'loss' }}">{{ m.result }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <!-- Last 5 Matches Away -->
+  <h2>{{ away_team }} – Last 5 Matches</h2>
+  <table>
+    <tr><th>Date</th><th>Opponent</th><th>Venue</th><th>Score</th><th>Result</th></tr>
+    {% for m in last_away %}
+    <tr>
+      <td>{{ m.date }}</td>
+      <td>{{ m.opponent }}</td>
+      <td>{{ m.venue }}</td>
+      <td>{{ m.score }}</td>
+      <td class="{{ 'win' if m.result=='W' else 'draw' if m.result=='D' else 'loss' }}">{{ m.result }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <!-- Head-to-Head -->
+  <h2>Head-to-Head</h2>
+  <table>
+    <tr><th>Date</th><th>Home</th><th>Away</th><th>Score</th><th>Result</th></tr>
+    {% for m in h2h %}
+    <tr>
+      <td>{{ m.date }}</td>
+      <td>{{ m.home }}</td>
+      <td>{{ m.away }}</td>
+      <td>{{ m.score }}</td>
+      <td class="{{ 'win' if m.result=='W' else 'draw' if m.result=='D' else 'loss' }}">{{ m.result }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+</div>
 </body>
 </html>

@@ -1,100 +1,96 @@
-import pandas as pd
-import os
+import csv
+import unicodedata
+from collections import defaultdict
 
-# -----------------------------
-# File paths (default CSVs)
-# -----------------------------
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MASTER_CSV = os.path.join(BASE_DIR, "master_matches.csv")
-UPCOMING_CSV = os.path.join(BASE_DIR, "upcoming_matches.csv")
-MASTER_OUT = os.path.join(BASE_DIR, "master_cleaned.csv")
-UPCOMING_OUT = os.path.join(BASE_DIR, "upcoming_cleaned.csv")
+# ---------------------- File paths ----------------------
+MASTER_CSV = "master_matches.csv"
+UPCOMING_CSV = "upcoming_matches.csv"
+MASTER_CLEANED = "master_cleaned.csv"
+UPCOMING_CLEANED = "upcoming_cleaned.csv"
+ALIAS_FILE = "team_aliases.csv"
 
-# -----------------------------
-# Load CSVs
-# -----------------------------
-df_master = pd.read_csv(MASTER_CSV)
-df_upcoming = pd.read_csv(UPCOMING_CSV)
+# ---------------------- Helper Functions ----------------------
+def normalize_name(name):
+    """
+    Normalize a team name: lowercase, remove accents, strip spaces.
+    """
+    if not name:
+        return ""
+    name = name.strip().lower()
+    name = ''.join(c for c in unicodedata.normalize('NFD', name) if unicodedata.category(c) != 'Mn')
+    name = ' '.join(name.split())
+    return name
 
-# Strip column names
-df_master.columns = [c.strip() for c in df_master.columns]
-df_upcoming.columns = [c.strip() for c in df_upcoming.columns]
+def load_teams(csv_files, team_cols=['home','away']):
+    """
+    Load unique team names from multiple CSVs.
+    """
+    teams = set()
+    for file in csv_files:
+        with open(file, encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                for col in team_cols:
+                    if col in row and row[col].strip():
+                        teams.add(row[col].strip())
+    return teams
 
-# -----------------------------
-# Detect unique team names
-# -----------------------------
-master_teams = set(df_master['home'].dropna().unique()) | set(df_master['away'].dropna().unique())
-upcoming_teams = set(df_upcoming['home'].dropna().unique()) | set(df_upcoming['away'].dropna().unique())
+def build_alias_map(teams):
+    """
+    Build normalized -> canonical mapping.
+    """
+    alias_map = {}
+    for t in teams:
+        norm = normalize_name(t)
+        if norm not in alias_map:
+            alias_map[norm] = t
+    return alias_map
 
-all_teams = master_teams | upcoming_teams
+def save_aliases(alias_map, file_path=ALIAS_FILE):
+    with open(file_path, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f)
+        writer.writerow(['normalized_name','canonical_name'])
+        for norm, canon in sorted(alias_map.items()):
+            writer.writerow([norm, canon])
 
-# -----------------------------
-# Predefined strong aliases
-# -----------------------------
-TEAM_ALIASES = {
-    # EPL
-    "Man City": "Manchester City",
-    "ManCity": "Manchester City",
-    "Manchester City FC": "Manchester City",
-    "Man Utd": "Manchester United",
-    "Man United": "Manchester United",
-    "Liverpool FC": "Liverpool",
-    "Chelsea FC": "Chelsea",
-    "Arsenal FC": "Arsenal",
-    "Brighton & Hove Albion FC": "Brighton",
-    "Brighton & Hove Albion": "Brighton",
-    "Brighton FC": "Brighton",
-    # Championship
-    "Bristol City Fc": "Bristol City",
-    "Birmingham City Fc": "Birmingham City",
-    "Leicester City FC": "Leicester City",
-    "Oxford United FC": "Oxford United",
-    "Millwall FC": "Millwall",
-    "Middlesbrough FC": "Middlesbrough",
-    "Preston North End FC": "Preston North End",
-    "Coventry City FC": "Coventry City",
-    "Norwich City FC": "Norwich City",
-    "Sheffield Wednesday FC": "Sheffield Wednesday",
-    "Derby County FC": "Derby County",
-    "West Bromwich Albion FC": "West Bromwich Albion",
-    "Hull City AFC": "Hull City",
-    "Swansea City AFC": "Swansea City",
-    "Portsmouth FC": "Portsmouth",
-    "Charlton Athletic FC": "Charlton Athletic",
-    # BelgianProLeague examples
-    "Standard Liège": "Standard Liege",
-    "RSC Anderlecht": "Anderlecht",
-    # Add all remaining known aliases here
-}
+def clean_csv(input_file, output_file, alias_map, team_cols=['home','away']):
+    """
+    Produce a cleaned CSV with team names harmonized using alias_map.
+    Keeps order and all other data intact.
+    """
+    with open(input_file, encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        rows = list(reader)
+        fieldnames = reader.fieldnames
 
-# -----------------------------
-# Automatically detect unmatched teams
-# -----------------------------
-unmatched = [t for t in all_teams if t not in TEAM_ALIASES.values() and t not in TEAM_ALIASES.keys()]
-if unmatched:
-    print("Unmatched teams detected. Consider adding to TEAM_ALIASES:", unmatched)
+    # Harmonize team names
+    for row in rows:
+        for col in team_cols:
+            if col in row:
+                norm = normalize_name(row[col])
+                row[col] = alias_map.get(norm, row[col])
 
-# -----------------------------
-# Normalize team names function
-# -----------------------------
-def normalize_team(name):
-    name = str(name).strip()
-    return TEAM_ALIASES.get(name, name)
+    # Write cleaned CSV
+    with open(output_file, 'w', newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
 
-# -----------------------------
-# Apply normalization
-# -----------------------------
-for df in [df_master, df_upcoming]:
-    for col in ['home', 'away']:
-        if col in df.columns:
-            df[col] = df[col].apply(normalize_team)
-
-# -----------------------------
-# Save cleaned CSVs (order preserved)
-# -----------------------------
-df_master.to_csv(MASTER_OUT, index=False)
-df_upcoming.to_csv(UPCOMING_OUT, index=False)
-
-print(f"Master CSV cleaned -> {MASTER_OUT}")
-print(f"Upcoming CSV cleaned -> {UPCOMING_OUT}")
-print("All team names normalized robustly. Order, dates, and times preserved.")
+# ---------------------- Main ----------------------
+if __name__ == "__main__":
+    # Step 1: Load all team names
+    all_teams = load_teams([MASTER_CSV, UPCOMING_CSV])
+    
+    # Step 2: Build alias map
+    alias_map = build_alias_map(all_teams)
+    
+    # Step 3: Save alias map
+    save_aliases(alias_map)
+    print(f"Generated alias map for {len(alias_map)} teams in {ALIAS_FILE}")
+    
+    # Step 4: Clean both CSVs
+    clean_csv(MASTER_CSV, MASTER_CLEANED, alias_map)
+    print(f"Cleaned master CSV saved as {MASTER_CLEANED}")
+    
+    clean_csv(UPCOMING_CSV, UPCOMING_CLEANED, alias_map)
+    print(f"Cleaned upcoming CSV saved as {UPCOMING_CLEANED}")

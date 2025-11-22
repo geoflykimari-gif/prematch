@@ -130,7 +130,7 @@ datetime,home,away,league
 2025-11-21 19:30,1. FSV Mainz 05,Hoffenheim,Bundesliga
 2025-11-22 14:30,Borussia Dortmund,Vfb Stuttgart,Bundesliga
 2025-11-22 14:30,1. Fc Heidenheim 1846,Borussia Mönchengladbach,Bundesliga
-2025-11-22 14:30,FC Bayern München,Sport-Club Freiburg,Bundesliga
+2025-11-22 14:30,Fc Bayern München,Sport-Club Freiburg,Bundesliga
 2025-11-22 14:30,Vfl Wolfsburg,Bayer 04 Leverkusen,Bundesliga
 2025-11-22 14:30,Fc Augsburg,Hamburger Sv,Bundesliga
 2025-11-22 17:30,1. Fc Köln,Eintracht Frankfurt,Bundesliga
@@ -140,13 +140,13 @@ datetime,home,away,league
 2025-11-29 14:30,Hoffenheim,Fc Augsburg,Bundesliga
 2025-11-29 14:30,1. Fc Union Berlin,1. Fc Heidenheim 1846,Bundesliga
 2025-11-29 14:30,Sv Werder Bremen,1. Fc Köln,Bundesliga
-2025-11-29 14:30,FC Bayern München,St Pauli,Bundesliga
+2025-11-29 14:30,Fc Bayern München,St Pauli,Bundesliga
 2025-11-29 17:30,Bayer 04 Leverkusen,Borussia Dortmund,Bundesliga
 2025-11-30 14:30,Hamburger Sv,Vfb Stuttgart,Bundesliga
 2025-11-30 16:30,Eintracht Frankfurt,Vfl Wolfsburg,Bundesliga
 2025-11-30 18:30,Sport-Club Freiburg,1. FSV Mainz 05,Bundesliga
 2025-12-06 14:30,Borussia Dortmund,Hoffenheim,Bundesliga
-2025-12-06 14:30,Vfb Stuttgart,FC Bayern München,Bundesliga
+2025-12-06 14:30,Vfb Stuttgart,Fc Bayern München,Bundesliga
 2025-12-06 14:30,Vfl Wolfsburg,1. Fc Union Berlin,Bundesliga
 2025-12-06 14:30,Fc Augsburg,Bayer 04 Leverkusen,Bundesliga
 2025-12-06 14:30,1. Fc Heidenheim 1846,Sport-Club Freiburg,Bundesliga
@@ -154,7 +154,7 @@ datetime,home,away,league
 2025-12-06 14:30,Hamburger Sv,Sv Werder Bremen,Bundesliga
 2025-12-06 14:30,1. FSV Mainz 05,Borussia Mönchengladbach,Bundesliga
 2025-12-06 14:30,Rb Leipzig,Eintracht Frankfurt,Bundesliga
-2025-12-13 14:30,FC Bayern München,1. FSV Mainz 05,Bundesliga
+2025-12-13 14:30,Fc Bayern München,1. FSV Mainz 05,Bundesliga
 2025-12-13 14:30,Hoffenheim,Hamburger Sv,Bundesliga
 2025-12-13 14:30,St Pauli,1. Fc Heidenheim 1846,Bundesliga
 2025-12-13 14:30,1. Fc Union Berlin,Rb Leipzig,Bundesliga
@@ -170,7 +170,7 @@ datetime,home,away,league
 2025-12-20 14:30,Rb Leipzig,Bayer 04 Leverkusen,Bundesliga
 2025-12-20 14:30,Borussia Dortmund,Borussia Mönchengladbach,Bundesliga
 2025-12-20 14:30,Hamburger Sv,Eintracht Frankfurt,Bundesliga
-2025-12-20 14:30,1. Fc Heidenheim 1846,FC Bayern München,Bundesliga
+2025-12-20 14:30,1. Fc Heidenheim 1846,Fc Bayern München,Bundesliga
 2025-12-20 14:30,1. FSV Mainz 05,St Pauli,Bundesliga
 2026-01-10 14:30,Bayer 04 Leverkusen,Vfb Stuttgart,Bundesliga
 2026-01-10 14:30,1. Fc Heidenheim 1846,1. Fc Köln,Bundesliga
@@ -179,7 +179,7 @@ datetime,home,away,league
 2026-01-10 14:30,Sv Werder Bremen,Hoffenheim,Bundesliga
 2026-01-10 14:30,Sport-Club Freiburg,Hamburger Sv,Bundesliga
 2026-01-10 14:30,Eintracht Frankfurt,Borussia Dortmund,Bundesliga
-2026-01-10 14:30,FC Bayern München,Vfl Wolfsburg,Bundesliga
+2026-01-10 14:30,Fc Bayern München,Vfl Wolfsburg,Bundesliga
 2026-01-10 14:30,Borussia Mönchengladbach,Fc Augsburg,Bundesliga
 2026-01-13 19:30,Vfl Wolfsburg,St Pauli,Bundesliga
 2026-01-13 19:30,Borussia Dortmund,Sv Werder Bremen,Bundesliga
@@ -189,18 +189,18 @@ datetime,home,away,league
 2026-01-13 19:30,Hamburger Sv,Bayer 04 Leverkusen,Bundesliga
 2026-01-13 19:30,Fc Augsburg,1. Fc Union Berlin,Bundesliga
 2026-01-13 19:30,Hoffenheim,Borussia Mönchengladbach,Bundesliga
-2026-01-13 19:30,1. Fc Köln,FC Bayern München,Bundesliga
+2026-01-13 19:30,1. Fc Köln,Fc Bayern München,Bundesliga
 2026-01-17 14:30,Vfl Wolfsburg,1. Fc Heidenheim 1846,Bundesliga
 2026-01-17 14:30,Fc Augsburg,Sport-Club Freiburg,Bundesliga
 2026-01-17 14:30,Borussia Dortmund,St Pauli,Bundesliga
 2026-01-17 14:30,Hoffenheim,Bayer 04 Leverkusen,Bundesliga
-2026-01-17 14:30,Rb Leipzig,FC Bayern München,Bundesliga
+2026-01-17 14:30,Rb Leipzig,Fc Bayern München,Bundesliga
 2026-01-17 14:30,1. Fc Köln,1. FSV Mainz 05,Bundesliga
 2026-01-17 14:30,Hamburger Sv,Borussia Mönchengladbach,Bundesliga
 2026-01-17 14:30,Sv Werder Bremen,Eintracht Frankfurt,Bundesliga
 2026-01-17 14:30,Vfb Stuttgart,1. Fc Union Berlin,Bundesliga
 2026-01-24 14:30,1. Fc Heidenheim 1846,Rb Leipzig,Bundesliga
-2026-01-24 14:30,FC Bayern München,Fc Augsburg,Bundesliga
+2026-01-24 14:30,Fc Bayern München,Fc Augsburg,Bundesliga
 2026-01-24 14:30,Bayer 04 Leverkusen,Sv Werder Bremen,Bundesliga
 2026-01-24 14:30,St Pauli,Hamburger Sv,Bundesliga
 2026-01-24 14:30,Eintracht Frankfurt,Hoffenheim,Bundesliga
@@ -214,7 +214,7 @@ datetime,home,away,league
 2026-01-31 14:30,Borussia Dortmund,1. Fc Heidenheim 1846,Bundesliga
 2026-01-31 14:30,Vfb Stuttgart,Sport-Club Freiburg,Bundesliga
 2026-01-31 14:30,Hoffenheim,1. Fc Union Berlin,Bundesliga
-2026-01-31 14:30,Hamburger Sv,FC Bayern München,Bundesliga
+2026-01-31 14:30,Hamburger Sv,Fc Bayern München,Bundesliga
 2026-01-31 14:30,Fc Augsburg,St Pauli,Bundesliga
 2026-01-31 14:30,1. Fc Köln,Vfl Wolfsburg,Bundesliga
 2026-02-07 14:30,1. Fc Köln,Rb Leipzig,Bundesliga
@@ -224,14 +224,14 @@ datetime,home,away,league
 2026-02-07 14:30,Borussia Mönchengladbach,Bayer 04 Leverkusen,Bundesliga
 2026-02-07 14:30,1. FSV Mainz 05,Fc Augsburg,Bundesliga
 2026-02-07 14:30,Sport-Club Freiburg,Sv Werder Bremen,Bundesliga
-2026-02-07 14:30,FC Bayern München,Hoffenheim,Bundesliga
+2026-02-07 14:30,Fc Bayern München,Hoffenheim,Bundesliga
 2026-02-07 14:30,Vfl Wolfsburg,Borussia Dortmund,Bundesliga
 2026-02-14 14:30,Fc Augsburg,1. Fc Heidenheim 1846,Bundesliga
 2026-02-14 14:30,Hamburger Sv,1. Fc Union Berlin,Bundesliga
 2026-02-14 14:30,Vfb Stuttgart,1. Fc Köln,Bundesliga
 2026-02-14 14:30,Hoffenheim,Sport-Club Freiburg,Bundesliga
 2026-02-14 14:30,Rb Leipzig,Vfl Wolfsburg,Bundesliga
-2026-02-14 14:30,Sv Werder Bremen,FC Bayern München,Bundesliga
+2026-02-14 14:30,Sv Werder Bremen,Fc Bayern München,Bundesliga
 2026-02-14 14:30,Eintracht Frankfurt,Borussia Mönchengladbach,Bundesliga
 2026-02-14 14:30,Bayer 04 Leverkusen,St Pauli,Bundesliga
 2026-02-14 14:30,Borussia Dortmund,1. FSV Mainz 05,Bundesliga
@@ -241,7 +241,7 @@ datetime,home,away,league
 2026-02-21 14:30,Rb Leipzig,Borussia Dortmund,Bundesliga
 2026-02-21 14:30,1. FSV Mainz 05,Hamburger Sv,Bundesliga
 2026-02-21 14:30,Sport-Club Freiburg,Borussia Mönchengladbach,Bundesliga
-2026-02-21 14:30,FC Bayern München,Eintracht Frankfurt,Bundesliga
+2026-02-21 14:30,Fc Bayern München,Eintracht Frankfurt,Bundesliga
 2026-02-21 14:30,1. Fc Union Berlin,Bayer 04 Leverkusen,Bundesliga
 2026-02-21 14:30,St Pauli,Sv Werder Bremen,Bundesliga
 2026-02-28 14:30,Hamburger Sv,Rb Leipzig,Bundesliga
@@ -250,10 +250,10 @@ datetime,home,away,league
 2026-02-28 14:30,Borussia Mönchengladbach,1. Fc Union Berlin,Bundesliga
 2026-02-28 14:30,Vfb Stuttgart,Vfl Wolfsburg,Bundesliga
 2026-02-28 14:30,Sv Werder Bremen,1. Fc Heidenheim 1846,Bundesliga
-2026-02-28 14:30,Borussia Dortmund,FC Bayern München,Bundesliga
+2026-02-28 14:30,Borussia Dortmund,Fc Bayern München,Bundesliga
 2026-02-28 14:30,Eintracht Frankfurt,Sport-Club Freiburg,Bundesliga
 2026-02-28 14:30,Bayer 04 Leverkusen,1. FSV Mainz 05,Bundesliga
-2026-03-07 14:30,FC Bayern München,Borussia Mönchengladbach,Bundesliga
+2026-03-07 14:30,Fc Bayern München,Borussia Mönchengladbach,Bundesliga
 2026-03-07 14:30,Sport-Club Freiburg,Bayer 04 Leverkusen,Bundesliga
 2026-03-07 14:30,1. FSV Mainz 05,Vfb Stuttgart,Bundesliga
 2026-03-07 14:30,Rb Leipzig,Fc Augsburg,Bundesliga
@@ -268,10 +268,10 @@ datetime,home,away,league
 2026-03-14 14:30,Sport-Club Freiburg,1. Fc Union Berlin,Bundesliga
 2026-03-14 14:30,Borussia Dortmund,Fc Augsburg,Bundesliga
 2026-03-14 14:30,Eintracht Frankfurt,1. Fc Heidenheim 1846,Bundesliga
-2026-03-14 14:30,Bayer 04 Leverkusen,FC Bayern München,Bundesliga
+2026-03-14 14:30,Bayer 04 Leverkusen,Fc Bayern München,Bundesliga
 2026-03-14 14:30,Hamburger Sv,1. Fc Köln,Bundesliga
 2026-03-14 14:30,Hoffenheim,Vfl Wolfsburg,Bundesliga
-2026-03-21 14:30,FC Bayern München,1. Fc Union Berlin,Bundesliga
+2026-03-21 14:30,Fc Bayern München,1. Fc Union Berlin,Bundesliga
 2026-03-21 14:30,Borussia Dortmund,Hamburger Sv,Bundesliga
 2026-03-21 14:30,1. FSV Mainz 05,Eintracht Frankfurt,Bundesliga
 2026-03-21 14:30,Rb Leipzig,Hoffenheim,Bundesliga
@@ -282,7 +282,7 @@ datetime,home,away,league
 2026-03-21 14:30,Vfl Wolfsburg,Sv Werder Bremen,Bundesliga
 2026-04-04 13:30,Bayer 04 Leverkusen,Vfl Wolfsburg,Bundesliga
 2026-04-04 13:30,Eintracht Frankfurt,1. Fc Köln,Bundesliga
-2026-04-04 13:30,Sport-Club Freiburg,FC Bayern München,Bundesliga
+2026-04-04 13:30,Sport-Club Freiburg,Fc Bayern München,Bundesliga
 2026-04-04 13:30,Vfb Stuttgart,Borussia Dortmund,Bundesliga
 2026-04-04 13:30,Sv Werder Bremen,Rb Leipzig,Bundesliga
 2026-04-04 13:30,1. Fc Union Berlin,St Pauli,Bundesliga
@@ -294,11 +294,11 @@ datetime,home,away,league
 2026-04-11 13:30,Vfb Stuttgart,Hamburger Sv,Bundesliga
 2026-04-11 13:30,Vfl Wolfsburg,Eintracht Frankfurt,Bundesliga
 2026-04-11 13:30,Borussia Dortmund,Bayer 04 Leverkusen,Bundesliga
-2026-04-11 13:30,St Pauli,FC Bayern München,Bundesliga
+2026-04-11 13:30,St Pauli,Fc Bayern München,Bundesliga
 2026-04-11 13:30,1. Fc Heidenheim 1846,1. Fc Union Berlin,Bundesliga
 2026-04-11 13:30,1. Fc Köln,Sv Werder Bremen,Bundesliga
 2026-04-11 13:30,Fc Augsburg,Hoffenheim,Bundesliga
-2026-04-18 13:30,FC Bayern München,Vfb Stuttgart,Bundesliga
+2026-04-18 13:30,Fc Bayern München,Vfb Stuttgart,Bundesliga
 2026-04-18 13:30,Bayer 04 Leverkusen,Fc Augsburg,Bundesliga
 2026-04-18 13:30,Eintracht Frankfurt,Rb Leipzig,Bundesliga
 2026-04-18 13:30,Sport-Club Freiburg,1. Fc Heidenheim 1846,Bundesliga
@@ -308,7 +308,7 @@ datetime,home,away,league
 2026-04-18 13:30,Hoffenheim,Borussia Dortmund,Bundesliga
 2026-04-18 13:30,Borussia Mönchengladbach,1. FSV Mainz 05,Bundesliga
 2026-04-25 13:30,Vfb Stuttgart,Sv Werder Bremen,Bundesliga
-2026-04-25 13:30,1. FSV Mainz 05,FC Bayern München,Bundesliga
+2026-04-25 13:30,1. FSV Mainz 05,Fc Bayern München,Bundesliga
 2026-04-25 13:30,Borussia Dortmund,Sport-Club Freiburg,Bundesliga
 2026-04-25 13:30,Vfl Wolfsburg,Borussia Mönchengladbach,Bundesliga
 2026-04-25 13:30,Rb Leipzig,1. Fc Union Berlin,Bundesliga
@@ -316,7 +316,7 @@ datetime,home,away,league
 2026-04-25 13:30,1. Fc Köln,Bayer 04 Leverkusen,Bundesliga
 2026-04-25 13:30,Hamburger Sv,Hoffenheim,Bundesliga
 2026-04-25 13:30,Fc Augsburg,Eintracht Frankfurt,Bundesliga
-2026-05-02 13:30,FC Bayern München,1. Fc Heidenheim 1846,Bundesliga
+2026-05-02 13:30,Fc Bayern München,1. Fc Heidenheim 1846,Bundesliga
 2026-05-02 13:30,Bayer 04 Leverkusen,Rb Leipzig,Bundesliga
 2026-05-02 13:30,Eintracht Frankfurt,Hamburger Sv,Bundesliga
 2026-05-02 13:30,Sport-Club Freiburg,Vfl Wolfsburg,Bundesliga
@@ -333,7 +333,7 @@ datetime,home,away,league
 2026-05-09 13:30,Fc Augsburg,Borussia Mönchengladbach,Bundesliga
 2026-05-09 13:30,1. Fc Köln,1. Fc Heidenheim 1846,Bundesliga
 2026-05-09 13:30,Hamburger Sv,Sport-Club Freiburg,Bundesliga
-2026-05-09 13:30,Vfl Wolfsburg,FC Bayern München,Bundesliga
+2026-05-09 13:30,Vfl Wolfsburg,Fc Bayern München,Bundesliga
 2026-05-16 13:30,Bayer 04 Leverkusen,Hamburger Sv,Bundesliga
 2026-05-16 13:30,1. Fc Heidenheim 1846,1. FSV Mainz 05,Bundesliga
 2026-05-16 13:30,St Pauli,Vfl Wolfsburg,Bundesliga
@@ -342,7 +342,7 @@ datetime,home,away,league
 2026-05-16 13:30,Sv Werder Bremen,Borussia Dortmund,Bundesliga
 2026-05-16 13:30,Sport-Club Freiburg,Rb Leipzig,Bundesliga
 2026-05-16 13:30,Eintracht Frankfurt,Vfb Stuttgart,Bundesliga
-2026-05-16 13:30,FC Bayern München,1. Fc Köln,Bundesliga
+2026-05-16 13:30,Fc Bayern München,1. Fc Köln,Bundesliga
 2025-11-22 00:00,Burnley Fc,Chelsea,EPL
 2025-11-22 00:00,Afc Bournemouth,West Ham United Fc,EPL
 2025-11-22 00:00,Brighton & Hove Albion Fc,Brentford Fc,EPL
@@ -2253,7 +2253,7 @@ datetime,home,away,league
 2026-05-24 02:00,Cremonese,Como 1907,Serie A
 2026-05-24 02:00,Us Lecce,Genoa Cfc,Serie A
 2025-11-22 14:30,Kayserispor,Gaziantep,TurkishSuperLig
-2025-11-22 17:00,Eyupspor,Fatih Karagümrük,TurkishSuperLig
+2025-11-22 17:00,Eyüpspor,Fatih Karagümrük,TurkishSuperLig
 2025-11-22 20:00,Galatasaray,Gençlerbirligi,TurkishSuperLig
 2025-11-23 14:30,Göztepe,Kocaelispor,TurkishSuperLig
 2025-11-23 17:00,Besiktas,Samsunspor,TurkishSuperLig
@@ -2263,7 +2263,7 @@ datetime,home,away,league
 2025-11-24 20:00,Istanbul Basaksehir,Trabzonspor,TurkishSuperLig
 2025-11-28 20:00,Kocaelispor,Gençlerbirligi,TurkishSuperLig
 2025-11-29 14:30,Çaykur Rizespor,Kayserispor,TurkishSuperLig
-2025-11-29 17:00,Gaziantep,Eyupspor,TurkishSuperLig
+2025-11-29 17:00,Gaziantep,Eyüpspor,TurkishSuperLig
 2025-11-29 20:00,Kasimpasa,Istanbul Basaksehir,TurkishSuperLig
 2025-11-29 20:00,Trabzonspor,Konyaspor,TurkishSuperLig
 2025-11-30 17:00,Antalyaspor,Göztepe,TurkishSuperLig
@@ -2271,7 +2271,7 @@ datetime,home,away,league
 2025-12-01 20:00,Samsunspor,Alanyaspor,TurkishSuperLig
 2025-12-01 20:00,Fenerbahçe,Galatasaray,TurkishSuperLig
 2025-12-05 20:00,Galatasaray,Samsunspor,TurkishSuperLig
-2025-12-06 14:30,Eyupspor,Kayserispor,TurkishSuperLig
+2025-12-06 14:30,Eyüpspor,Kayserispor,TurkishSuperLig
 2025-12-06 17:00,Konyaspor,Çaykur Rizespor,TurkishSuperLig
 2025-12-06 20:00,Istanbul Basaksehir,Fenerbahçe,TurkishSuperLig
 2025-12-07 14:30,Gençlerbirligi,Fatih Karagümrük,TurkishSuperLig
@@ -2280,7 +2280,7 @@ datetime,home,away,league
 2025-12-08 20:00,Besiktas,Gaziantep,TurkishSuperLig
 2025-12-08 20:00,Alanyaspor,Antalyaspor,TurkishSuperLig
 2025-12-12 20:00,Kasimpasa,Gençlerbirligi,TurkishSuperLig
-2025-12-13 14:30,Çaykur Rizespor,Eyupspor,TurkishSuperLig
+2025-12-13 14:30,Çaykur Rizespor,Eyüpspor,TurkishSuperLig
 2025-12-13 17:00,Kayserispor,Alanyaspor,TurkishSuperLig
 2025-12-13 20:00,Antalyaspor,Galatasaray,TurkishSuperLig
 2025-12-14 14:30,Gaziantep,Göztepe,TurkishSuperLig
@@ -2288,7 +2288,7 @@ datetime,home,away,league
 2025-12-14 20:00,Trabzonspor,Besiktas,TurkishSuperLig
 2025-12-14 20:00,Samsunspor,Istanbul Basaksehir,TurkishSuperLig
 2025-12-15 20:00,Fenerbahçe,Konyaspor,TurkishSuperLig
-2025-12-21 16:00,Eyupspor,Fenerbahçe,TurkishSuperLig
+2025-12-21 16:00,Eyüpspor,Fenerbahçe,TurkishSuperLig
 2025-12-21 16:00,Konyaspor,Kayserispor,TurkishSuperLig
 2025-12-21 16:00,Besiktas,Çaykur Rizespor,TurkishSuperLig
 2025-12-21 16:00,Alanyaspor,Fatih Karagümrük,TurkishSuperLig
@@ -2297,7 +2297,7 @@ datetime,home,away,league
 2025-12-21 16:00,Galatasaray,Kasimpasa,TurkishSuperLig
 2025-12-21 16:00,Gençlerbirligi,Trabzonspor,TurkishSuperLig
 2025-12-21 16:00,Kocaelispor,Antalyaspor,TurkishSuperLig
-2026-01-18 16:00,Konyaspor,Eyupspor,TurkishSuperLig
+2026-01-18 16:00,Konyaspor,Eyüpspor,TurkishSuperLig
 2026-01-18 16:00,Kasimpasa,Antalyaspor,TurkishSuperLig
 2026-01-18 16:00,Kocaelispor,Trabzonspor,TurkishSuperLig
 2026-01-18 16:00,Gençlerbirligi,Samsunspor,TurkishSuperLig
@@ -2306,7 +2306,7 @@ datetime,home,away,league
 2026-01-18 16:00,Alanyaspor,Fenerbahçe,TurkishSuperLig
 2026-01-18 16:00,Göztepe,Çaykur Rizespor,TurkishSuperLig
 2026-01-18 16:00,Besiktas,Kayserispor,TurkishSuperLig
-2026-01-25 16:00,Eyupspor,Besiktas,TurkishSuperLig
+2026-01-25 16:00,Eyüpspor,Besiktas,TurkishSuperLig
 2026-01-25 16:00,Trabzonspor,Kasimpasa,TurkishSuperLig
 2026-01-25 16:00,Gaziantep,Konyaspor,TurkishSuperLig
 2026-01-25 16:00,Çaykur Rizespor,Alanyaspor,TurkishSuperLig
@@ -2315,7 +2315,7 @@ datetime,home,away,league
 2026-01-25 16:00,Fatih Karagümrük,Galatasaray,TurkishSuperLig
 2026-01-25 16:00,Antalyaspor,Gençlerbirligi,TurkishSuperLig
 2026-01-25 16:00,Samsunspor,Kocaelispor,TurkishSuperLig
-2026-02-01 16:00,Alanyaspor,Eyupspor,TurkishSuperLig
+2026-02-01 16:00,Alanyaspor,Eyüpspor,TurkishSuperLig
 2026-02-01 16:00,Besiktas,Konyaspor,TurkishSuperLig
 2026-02-01 16:00,Antalyaspor,Trabzonspor,TurkishSuperLig
 2026-02-01 16:00,Kasimpasa,Samsunspor,TurkishSuperLig
@@ -2324,7 +2324,7 @@ datetime,home,away,league
 2026-02-01 16:00,Kocaelispor,Fenerbahçe,TurkishSuperLig
 2026-02-01 16:00,Istanbul Basaksehir,Çaykur Rizespor,TurkishSuperLig
 2026-02-01 16:00,Galatasaray,Kayserispor,TurkishSuperLig
-2026-02-08 16:00,Eyupspor,Istanbul Basaksehir,TurkishSuperLig
+2026-02-08 16:00,Eyüpspor,Istanbul Basaksehir,TurkishSuperLig
 2026-02-08 16:00,Gaziantep,Kasimpasa,TurkishSuperLig
 2026-02-08 16:00,Fatih Karagümrük,Antalyaspor,TurkishSuperLig
 2026-02-08 16:00,Samsunspor,Trabzonspor,TurkishSuperLig
@@ -2333,7 +2333,7 @@ datetime,home,away,league
 2026-02-08 16:00,Çaykur Rizespor,Galatasaray,TurkishSuperLig
 2026-02-08 16:00,Fenerbahçe,Gençlerbirligi,TurkishSuperLig
 2026-02-08 16:00,Kayserispor,Kocaelispor,TurkishSuperLig
-2026-02-15 16:00,Galatasaray,Eyupspor,TurkishSuperLig
+2026-02-15 16:00,Galatasaray,Eyüpspor,TurkishSuperLig
 2026-02-15 16:00,Alanyaspor,Konyaspor,TurkishSuperLig
 2026-02-15 16:00,Istanbul Basaksehir,Besiktas,TurkishSuperLig
 2026-02-15 16:00,Antalyaspor,Samsunspor,TurkishSuperLig
@@ -2342,7 +2342,7 @@ datetime,home,away,league
 2026-02-15 16:00,Trabzonspor,Fenerbahçe,TurkishSuperLig
 2026-02-15 16:00,Gençlerbirligi,Çaykur Rizespor,TurkishSuperLig
 2026-02-15 16:00,Göztepe,Kayserispor,TurkishSuperLig
-2026-02-22 16:00,Eyupspor,Gençlerbirligi,TurkishSuperLig
+2026-02-22 16:00,Eyüpspor,Gençlerbirligi,TurkishSuperLig
 2026-02-22 16:00,Fenerbahçe,Kasimpasa,TurkishSuperLig
 2026-02-22 16:00,Kayserispor,Antalyaspor,TurkishSuperLig
 2026-02-22 16:00,Gaziantep,Trabzonspor,TurkishSuperLig
@@ -2351,7 +2351,7 @@ datetime,home,away,league
 2026-02-22 16:00,Besiktas,Göztepe,TurkishSuperLig
 2026-02-22 16:00,Konyaspor,Galatasaray,TurkishSuperLig
 2026-02-22 16:00,Çaykur Rizespor,Kocaelispor,TurkishSuperLig
-2026-03-01 16:00,Göztepe,Eyupspor,TurkishSuperLig
+2026-03-01 16:00,Göztepe,Eyüpspor,TurkishSuperLig
 2026-03-01 16:00,Istanbul Basaksehir,Konyaspor,TurkishSuperLig
 2026-03-01 16:00,Kocaelispor,Besiktas,TurkishSuperLig
 2026-03-01 16:00,Galatasaray,Alanyaspor,TurkishSuperLig
@@ -2360,7 +2360,7 @@ datetime,home,away,league
 2026-03-01 16:00,Antalyaspor,Fenerbahçe,TurkishSuperLig
 2026-03-01 16:00,Kasimpasa,Çaykur Rizespor,TurkishSuperLig
 2026-03-01 16:00,Gençlerbirligi,Kayserispor,TurkishSuperLig
-2026-03-08 16:00,Eyupspor,Kocaelispor,TurkishSuperLig
+2026-03-08 16:00,Eyüpspor,Kocaelispor,TurkishSuperLig
 2026-03-08 16:00,Konyaspor,Kasimpasa,TurkishSuperLig
 2026-03-08 16:00,Çaykur Rizespor,Antalyaspor,TurkishSuperLig
 2026-03-08 16:00,Kayserispor,Trabzonspor,TurkishSuperLig
@@ -2369,7 +2369,7 @@ datetime,home,away,league
 2026-03-08 16:00,Istanbul Basaksehir,Göztepe,TurkishSuperLig
 2026-03-08 16:00,Besiktas,Galatasaray,TurkishSuperLig
 2026-03-08 16:00,Alanyaspor,Gençlerbirligi,TurkishSuperLig
-2026-03-15 16:00,Kasimpasa,Eyupspor,TurkishSuperLig
+2026-03-15 16:00,Kasimpasa,Eyüpspor,TurkishSuperLig
 2026-03-15 16:00,Kocaelispor,Konyaspor,TurkishSuperLig
 2026-03-15 16:00,Gençlerbirligi,Besiktas,TurkishSuperLig
 2026-03-15 16:00,Göztepe,Alanyaspor,TurkishSuperLig
@@ -2378,7 +2378,7 @@ datetime,home,away,league
 2026-03-15 16:00,Fatih Karagümrük,Fenerbahçe,TurkishSuperLig
 2026-03-15 16:00,Trabzonspor,Çaykur Rizespor,TurkishSuperLig
 2026-03-15 16:00,Samsunspor,Kayserispor,TurkishSuperLig
-2026-03-22 16:00,Eyupspor,Trabzonspor,TurkishSuperLig
+2026-03-22 16:00,Eyüpspor,Trabzonspor,TurkishSuperLig
 2026-03-22 16:00,Besiktas,Kasimpasa,TurkishSuperLig
 2026-03-22 16:00,Istanbul Basaksehir,Antalyaspor,TurkishSuperLig
 2026-03-22 16:00,Çaykur Rizespor,Samsunspor,TurkishSuperLig
@@ -2387,7 +2387,7 @@ datetime,home,away,league
 2026-03-22 16:00,Göztepe,Galatasaray,TurkishSuperLig
 2026-03-22 16:00,Konyaspor,Gençlerbirligi,TurkishSuperLig
 2026-03-22 16:00,Alanyaspor,Kocaelispor,TurkishSuperLig
-2026-04-05 16:00,Antalyaspor,Eyupspor,TurkishSuperLig
+2026-04-05 16:00,Antalyaspor,Eyüpspor,TurkishSuperLig
 2026-04-05 16:00,Samsunspor,Konyaspor,TurkishSuperLig
 2026-04-05 16:00,Fenerbahçe,Besiktas,TurkishSuperLig
 2026-04-05 16:00,Gaziantep,Alanyaspor,TurkishSuperLig
@@ -2396,7 +2396,7 @@ datetime,home,away,league
 2026-04-05 16:00,Trabzonspor,Galatasaray,TurkishSuperLig
 2026-04-05 16:00,Fatih Karagümrük,Çaykur Rizespor,TurkishSuperLig
 2026-04-05 16:00,Kasimpasa,Kayserispor,TurkishSuperLig
-2026-04-12 16:00,Eyupspor,Samsunspor,TurkishSuperLig
+2026-04-12 16:00,Eyüpspor,Samsunspor,TurkishSuperLig
 2026-04-12 16:00,Göztepe,Kasimpasa,TurkishSuperLig
 2026-04-12 16:00,Besiktas,Antalyaspor,TurkishSuperLig
 2026-04-12 16:00,Alanyaspor,Trabzonspor,TurkishSuperLig
@@ -2405,7 +2405,7 @@ datetime,home,away,league
 2026-04-12 16:00,Kayserispor,Fenerbahçe,TurkishSuperLig
 2026-04-12 16:00,Istanbul Basaksehir,Gençlerbirligi,TurkishSuperLig
 2026-04-12 16:00,Galatasaray,Kocaelispor,TurkishSuperLig
-2026-04-19 16:00,Fatih Karagümrük,Eyupspor,TurkishSuperLig
+2026-04-19 16:00,Fatih Karagümrük,Eyüpspor,TurkishSuperLig
 2026-04-19 16:00,Antalyaspor,Konyaspor,TurkishSuperLig
 2026-04-19 16:00,Samsunspor,Besiktas,TurkishSuperLig
 2026-04-19 16:00,Kasimpasa,Alanyaspor,TurkishSuperLig
@@ -2414,7 +2414,7 @@ datetime,home,away,league
 2026-04-19 16:00,Gençlerbirligi,Galatasaray,TurkishSuperLig
 2026-04-19 16:00,Fenerbahçe,Çaykur Rizespor,TurkishSuperLig
 2026-04-19 16:00,Gaziantep,Kayserispor,TurkishSuperLig
-2026-04-26 16:00,Eyupspor,Gaziantep,TurkishSuperLig
+2026-04-26 16:00,Eyüpspor,Gaziantep,TurkishSuperLig
 2026-04-26 16:00,Istanbul Basaksehir,Kasimpasa,TurkishSuperLig
 2026-04-26 16:00,Göztepe,Antalyaspor,TurkishSuperLig
 2026-04-26 16:00,Konyaspor,Trabzonspor,TurkishSuperLig
@@ -2423,7 +2423,7 @@ datetime,home,away,league
 2026-04-26 16:00,Galatasaray,Fenerbahçe,TurkishSuperLig
 2026-04-26 16:00,Kayserispor,Çaykur Rizespor,TurkishSuperLig
 2026-04-26 16:00,Gençlerbirligi,Kocaelispor,TurkishSuperLig
-2026-05-03 16:00,Kayserispor,Eyupspor,TurkishSuperLig
+2026-05-03 16:00,Kayserispor,Eyüpspor,TurkishSuperLig
 2026-05-03 16:00,Çaykur Rizespor,Konyaspor,TurkishSuperLig
 2026-05-03 16:00,Gaziantep,Besiktas,TurkishSuperLig
 2026-05-03 16:00,Antalyaspor,Alanyaspor,TurkishSuperLig
@@ -2432,7 +2432,7 @@ datetime,home,away,league
 2026-05-03 16:00,Samsunspor,Galatasaray,TurkishSuperLig
 2026-05-03 16:00,Fatih Karagümrük,Gençlerbirligi,TurkishSuperLig
 2026-05-03 16:00,Kasimpasa,Kocaelispor,TurkishSuperLig
-2026-05-10 16:00,Eyupspor,Çaykur Rizespor,TurkishSuperLig
+2026-05-10 16:00,Eyüpspor,Çaykur Rizespor,TurkishSuperLig
 2026-05-10 16:00,Gençlerbirligi,Kasimpasa,TurkishSuperLig
 2026-05-10 16:00,Galatasaray,Antalyaspor,TurkishSuperLig
 2026-05-10 16:00,Besiktas,Trabzonspor,TurkishSuperLig
@@ -2441,7 +2441,7 @@ datetime,home,away,league
 2026-05-10 16:00,Göztepe,Gaziantep,TurkishSuperLig
 2026-05-10 16:00,Konyaspor,Fenerbahçe,TurkishSuperLig
 2026-05-10 16:00,Alanyaspor,Kayserispor,TurkishSuperLig
-2026-05-17 16:00,Fenerbahçe,Eyupspor,TurkishSuperLig
+2026-05-17 16:00,Fenerbahçe,Eyüpspor,TurkishSuperLig
 2026-05-17 16:00,Kayserispor,Konyaspor,TurkishSuperLig
 2026-05-17 16:00,Çaykur Rizespor,Besiktas,TurkishSuperLig
 2026-05-17 16:00,Fatih Karagümrük,Alanyaspor,TurkishSuperLig
