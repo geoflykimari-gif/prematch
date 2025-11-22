@@ -11,7 +11,7 @@ UPCOMING_CSV = "upcoming_matches.csv"
 
 LEAGUE_ORDER = ["EPL","Championship","La Liga","Serie A","Bundesliga","Ligue 1"]
 
-# --- CSV Loader with normalization ---
+# --- CSV Loader ---
 def load_csv(path, is_master=False):
     df = pd.read_csv(path)
 
@@ -28,7 +28,7 @@ def load_csv(path, is_master=False):
     for c in df.select_dtypes(include='object').columns:
         df[c] = df[c].astype(str).str.strip()
 
-    # Lowercase team names for robust matching
+    # Lowercase team names
     df['home'] = df['home'].str.lower()
     df['away'] = df['away'].str.lower()
     if 'league' in df.columns:
@@ -51,7 +51,7 @@ def load_csv(path, is_master=False):
 df_master = load_csv(MASTER_CSV, is_master=True)
 df_upcoming = load_csv(UPCOMING_CSV)
 
-# --- Normalize teams for robust matching ---
+# --- Normalize teams ---
 def normalize_teams(df):
     df['home'] = df['home'].str.strip().str.lower()
     df['away'] = df['away'].str.strip().str.lower()
@@ -70,8 +70,8 @@ def get_last_n_matches(team, n=5):
         opponent = row['away'] if row['home']==team else row['home']
         venue = 'Home' if row['home']==team else 'Away'
 
-        home_goals = row.get('fthg',0)
-        away_goals = row.get('ftag',0)
+        home_goals = int(row.get('fthg',0))
+        away_goals = int(row.get('ftag',0))
 
         score = f"{home_goals}-{away_goals}" if venue=='Home' else f"{away_goals}-{home_goals}"
 
@@ -119,8 +119,8 @@ def get_match_prediction(home, away):
     home_avg = np.mean([int(m['score'].split('-')[0]) for m in last_home]) if last_home else 1
     away_avg = np.mean([int(m['score'].split('-')[1]) for m in last_away]) if last_away else 1
 
-    exp_home_goals = int(round(home_avg))
-    exp_away_goals = int(round(away_avg))
+    exp_home_goals = round(home_avg)
+    exp_away_goals = round(away_avg)
     predicted_score = f"{exp_home_goals}-{exp_away_goals}"
 
     home_pct = min(max(40 + (exp_home_goals-exp_away_goals)*10,5),90)
@@ -128,14 +128,14 @@ def get_match_prediction(home, away):
     away_pct = 100 - home_pct - draw_pct
 
     total_goals = exp_home_goals + exp_away_goals
-    over_25 = 70 if total_goals>2.5 else 30
+    over_25 = 70 if total_goals>2 else 30
     under_25 = 100 - over_25
     btts = 70 if exp_home_goals>0 and exp_away_goals>0 else 30
 
     return {
-        'home_pct': round(home_pct),
-        'draw_pct': round(draw_pct),
-        'away_pct': round(away_pct),
+        'home_pct': int(home_pct),
+        'draw_pct': int(draw_pct),
+        'away_pct': int(away_pct),
         'predicted_score': predicted_score,
         'exp_home_goals': exp_home_goals,
         'exp_away_goals': exp_away_goals,
@@ -145,10 +145,6 @@ def get_match_prediction(home, away):
     }
 
 # --- Routes ---
-@app.route("/ping")
-def ping():
-    return "pong", 200
-
 @app.route("/")
 def index():
     now = datetime.now()
@@ -189,5 +185,22 @@ def match_detail():
         h2h=h2h
     )
 
+@app.route("/info")
+def info():
+    return render_template("info.html")
+
+@app.route("/privacy")
+def privacy():
+    return render_template("privacy.html")
+
+@app.route("/terms")
+def terms():
+    return render_template("terms.html")
+
+# Optional: simple ping route to keep Render awake
+@app.route("/ping")
+def ping():
+    return "pong"
+
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=10000)
