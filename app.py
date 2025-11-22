@@ -102,6 +102,11 @@ def load_upcoming():
     df_upcoming["away"] = df_upcoming["away"].apply(normalize_team)
 
 # -----------------------------
+# Load master immediately so Render sees it
+# -----------------------------
+load_master()
+
+# -----------------------------
 # Last N matches
 # -----------------------------
 def get_last_n_matches(team, n=10):
@@ -169,17 +174,13 @@ def predict_match(home, away):
     # -----------------------------
     # Minimal changes: integer goals & realistic BTTS / Over 2.5
     # -----------------------------
-    # Expected goals using adjusted averages
     home_exp = (home_gf + away_ga*0.9)/2
     away_exp = (away_gf + home_ga*0.9)/2
 
-    # Sample goals from Poisson for realism
     home_goals_pred = np.random.poisson(max(0.5, home_exp))
     away_goals_pred = np.random.poisson(max(0.5, away_exp))
 
-    # BTTS probability
     btts = "Likely" if home_goals_pred>0 and away_goals_pred>0 else "Unlikely"
-    # Over 2.5 goals
     over25 = "Likely" if (home_goals_pred + away_goals_pred) > 2 else "Unlikely"
 
     ft_score = f"{home_goals_pred}-{away_goals_pred}"
@@ -233,5 +234,4 @@ def match_detail():
 
 # -----------------------------
 if __name__ == "__main__":
-    load_master()
     app.run(debug=True)
