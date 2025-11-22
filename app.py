@@ -54,7 +54,6 @@ def normalize_team(name):
 # TEAM STRENGTH BASELINE
 # -----------------------------
 TEAM_STRENGTH = {
-    # EPL top teams
     "Manchester City": 95,
     "Chelsea": 88,
     "Arsenal": 90,
@@ -63,22 +62,18 @@ TEAM_STRENGTH = {
     "Tottenham": 84,
     "Newcastle": 83,
     "Brighton": 80,
-    # Mid-table
     "Everton": 75,
     "West Ham": 74,
     "Aston Villa": 73,
     "Leicester City": 72,
-    # Lower teams
     "Southampton": 70,
     "Bournemouth": 68,
     "Nottingham Forest": 67,
     "Crystal Palace": 66,
-    # Championship examples
     "Sheffield United": 78,
     "Bristol City": 72,
     "Millwall": 70,
     "Coventry City": 69,
-    # Default unknown teams will be 70
 }
 
 # -----------------------------
@@ -163,13 +158,12 @@ def get_last_n_matches(team, n=10):
     return results
 
 # -----------------------------
-# Predict match (balanced realistic goals)
+# Predict match (realistic, balanced goals)
 # -----------------------------
 def predict_match(home, away):
     home_form = get_last_n_matches(home, 10)
     away_form = get_last_n_matches(away, 10)
 
-    # Steeper recent form weighting
     def weighted_score(form):
         score_map = {"W":3, "D":1, "L":0}
         weights = [2.0, 1.8, 1.5, 1.2, 1, 1, 1, 1, 1, 1][:len(form)]
@@ -178,7 +172,6 @@ def predict_match(home, away):
     home_score = weighted_score(home_form)
     away_score = weighted_score(away_form)
 
-    # Average goals
     def avg_goals(team):
         matches = get_last_n_matches(team,10)
         gf=ga=0
@@ -195,7 +188,6 @@ def predict_match(home, away):
     home_gf, home_ga = avg_goals(home)
     away_gf, away_ga = avg_goals(away)
 
-    # Baseline team strength
     home_base = TEAM_STRENGTH.get(home, 70)
     away_base = TEAM_STRENGTH.get(away, 70)
 
@@ -203,15 +195,13 @@ def predict_match(home, away):
     away_power = away_base*0.4 + away_score*0.7 + away_gf*0.6 - away_ga*0.4
     home_power *= 1.1
 
-    # Probabilities
     total = home_power + away_power + 0.01
     home_win = round(home_power/total*100,1)
     away_win = round(away_power/total*100,1)
     draw = round(100 - home_win - away_win,1)
 
     # -----------------------------
-    # Balanced Expected Goals
-    # -----------------------------
+    # Adjust expected goals with higher ceilings
     home_base_exp = (home_gf + away_ga*0.9)/2
     away_base_exp = (away_gf + home_ga*0.9)/2
 
@@ -219,9 +209,9 @@ def predict_match(home, away):
     home_exp = home_base_exp + 0.02*strength_diff
     away_exp = away_base_exp - 0.01*strength_diff
 
-    # Clamp to realistic football range
-    home_exp = min(max(home_exp, 0.8), 3.2)
-    away_exp = min(max(away_exp, 0.5), 2.5)
+    # Clamp to realistic football range (slightly higher now)
+    home_exp = min(max(home_exp, 0.8), 4.0)
+    away_exp = min(max(away_exp, 0.5), 3.0)
 
     sims = 1000
     home_goals_sims = np.random.poisson(home_exp, sims)
