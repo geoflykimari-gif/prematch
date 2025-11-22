@@ -43,7 +43,6 @@ TEAM_ALIASES = {
     "Chelsea FC": "Chelsea",
     "Liverpool FC": "Liverpool",
     "Arsenal FC": "Arsenal",
-    # Add more aliases if needed
 }
 
 def normalize_team(name):
@@ -158,7 +157,7 @@ def get_last_n_matches(team, n=10):
     return results
 
 # -----------------------------
-# Predict match (realistic, balanced goals)
+# Predict match (boosted realistic goals)
 # -----------------------------
 def predict_match(home, away):
     home_form = get_last_n_matches(home, 10)
@@ -201,7 +200,7 @@ def predict_match(home, away):
     draw = round(100 - home_win - away_win,1)
 
     # -----------------------------
-    # Adjust expected goals with higher ceilings
+    # Boost expected goals minimally
     home_base_exp = (home_gf + away_ga*0.9)/2
     away_base_exp = (away_gf + home_ga*0.9)/2
 
@@ -209,9 +208,10 @@ def predict_match(home, away):
     home_exp = home_base_exp + 0.02*strength_diff
     away_exp = away_base_exp - 0.01*strength_diff
 
-    # Clamp to realistic football range (slightly higher now)
-    home_exp = min(max(home_exp, 0.8), 4.0)
-    away_exp = min(max(away_exp, 0.5), 3.0)
+    # -----------------------------
+    # Minimal boost to make goals more realistic
+    home_exp = min(max(home_exp + 0.6, 1.2), 4.5)  # +0.6 boost
+    away_exp = min(max(away_exp + 0.4, 0.8), 3.5)  # +0.4 boost
 
     sims = 1000
     home_goals_sims = np.random.poisson(home_exp, sims)
@@ -226,7 +226,6 @@ def predict_match(home, away):
     scores = [f"{h}-{a}" for h,a in zip(home_goals_sims, away_goals_sims)]
     ft_score = max(set(scores), key=scores.count)
 
-    # Smooth Home/Draw/Away
     draw_adjust = np.mean(home_goals_sims == away_goals_sims)*100
     home_win = round(home_win*(1-draw_adjust/100) + np.mean(home_goals_sims > away_goals_sims)*draw_adjust,1)
     away_win = round(100 - home_win - round(draw_adjust,1),1)
