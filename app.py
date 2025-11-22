@@ -132,7 +132,7 @@ def get_last_n_matches(team, n=10):
     return results
 
 # -----------------------------
-# Predict match
+# Predict match (enhanced)
 # -----------------------------
 def predict_match(home, away):
     home_form = get_last_n_matches(home, 10)
@@ -166,24 +166,39 @@ def predict_match(home, away):
     away_power = away_score*0.7 + away_gf*0.6 - away_ga*0.4
     home_power *= 1.1
 
+    # Smoothed probabilities using power
     total = home_power + away_power + 0.01
     home_win = round(home_power/total*100,1)
     away_win = round(away_power/total*100,1)
     draw = round(100 - home_win - away_win,1)
 
     # -----------------------------
-    # Minimal changes: integer goals & realistic BTTS / Over 2.5
+    # Enhanced Poisson simulation
     # -----------------------------
     home_exp = (home_gf + away_ga*0.9)/2
     away_exp = (away_gf + home_ga*0.9)/2
 
-    home_goals_pred = np.random.poisson(max(0.5, home_exp))
-    away_goals_pred = np.random.poisson(max(0.5, away_exp))
+    sims = 1000
+    home_goals_sims = np.random.poisson(max(0.5, home_exp), sims)
+    away_goals_sims = np.random.poisson(max(0.5, away_exp), sims)
 
-    btts = "Likely" if home_goals_pred>0 and away_goals_pred>0 else "Unlikely"
-    over25 = "Likely" if (home_goals_pred + away_goals_pred) > 2 else "Unlikely"
+    # BTTS probability
+    btts_prob = np.mean((home_goals_sims>0) & (away_goals_sims>0))
+    btts = f"{round(btts_prob*100)}%"
 
-    ft_score = f"{home_goals_pred}-{away_goals_pred}"
+    # Over 2.5 goals probability
+    over25_prob = np.mean(home_goals_sims + away_goals_sims > 2)
+    over25 = f"{round(over25_prob*100)}%"
+
+    # Most likely score
+    scores = [f"{h}-{a}" for h,a in zip(home_goals_sims, away_goals_sims)]
+    ft_score = max(set(scores), key=scores.count)
+
+    # Optional: Smooth Home/Draw/Away based on simulations (very minor adjustment)
+    draw_adjust = np.mean(home_goals_sims == away_goals_sims)*100
+    home_win = round(home_win*(1-draw_adjust/100) + np.mean(home_goals_sims > away_goals_sims)*draw_adjust,1)
+    away_win = round(100 - home_win - round(draw_adjust,1),1)
+    draw = round(draw_adjust,1)
 
     return {
         "prediction":{"home_win":f"{home_win}%", "draw":f"{draw}%", "away_win":f"{away_win}%"},
