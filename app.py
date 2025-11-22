@@ -163,7 +163,7 @@ def get_last_n_matches(team, n=10):
     return results
 
 # -----------------------------
-# Predict match (minimal changes)
+# Predict match (balanced realistic goals)
 # -----------------------------
 def predict_match(home, away):
     home_form = get_last_n_matches(home, 10)
@@ -209,9 +209,19 @@ def predict_match(home, away):
     away_win = round(away_power/total*100,1)
     draw = round(100 - home_win - away_win,1)
 
-    # Poisson simulation
-    home_exp = max((home_gf + away_ga*0.9)/2, 1.0)
-    away_exp = max((away_gf + home_ga*0.9)/2, 0.7)
+    # -----------------------------
+    # Balanced Expected Goals
+    # -----------------------------
+    home_base_exp = (home_gf + away_ga*0.9)/2
+    away_base_exp = (away_gf + home_ga*0.9)/2
+
+    strength_diff = TEAM_STRENGTH.get(home,70) - TEAM_STRENGTH.get(away,70)
+    home_exp = home_base_exp + 0.02*strength_diff
+    away_exp = away_base_exp - 0.01*strength_diff
+
+    # Clamp to realistic football range
+    home_exp = min(max(home_exp, 0.8), 3.2)
+    away_exp = min(max(away_exp, 0.5), 2.5)
 
     sims = 1000
     home_goals_sims = np.random.poisson(home_exp, sims)
