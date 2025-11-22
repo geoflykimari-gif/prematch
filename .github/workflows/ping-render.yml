@@ -1,0 +1,16 @@
+name: Keep Render App Awake
+
+# Run on a schedule
+on:
+  schedule:
+    # Every 10 minutes
+    - cron: '*/10 * * * *'
+  workflow_dispatch:  # Also allow manual trigger
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render App
+        run: |
+          curl -I https://prematch.onrender.com/
