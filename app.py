@@ -119,13 +119,18 @@ def get_match_prediction(home, away):
     home_avg = np.mean([int(m['score'].split('-')[0]) for m in last_home]) if last_home else 1
     away_avg = np.mean([int(m['score'].split('-')[1]) for m in last_away]) if last_away else 1
 
-    exp_home_goals = round(home_avg,1)
-    exp_away_goals = round(away_avg,1)
-    predicted_score = f"{round(exp_home_goals)}-{round(exp_away_goals)}"
+    exp_home_goals = int(round(home_avg))
+    exp_away_goals = int(round(away_avg))
+    predicted_score = f"{exp_home_goals}-{exp_away_goals}"
 
     home_pct = min(max(40 + (exp_home_goals-exp_away_goals)*10,5),90)
     draw_pct = min(max(100 - home_pct - 10,5),50)
     away_pct = 100 - home_pct - draw_pct
+
+    total_goals = exp_home_goals + exp_away_goals
+    over_25 = 70 if total_goals>2.5 else 30
+    under_25 = 100 - over_25
+    btts = 70 if exp_home_goals>0 and exp_away_goals>0 else 30
 
     return {
         'home_pct': round(home_pct),
@@ -133,10 +138,17 @@ def get_match_prediction(home, away):
         'away_pct': round(away_pct),
         'predicted_score': predicted_score,
         'exp_home_goals': exp_home_goals,
-        'exp_away_goals': exp_away_goals
+        'exp_away_goals': exp_away_goals,
+        'btts_pct': btts,
+        'over_25_pct': over_25,
+        'under_25_pct': under_25
     }
 
 # --- Routes ---
+@app.route("/ping")
+def ping():
+    return "pong", 200
+
 @app.route("/")
 def index():
     now = datetime.now()
