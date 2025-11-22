@@ -51,6 +51,37 @@ def normalize_team(name):
     return TEAM_ALIASES.get(name, name)
 
 # -----------------------------
+# TEAM STRENGTH BASELINE
+# -----------------------------
+TEAM_STRENGTH = {
+    # EPL top teams
+    "Manchester City": 95,
+    "Chelsea": 88,
+    "Arsenal": 90,
+    "Liverpool": 89,
+    "Man United": 85,
+    "Tottenham": 84,
+    "Newcastle": 83,
+    "Brighton": 80,
+    # Mid-table
+    "Everton": 75,
+    "West Ham": 74,
+    "Aston Villa": 73,
+    "Leicester City": 72,
+    # Lower teams
+    "Southampton": 70,
+    "Bournemouth": 68,
+    "Nottingham Forest": 67,
+    "Crystal Palace": 66,
+    # Championship examples
+    "Sheffield United": 78,
+    "Bristol City": 72,
+    "Millwall": 70,
+    "Coventry City": 69,
+    # Default unknown teams will be 70
+}
+
+# -----------------------------
 # Load master CSV
 # -----------------------------
 def load_master():
@@ -102,7 +133,7 @@ def load_upcoming():
     df_upcoming["away"] = df_upcoming["away"].apply(normalize_team)
 
 # -----------------------------
-# Load master immediately so Render sees it
+# Load master immediately
 # -----------------------------
 load_master()
 
@@ -132,20 +163,22 @@ def get_last_n_matches(team, n=10):
     return results
 
 # -----------------------------
-# Predict match (enhanced)
+# Predict match (minimal changes)
 # -----------------------------
 def predict_match(home, away):
     home_form = get_last_n_matches(home, 10)
     away_form = get_last_n_matches(away, 10)
 
+    # Steeper recent form weighting
     def weighted_score(form):
         score_map = {"W":3, "D":1, "L":0}
-        weights = [1.5,1.4,1.3,1.2,1.1,1,1,1,1,1][:len(form)]
+        weights = [2.0, 1.8, 1.5, 1.2, 1, 1, 1, 1, 1, 1][:len(form)]
         return sum(score_map[m["outcome"]]*w for m,w in zip(form,weights))
 
     home_score = weighted_score(home_form)
     away_score = weighted_score(away_form)
 
+    # Average goals
     def avg_goals(team):
         matches = get_last_n_matches(team,10)
         gf=ga=0
@@ -162,39 +195,38 @@ def predict_match(home, away):
     home_gf, home_ga = avg_goals(home)
     away_gf, away_ga = avg_goals(away)
 
-    home_power = home_score*0.7 + home_gf*0.6 - home_ga*0.4
-    away_power = away_score*0.7 + away_gf*0.6 - away_ga*0.4
+    # Baseline team strength
+    home_base = TEAM_STRENGTH.get(home, 70)
+    away_base = TEAM_STRENGTH.get(away, 70)
+
+    home_power = home_base*0.4 + home_score*0.7 + home_gf*0.6 - home_ga*0.4
+    away_power = away_base*0.4 + away_score*0.7 + away_gf*0.6 - away_ga*0.4
     home_power *= 1.1
 
-    # Smoothed probabilities using power
+    # Probabilities
     total = home_power + away_power + 0.01
     home_win = round(home_power/total*100,1)
     away_win = round(away_power/total*100,1)
     draw = round(100 - home_win - away_win,1)
 
-    # -----------------------------
-    # Enhanced Poisson simulation
-    # -----------------------------
-    home_exp = (home_gf + away_ga*0.9)/2
-    away_exp = (away_gf + home_ga*0.9)/2
+    # Poisson simulation
+    home_exp = max((home_gf + away_ga*0.9)/2, 1.0)
+    away_exp = max((away_gf + home_ga*0.9)/2, 0.7)
 
     sims = 1000
-    home_goals_sims = np.random.poisson(max(0.5, home_exp), sims)
-    away_goals_sims = np.random.poisson(max(0.5, away_exp), sims)
+    home_goals_sims = np.random.poisson(home_exp, sims)
+    away_goals_sims = np.random.poisson(away_exp, sims)
 
-    # BTTS probability
     btts_prob = np.mean((home_goals_sims>0) & (away_goals_sims>0))
     btts = f"{round(btts_prob*100)}%"
 
-    # Over 2.5 goals probability
     over25_prob = np.mean(home_goals_sims + away_goals_sims > 2)
     over25 = f"{round(over25_prob*100)}%"
 
-    # Most likely score
     scores = [f"{h}-{a}" for h,a in zip(home_goals_sims, away_goals_sims)]
     ft_score = max(set(scores), key=scores.count)
 
-    # Optional: Smooth Home/Draw/Away based on simulations (very minor adjustment)
+    # Smooth Home/Draw/Away
     draw_adjust = np.mean(home_goals_sims == away_goals_sims)*100
     home_win = round(home_win*(1-draw_adjust/100) + np.mean(home_goals_sims > away_goals_sims)*draw_adjust,1)
     away_win = round(100 - home_win - round(draw_adjust,1),1)
