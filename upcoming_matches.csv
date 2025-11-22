@@ -1,5 +1,5 @@
 datetime,home,away,league
-2025-11-21 19:45,Standard Liège,SV Zulte Waregem,BelgianProLeague
+2025-11-21 19:45,Standard Liege,SV Zulte Waregem,BelgianProLeague
 2025-11-22 15:00,Union Saint-Gilloise,Cercle Brugge,BelgianProLeague
 2025-11-22 17:15,Westerlo,KAA Gent,BelgianProLeague
 2025-11-22 19:45,Club Brugge,Sporting Charleroi,BelgianProLeague
@@ -7,7 +7,7 @@ datetime,home,away,league
 2025-11-23 15:00,Royal Antwerp FC,FCV Dender EH,BelgianProLeague
 2025-11-23 17:30,RAAL La Louvière,Anderlecht,BelgianProLeague
 2025-11-23 18:15,Oud-Heverlee Leuven,Sint-Truidense Vv,BelgianProLeague
-2025-11-28 19:45,Mechelen,Standard Liège,BelgianProLeague
+2025-11-28 19:45,Mechelen,Standard Liege,BelgianProLeague
 2025-11-29 15:00,FCV Dender EH,Westerlo,BelgianProLeague
 2025-11-29 17:15,SV Zulte Waregem,Cercle Brugge,BelgianProLeague
 2025-11-29 19:45,Sporting Charleroi,RAAL La Louvière,BelgianProLeague
@@ -20,10 +20,10 @@ datetime,home,away,league
 2025-12-06 17:15,Union Saint-Gilloise,KAA Gent,BelgianProLeague
 2025-12-06 19:45,Sint-Truidense Vv,Club Brugge,BelgianProLeague
 2025-12-07 12:30,Mechelen,Sporting Charleroi,BelgianProLeague
-2025-12-07 15:00,Cercle Brugge,Standard Liège,BelgianProLeague
+2025-12-07 15:00,Cercle Brugge,Standard Liege,BelgianProLeague
 2025-12-07 17:30,Royal Antwerp FC,Genk,BelgianProLeague
 2025-12-07 18:15,Oud-Heverlee Leuven,SV Zulte Waregem,BelgianProLeague
-2025-12-12 19:45,Standard Liège,Oud-Heverlee Leuven,BelgianProLeague
+2025-12-12 19:45,Standard Liege,Oud-Heverlee Leuven,BelgianProLeague
 2025-12-13 15:00,Cercle Brugge,Mechelen,BelgianProLeague
 2025-12-13 17:15,SV Zulte Waregem,RAAL La Louvière,BelgianProLeague
 2025-12-13 19:45,Anderlecht,Sint-Truidense Vv,BelgianProLeague
@@ -32,7 +32,7 @@ datetime,home,away,league
 2025-12-14 17:30,Sporting Charleroi,Union Saint-Gilloise,BelgianProLeague
 2025-12-14 18:15,Genk,Westerlo,BelgianProLeague
 2025-12-19 19:45,Sporting Charleroi,Genk,BelgianProLeague
-2025-12-20 15:00,FCV Dender EH,Standard Liège,BelgianProLeague
+2025-12-20 15:00,FCV Dender EH,Standard Liege,BelgianProLeague
 2025-12-20 17:15,Westerlo,RAAL La Louvière,BelgianProLeague
 2025-12-20 19:45,Union Saint-Gilloise,SV Zulte Waregem,BelgianProLeague
 2025-12-21 12:30,Club Brugge,KAA Gent,BelgianProLeague
@@ -41,7 +41,7 @@ datetime,home,away,league
 2025-12-21 18:15,Oud-Heverlee Leuven,Cercle Brugge,BelgianProLeague
 2025-12-26 12:30,Genk,Club Brugge,BelgianProLeague
 2025-12-26 15:00,Cercle Brugge,Union Saint-Gilloise,BelgianProLeague
-2025-12-26 17:30,Standard Liège,Sint-Truidense Vv,BelgianProLeague
+2025-12-26 17:30,Standard Liege,Sint-Truidense Vv,BelgianProLeague
 2025-12-26 19:45,Anderlecht,Sporting Charleroi,BelgianProLeague
 2025-12-27 12:30,Royal Antwerp FC,SV Zulte Waregem,BelgianProLeague
 2025-12-27 15:00,RAAL La Louvière,Oud-Heverlee Leuven,BelgianProLeague
@@ -51,12 +51,12 @@ datetime,home,away,league
 2026-01-17 00:00,Union Saint-Gilloise,Mechelen,BelgianProLeague
 2026-01-17 00:00,SV Zulte Waregem,Genk,BelgianProLeague
 2026-01-17 00:00,FCV Dender EH,Royal Antwerp FC,BelgianProLeague
-2026-01-17 00:00,Sporting Charleroi,Standard Liège,BelgianProLeague
+2026-01-17 00:00,Sporting Charleroi,Standard Liege,BelgianProLeague
 2026-01-17 00:00,Westerlo,Cercle Brugge,BelgianProLeague
 2026-01-17 00:00,KAA Gent,Anderlecht,BelgianProLeague
 2026-01-17 00:00,Club Brugge,RAAL La Louvière,BelgianProLeague
 2026-01-24 00:00,Anderlecht,FCV Dender EH,BelgianProLeague
-2026-01-24 00:00,Standard Liège,KAA Gent,BelgianProLeague
+2026-01-24 00:00,Standard Liege,KAA Gent,BelgianProLeague
 2026-01-24 00:00,Oud-Heverlee Leuven,Union Saint-Gilloise,BelgianProLeague
 2026-01-24 00:00,Mechelen,Westerlo,BelgianProLeague
 2026-01-24 00:00,Genk,Cercle Brugge,BelgianProLeague
@@ -66,7 +66,7 @@ datetime,home,away,league
 2026-01-31 00:00,Oud-Heverlee Leuven,Mechelen,BelgianProLeague
 2026-01-31 00:00,FCV Dender EH,Genk,BelgianProLeague
 2026-01-31 00:00,RAAL La Louvière,KAA Gent,BelgianProLeague
-2026-01-31 00:00,Standard Liège,Anderlecht,BelgianProLeague
+2026-01-31 00:00,Standard Liege,Anderlecht,BelgianProLeague
 2026-01-31 00:00,SV Zulte Waregem,Westerlo,BelgianProLeague
 2026-01-31 00:00,Union Saint-Gilloise,Club Brugge,BelgianProLeague
 2026-01-31 00:00,Sint-Truidense Vv,Sporting Charleroi,BelgianProLeague
@@ -77,7 +77,7 @@ datetime,home,away,league
 2026-02-07 00:00,Genk,Anderlecht,BelgianProLeague
 2026-02-07 00:00,Mechelen,Royal Antwerp FC,BelgianProLeague
 2026-02-07 00:00,Westerlo,Sint-Truidense Vv,BelgianProLeague
-2026-02-07 00:00,Club Brugge,Standard Liège,BelgianProLeague
+2026-02-07 00:00,Club Brugge,Standard Liege,BelgianProLeague
 2026-02-07 00:00,Union Saint-Gilloise,RAAL La Louvière,BelgianProLeague
 2026-02-14 00:00,Cercle Brugge,Club Brugge,BelgianProLeague
 2026-02-14 00:00,Mechelen,Genk,BelgianProLeague
@@ -85,7 +85,7 @@ datetime,home,away,league
 2026-02-14 00:00,Royal Antwerp FC,Westerlo,BelgianProLeague
 2026-02-14 00:00,Anderlecht,RAAL La Louvière,BelgianProLeague
 2026-02-14 00:00,Sporting Charleroi,KAA Gent,BelgianProLeague
-2026-02-14 00:00,Standard Liège,Union Saint-Gilloise,BelgianProLeague
+2026-02-14 00:00,Standard Liege,Union Saint-Gilloise,BelgianProLeague
 2026-02-14 00:00,Sint-Truidense Vv,SV Zulte Waregem,BelgianProLeague
 2026-02-21 00:00,RAAL La Louvière,Mechelen,BelgianProLeague
 2026-02-21 00:00,FCV Dender EH,Sint-Truidense Vv,BelgianProLeague
@@ -93,21 +93,21 @@ datetime,home,away,league
 2026-02-21 00:00,KAA Gent,Cercle Brugge,BelgianProLeague
 2026-02-21 00:00,Union Saint-Gilloise,Royal Antwerp FC,BelgianProLeague
 2026-02-21 00:00,SV Zulte Waregem,Anderlecht,BelgianProLeague
-2026-02-21 00:00,Genk,Standard Liège,BelgianProLeague
+2026-02-21 00:00,Genk,Standard Liege,BelgianProLeague
 2026-02-21 00:00,Westerlo,Sporting Charleroi,BelgianProLeague
 2026-02-28 00:00,Anderlecht,Oud-Heverlee Leuven,BelgianProLeague
 2026-02-28 00:00,Cercle Brugge,FCV Dender EH,BelgianProLeague
 2026-02-28 00:00,Genk,KAA Gent,BelgianProLeague
 2026-02-28 00:00,Mechelen,SV Zulte Waregem,BelgianProLeague
 2026-02-28 00:00,Westerlo,Union Saint-Gilloise,BelgianProLeague
-2026-02-28 00:00,Standard Liège,RAAL La Louvière,BelgianProLeague
+2026-02-28 00:00,Standard Liege,RAAL La Louvière,BelgianProLeague
 2026-02-28 00:00,Sporting Charleroi,Club Brugge,BelgianProLeague
 2026-02-28 00:00,Royal Antwerp FC,Sint-Truidense Vv,BelgianProLeague
 2026-03-07 00:00,Club Brugge,Anderlecht,BelgianProLeague
 2026-03-07 00:00,KAA Gent,Mechelen,BelgianProLeague
 2026-03-07 00:00,Oud-Heverlee Leuven,Westerlo,BelgianProLeague
 2026-03-07 00:00,RAAL La Louvière,Royal Antwerp FC,BelgianProLeague
-2026-03-07 00:00,SV Zulte Waregem,Standard Liège,BelgianProLeague
+2026-03-07 00:00,SV Zulte Waregem,Standard Liege,BelgianProLeague
 2026-03-07 00:00,Union Saint-Gilloise,Genk,BelgianProLeague
 2026-03-07 00:00,Sint-Truidense Vv,Cercle Brugge,BelgianProLeague
 2026-03-07 00:00,FCV Dender EH,Sporting Charleroi,BelgianProLeague
@@ -117,13 +117,13 @@ datetime,home,away,league
 2026-03-14 00:00,Genk,Sint-Truidense Vv,BelgianProLeague
 2026-03-14 00:00,Mechelen,Anderlecht,BelgianProLeague
 2026-03-14 00:00,Westerlo,Club Brugge,BelgianProLeague
-2026-03-14 00:00,Royal Antwerp FC,Standard Liège,BelgianProLeague
+2026-03-14 00:00,Royal Antwerp FC,Standard Liege,BelgianProLeague
 2026-03-14 00:00,Sporting Charleroi,Oud-Heverlee Leuven,BelgianProLeague
 2026-03-21 00:00,Club Brugge,Mechelen,BelgianProLeague
 2026-03-21 00:00,Oud-Heverlee Leuven,Royal Antwerp FC,BelgianProLeague
 2026-03-21 00:00,Sint-Truidense Vv,Union Saint-Gilloise,BelgianProLeague
 2026-03-21 00:00,SV Zulte Waregem,Sporting Charleroi,BelgianProLeague
-2026-03-21 00:00,Standard Liège,Westerlo,BelgianProLeague
+2026-03-21 00:00,Standard Liege,Westerlo,BelgianProLeague
 2026-03-21 00:00,Anderlecht,Cercle Brugge,BelgianProLeague
 2026-03-21 00:00,RAAL La Louvière,Genk,BelgianProLeague
 2026-03-21 00:00,FCV Dender EH,KAA Gent,BelgianProLeague
