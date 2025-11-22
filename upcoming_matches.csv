@@ -812,7 +812,7 @@ datetime,home,away,league
 2026-05-17 14:30,Psv,Twente,Eredivisie
 2026-05-17 14:30,Az,Nac Breda,Eredivisie
 2025-11-21 20:00,Preston North End,Blackburn Rovers,Championship
-2025-11-22 12:30,Bristol City Fc,Swansea City,Championship
+2025-11-22 12:30,Bristol City,Swansea City,Championship
 2025-11-22 02:00,Charlton Athletic Fc,Southampton,Championship
 2025-11-22 02:00,Coventry City Fc,West Bromwich Albion Fc,Championship
 2025-11-22 15:00,Birmingham City,Norwich City Fc,Championship
@@ -833,11 +833,11 @@ datetime,home,away,league
 2025-11-26 19:45,Millwall Fc,Sheffield Wednesday Fc,Championship
 2025-11-26 02:00,Sheffield United,Portsmouth Fc,Championship
 2025-11-26 02:00,Blackburn Rovers,Queens Park Rangers Fc,Championship
-2025-11-26 02:00,Wrexham Afc,Bristol City Fc,Championship
+2025-11-26 02:00,Wrexham Afc,Bristol City,Championship
 2025-11-26 20:00,West Bromwich Albion Fc,Birmingham City,Championship
 2025-11-28 20:00,Oxford United Fc,Ipswich Town,Championship
 2025-11-29 12:30,Leicester City,Sheffield United,Championship
-2025-11-29 02:00,Portsmouth Fc,Bristol City Fc,Championship
+2025-11-29 02:00,Portsmouth Fc,Bristol City,Championship
 2025-11-29 02:00,Stoke City,Hull City,Championship
 2025-11-29 15:00,Coventry City Fc,Charlton Athletic Fc,Championship
 2025-11-29 02:00,Middlesbrough,Derby County Fc,Championship
@@ -852,7 +852,7 @@ datetime,home,away,league
 2025-12-06 02:00,Derby County Fc,Leicester City,Championship
 2025-12-06 02:00,Watford,Norwich City Fc,Championship
 2025-12-06 15:00,Blackburn Rovers,Sheffield Wednesday Fc,Championship
-2025-12-06 02:00,Bristol City Fc,Millwall Fc,Championship
+2025-12-06 02:00,Bristol City,Millwall Fc,Championship
 2025-12-06 02:00,Ipswich Town,Coventry City Fc,Championship
 2025-12-06 02:00,Preston North End,Wrexham Afc,Championship
 2025-12-06 02:00,Queens Park Rangers Fc,West Bromwich Albion Fc,Championship
@@ -867,7 +867,7 @@ datetime,home,away,league
 2025-12-09 02:00,Swansea City,Portsmouth Fc,Championship
 2025-12-09 02:00,Watford,Sheffield Wednesday Fc,Championship
 2025-12-09 20:00,Queens Park Rangers Fc,Birmingham City,Championship
-2025-12-10 19:45,Bristol City Fc,Leicester City,Championship
+2025-12-10 19:45,Bristol City,Leicester City,Championship
 2025-12-10 02:00,Derby County Fc,Millwall Fc,Championship
 2025-12-10 02:00,Ipswich Town,Stoke City,Championship
 2025-12-10 20:00,Hull City,Wrexham Afc,Championship
@@ -876,7 +876,7 @@ datetime,home,away,league
 2025-12-13 02:00,Oxford United Fc,Preston North End,Championship
 2025-12-13 02:00,Stoke City,Swansea City,Championship
 2025-12-13 15:00,Birmingham City,Charlton Athletic Fc,Championship
-2025-12-13 02:00,Coventry City Fc,Bristol City Fc,Championship
+2025-12-13 02:00,Coventry City Fc,Bristol City,Championship
 2025-12-13 02:00,Leicester City,Ipswich Town,Championship
 2025-12-13 02:00,Middlesbrough,Queens Park Rangers Fc,Championship
 2025-12-13 02:00,Millwall Fc,Hull City,Championship
@@ -887,7 +887,7 @@ datetime,home,away,league
 2025-12-20 12:30,Blackburn Rovers,Millwall Fc,Championship
 2025-12-20 02:00,Preston North End,Norwich City Fc,Championship
 2025-12-20 02:00,Southampton,Coventry City Fc,Championship
-2025-12-20 15:00,Bristol City Fc,Middlesbrough,Championship
+2025-12-20 15:00,Bristol City,Middlesbrough,Championship
 2025-12-20 02:00,Charlton Athletic Fc,Oxford United Fc,Championship
 2025-12-20 02:00,Derby County Fc,Portsmouth Fc,Championship
 2025-12-20 02:00,Hull City,West Bromwich Albion Fc,Championship
@@ -905,12 +905,12 @@ datetime,home,away,league
 2025-12-26 02:00,Portsmouth Fc,Queens Park Rangers Fc,Championship
 2025-12-26 02:00,Sheffield Wednesday Fc,Hull City,Championship
 2025-12-26 02:00,Stoke City,Preston North End,Championship
-2025-12-26 02:00,West Bromwich Albion Fc,Bristol City Fc,Championship
+2025-12-26 02:00,West Bromwich Albion Fc,Bristol City,Championship
 2025-12-26 17:30,Wrexham Afc,Sheffield United,Championship
 2025-12-29 18:00,Coventry City Fc,Ipswich Town,Championship
 2025-12-29 19:45,Leicester City,Derby County Fc,Championship
 2025-12-29 02:00,Middlesbrough,Hull City,Championship
-2025-12-29 02:00,Millwall Fc,Bristol City Fc,Championship
+2025-12-29 02:00,Millwall Fc,Bristol City,Championship
 2025-12-29 02:00,Norwich City Fc,Watford,Championship
 2025-12-29 02:00,Oxford United Fc,Swansea City,Championship
 2025-12-29 02:00,Portsmouth Fc,Charlton Athletic Fc,Championship
@@ -920,7 +920,7 @@ datetime,home,away,league
 2025-12-29 02:00,Wrexham Afc,Preston North End,Championship
 2025-12-29 20:15,Birmingham City,Southampton,Championship
 2026-01-01 12:30,Blackburn Rovers,Wrexham Afc,Championship
-2026-01-01 15:00,Bristol City Fc,Portsmouth Fc,Championship
+2026-01-01 15:00,Bristol City,Portsmouth Fc,Championship
 2026-01-01 02:00,Charlton Athletic Fc,Coventry City Fc,Championship
 2026-01-01 02:00,Derby County Fc,Middlesbrough,Championship
 2026-01-01 02:00,Hull City,Stoke City,Championship
@@ -935,7 +935,7 @@ datetime,home,away,league
 2026-01-04 02:00,Queens Park Rangers Fc,Sheffield Wednesday Fc,Championship
 2026-01-04 02:00,Sheffield United,Oxford United Fc,Championship
 2026-01-04 15:00,Blackburn Rovers,Charlton Athletic Fc,Championship
-2026-01-04 02:00,Bristol City Fc,Preston North End,Championship
+2026-01-04 02:00,Bristol City,Preston North End,Championship
 2026-01-04 02:00,Derby County Fc,Wrexham Afc,Championship
 2026-01-04 02:00,Hull City,Watford,Championship
 2026-01-04 02:00,Middlesbrough,Southampton,Championship
@@ -946,7 +946,7 @@ datetime,home,away,league
 2026-01-17 15:00,Charlton Athletic Fc,Sheffield United,Championship
 2026-01-17 02:00,Coventry City Fc,Leicester City,Championship
 2026-01-17 02:00,Ipswich Town,Blackburn Rovers,Championship
-2026-01-17 02:00,Oxford United Fc,Bristol City Fc,Championship
+2026-01-17 02:00,Oxford United Fc,Bristol City,Championship
 2026-01-17 02:00,Preston North End,Derby County Fc,Championship
 2026-01-17 02:00,Sheffield Wednesday Fc,Portsmouth Fc,Championship
 2026-01-17 02:00,Southampton,Hull City,Championship
@@ -956,7 +956,7 @@ datetime,home,away,league
 2026-01-17 02:00,West Bromwich Albion Fc,Middlesbrough,Championship
 2026-01-17 02:00,Wrexham Afc,Norwich City Fc,Championship
 2026-01-20 19:45,Coventry City Fc,Millwall Fc,Championship
-2026-01-20 02:00,Ipswich Town,Bristol City Fc,Championship
+2026-01-20 02:00,Ipswich Town,Bristol City,Championship
 2026-01-20 02:00,Oxford United Fc,Queens Park Rangers Fc,Championship
 2026-01-20 02:00,Preston North End,Hull City,Championship
 2026-01-20 02:00,Sheffield Wednesday Fc,Birmingham City,Championship
@@ -969,7 +969,7 @@ datetime,home,away,league
 2026-01-21 02:00,Watford,Portsmouth Fc,Championship
 2026-01-24 15:00,Birmingham City,Stoke City,Championship
 2026-01-24 02:00,Blackburn Rovers,Watford,Championship
-2026-01-24 02:00,Bristol City Fc,Sheffield Wednesday Fc,Championship
+2026-01-24 02:00,Bristol City,Sheffield Wednesday Fc,Championship
 2026-01-24 02:00,Derby County Fc,West Bromwich Albion Fc,Championship
 2026-01-24 02:00,Hull City,Swansea City,Championship
 2026-01-24 02:00,Leicester City,Oxford United Fc,Championship
@@ -980,7 +980,7 @@ datetime,home,away,league
 2026-01-24 02:00,Queens Park Rangers Fc,Wrexham Afc,Championship
 2026-01-24 02:00,Sheffield United,Ipswich Town,Championship
 2026-01-31 15:00,Blackburn Rovers,Hull City,Championship
-2026-01-31 02:00,Bristol City Fc,Derby County Fc,Championship
+2026-01-31 02:00,Bristol City,Derby County Fc,Championship
 2026-01-31 02:00,Ipswich Town,Preston North End,Championship
 2026-01-31 02:00,Leicester City,Charlton Athletic Fc,Championship
 2026-01-31 02:00,Middlesbrough,Norwich City Fc,Championship
@@ -995,7 +995,7 @@ datetime,home,away,league
 2026-02-07 02:00,Charlton Athletic Fc,Queens Park Rangers Fc,Championship
 2026-02-07 02:00,Coventry City Fc,Oxford United Fc,Championship
 2026-02-07 02:00,Derby County Fc,Ipswich Town,Championship
-2026-02-07 02:00,Hull City,Bristol City Fc,Championship
+2026-02-07 02:00,Hull City,Bristol City,Championship
 2026-02-07 02:00,Norwich City Fc,Blackburn Rovers,Championship
 2026-02-07 02:00,Preston North End,Portsmouth Fc,Championship
 2026-02-07 02:00,Sheffield United,Middlesbrough,Championship
@@ -1004,7 +1004,7 @@ datetime,home,away,league
 2026-02-07 02:00,West Bromwich Albion Fc,Stoke City,Championship
 2026-02-07 02:00,Wrexham Afc,Millwall Fc,Championship
 2026-02-14 15:00,Birmingham City,West Bromwich Albion Fc,Championship
-2026-02-14 02:00,Bristol City Fc,Wrexham Afc,Championship
+2026-02-14 02:00,Bristol City,Wrexham Afc,Championship
 2026-02-14 02:00,Charlton Athletic Fc,Stoke City,Championship
 2026-02-14 02:00,Coventry City Fc,Middlesbrough,Championship
 2026-02-14 02:00,Derby County Fc,Swansea City,Championship
@@ -1023,7 +1023,7 @@ datetime,home,away,league
 2026-02-21 02:00,Sheffield United,Sheffield Wednesday Fc,Championship
 2026-02-21 02:00,Southampton,Charlton Athletic Fc,Championship
 2026-02-21 02:00,Stoke City,Leicester City,Championship
-2026-02-21 02:00,Swansea City,Bristol City Fc,Championship
+2026-02-21 02:00,Swansea City,Bristol City,Championship
 2026-02-21 02:00,Watford,Derby County Fc,Championship
 2026-02-21 02:00,West Bromwich Albion Fc,Coventry City Fc,Championship
 2026-02-21 02:00,Wrexham Afc,Ipswich Town,Championship
@@ -1035,12 +1035,12 @@ datetime,home,away,league
 2026-02-24 02:00,Watford,Ipswich Town,Championship
 2026-02-24 02:00,West Bromwich Albion Fc,Charlton Athletic Fc,Championship
 2026-02-24 02:00,Wrexham Afc,Portsmouth Fc,Championship
-2026-02-25 19:45,Blackburn Rovers,Bristol City Fc,Championship
+2026-02-25 19:45,Blackburn Rovers,Bristol City,Championship
 2026-02-25 02:00,Millwall Fc,Birmingham City,Championship
 2026-02-25 02:00,Norwich City Fc,Sheffield Wednesday Fc,Championship
 2026-02-25 02:00,Sheffield United,Coventry City Fc,Championship
 2026-02-28 15:00,Birmingham City,Middlesbrough,Championship
-2026-02-28 02:00,Bristol City Fc,Watford,Championship
+2026-02-28 02:00,Bristol City,Watford,Championship
 2026-02-28 02:00,Charlton Athletic Fc,Wrexham Afc,Championship
 2026-02-28 02:00,Coventry City Fc,Stoke City,Championship
 2026-02-28 02:00,Derby County Fc,Blackburn Rovers,Championship
@@ -1052,7 +1052,7 @@ datetime,home,away,league
 2026-02-28 02:00,Queens Park Rangers Fc,Sheffield United,Championship
 2026-02-28 02:00,Sheffield Wednesday Fc,Southampton,Championship
 2026-03-07 15:00,Blackburn Rovers,Portsmouth Fc,Championship
-2026-03-07 02:00,Bristol City Fc,Coventry City Fc,Championship
+2026-03-07 02:00,Bristol City,Coventry City Fc,Championship
 2026-03-07 02:00,Charlton Athletic Fc,Birmingham City,Championship
 2026-03-07 02:00,Derby County Fc,Sheffield Wednesday Fc,Championship
 2026-03-07 02:00,Hull City,Millwall Fc,Championship
@@ -1064,7 +1064,7 @@ datetime,home,away,league
 2026-03-07 02:00,Swansea City,Stoke City,Championship
 2026-03-07 02:00,Watford,Wrexham Afc,Championship
 2026-03-10 19:45,Birmingham City,Queens Park Rangers Fc,Championship
-2026-03-10 02:00,Leicester City,Bristol City Fc,Championship
+2026-03-10 02:00,Leicester City,Bristol City,Championship
 2026-03-10 02:00,Millwall Fc,Derby County Fc,Championship
 2026-03-10 02:00,Norwich City Fc,Sheffield United,Championship
 2026-03-10 02:00,Portsmouth Fc,Swansea City,Championship
@@ -1078,7 +1078,7 @@ datetime,home,away,league
 2026-03-14 15:00,Birmingham City,Sheffield United,Championship
 2026-03-14 02:00,Coventry City Fc,Southampton,Championship
 2026-03-14 02:00,Leicester City,Queens Park Rangers Fc,Championship
-2026-03-14 02:00,Middlesbrough,Bristol City Fc,Championship
+2026-03-14 02:00,Middlesbrough,Bristol City,Championship
 2026-03-14 02:00,Millwall Fc,Blackburn Rovers,Championship
 2026-03-14 02:00,Norwich City Fc,Preston North End,Championship
 2026-03-14 02:00,Oxford United Fc,Charlton Athletic Fc,Championship
@@ -1088,7 +1088,7 @@ datetime,home,away,league
 2026-03-14 02:00,West Bromwich Albion Fc,Hull City,Championship
 2026-03-14 02:00,Wrexham Afc,Swansea City,Championship
 2026-03-21 15:00,Blackburn Rovers,Middlesbrough,Championship
-2026-03-21 02:00,Bristol City Fc,West Bromwich Albion Fc,Championship
+2026-03-21 02:00,Bristol City,West Bromwich Albion Fc,Championship
 2026-03-21 02:00,Charlton Athletic Fc,Norwich City Fc,Championship
 2026-03-21 02:00,Derby County Fc,Birmingham City,Championship
 2026-03-21 02:00,Hull City,Sheffield Wednesday Fc,Championship
@@ -1108,11 +1108,11 @@ datetime,home,away,league
 2026-04-03 02:00,Stoke City,Sheffield Wednesday Fc,Championship
 2026-04-03 02:00,West Bromwich Albion Fc,Wrexham Afc,Championship
 2026-04-03 02:00,Birmingham City,Blackburn Rovers,Championship
-2026-04-03 02:00,Charlton Athletic Fc,Bristol City Fc,Championship
+2026-04-03 02:00,Charlton Athletic Fc,Bristol City,Championship
 2026-04-03 02:00,Coventry City Fc,Derby County Fc,Championship
 2026-04-03 02:00,Leicester City,Preston North End,Championship
 2026-04-06 15:00,Blackburn Rovers,West Bromwich Albion Fc,Championship
-2026-04-06 02:00,Bristol City Fc,Sheffield United,Championship
+2026-04-06 02:00,Bristol City,Sheffield United,Championship
 2026-04-06 02:00,Derby County Fc,Stoke City,Championship
 2026-04-06 02:00,Hull City,Coventry City Fc,Championship
 2026-04-06 02:00,Ipswich Town,Birmingham City,Championship
@@ -1130,13 +1130,13 @@ datetime,home,away,league
 2026-04-11 02:00,Middlesbrough,Portsmouth Fc,Championship
 2026-04-11 02:00,Norwich City Fc,Ipswich Town,Championship
 2026-04-11 02:00,Oxford United Fc,Watford,Championship
-2026-04-11 02:00,Queens Park Rangers Fc,Bristol City Fc,Championship
+2026-04-11 02:00,Queens Park Rangers Fc,Bristol City,Championship
 2026-04-11 02:00,Sheffield United,Hull City,Championship
 2026-04-11 02:00,Southampton,Derby County Fc,Championship
 2026-04-11 02:00,Stoke City,Blackburn Rovers,Championship
 2026-04-11 02:00,West Bromwich Albion Fc,Millwall Fc,Championship
 2026-04-18 15:00,Blackburn Rovers,Coventry City Fc,Championship
-2026-04-18 02:00,Bristol City Fc,Norwich City Fc,Championship
+2026-04-18 02:00,Bristol City,Norwich City Fc,Championship
 2026-04-18 02:00,Derby County Fc,Oxford United Fc,Championship
 2026-04-18 02:00,Hull City,Birmingham City,Championship
 2026-04-18 02:00,Ipswich Town,Middlesbrough,Championship
@@ -1152,14 +1152,14 @@ datetime,home,away,league
 2026-04-21 02:00,Norwich City Fc,Derby County Fc,Championship
 2026-04-21 02:00,Oxford United Fc,Wrexham Afc,Championship
 2026-04-21 02:00,Queens Park Rangers Fc,Swansea City,Championship
-2026-04-21 02:00,Southampton,Bristol City Fc,Championship
+2026-04-21 02:00,Southampton,Bristol City,Championship
 2026-04-21 02:00,Stoke City,Millwall Fc,Championship
 2026-04-21 02:00,West Bromwich Albion Fc,Watford,Championship
 2026-04-22 19:45,Birmingham City,Preston North End,Championship
 2026-04-22 02:00,Charlton Athletic Fc,Ipswich Town,Championship
 2026-04-22 02:00,Leicester City,Hull City,Championship
 2026-04-22 02:00,Sheffield United,Blackburn Rovers,Championship
-2026-04-25 15:00,Birmingham City,Bristol City Fc,Championship
+2026-04-25 15:00,Birmingham City,Bristol City,Championship
 2026-04-25 02:00,Charlton Athletic Fc,Hull City,Championship
 2026-04-25 02:00,Coventry City Fc,Wrexham Afc,Championship
 2026-04-25 02:00,Leicester City,Millwall Fc,Championship
@@ -1172,7 +1172,7 @@ datetime,home,away,league
 2026-04-25 02:00,Stoke City,Portsmouth Fc,Championship
 2026-04-25 02:00,West Bromwich Albion Fc,Ipswich Town,Championship
 2026-05-02 12:30,Blackburn Rovers,Leicester City,Championship
-2026-05-02 02:00,Bristol City Fc,Stoke City,Championship
+2026-05-02 02:00,Bristol City,Stoke City,Championship
 2026-05-02 02:00,Derby County Fc,Sheffield United,Championship
 2026-05-02 02:00,Hull City,Norwich City Fc,Championship
 2026-05-02 02:00,Ipswich Town,Queens Park Rangers Fc,Championship
