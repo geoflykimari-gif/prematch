@@ -1,9 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ home_team }} vs {{ away_team }} - Match Details</title>
+  <title>Manchester United Fc vs Everton Fc - Match Details</title>
+
+  <!-- Google AdSense Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7370734400883449"
+     crossorigin="anonymous"></script>
 
   <style>
     body {
@@ -123,79 +125,135 @@
 <div class="container">
 
   <div class="match-header">
-    <h1>{{ home_team }} vs {{ away_team }}</h1>
-    <div class="match-meta">{{ league }} • {{ match_date }}</div>
+    <h1>Manchester United Fc vs Everton Fc</h1>
+    <div class="match-meta">EPL • 2025-11-24 00:00:00</div>
   </div>
 
   <!-- Predictions -->
   <h2>Match Predictions</h2>
   <div class="prob-box">
     <div class="prob-bar">
-      <div class="prob-fill home" style="width: {{ pred.home_pct }}%;">{{ pred.home_pct }}% Home Win</div>
+      <div class="prob-fill home" style="width: 50%;">50% Home Win</div>
     </div>
     <div class="prob-bar">
-      <div class="prob-fill draw" style="width: {{ pred.draw_pct }}%;">{{ pred.draw_pct }}% Draw</div>
+      <div class="prob-fill draw" style="width: 40%;">40% Draw</div>
     </div>
     <div class="prob-bar">
-      <div class="prob-fill away" style="width: {{ pred.away_pct }}%;">{{ pred.away_pct }}% Away Win</div>
+      <div class="prob-fill away" style="width: 10%;">10% Away Win</div>
     </div>
   </div>
 
   <!-- Predicted Score -->
   <h2>Predicted Final Score</h2>
   <div class="pred-score">
-    {{ home_team }} {{ pred.exp_home_goals|round(0, 'floor')|int }} - {{ pred.exp_away_goals|round(0, 'floor')|int }} {{ away_team }}
+    Manchester United Fc 2 - 1 Everton Fc
   </div>
   <div class="expected-goals">
-    Expected Home Goals: <strong>{{ pred.exp_home_goals }}</strong> • 
-    Expected Away Goals: <strong>{{ pred.exp_away_goals }}</strong>
+    Expected Home Goals: <strong>2</strong> • 
+    Expected Away Goals: <strong>1</strong>
   </div>
 
   <!-- Last 5 Matches Home -->
-  <h2>{{ home_team }} – Last 5 Matches</h2>
+  <h2>Manchester United Fc – Last 5 Matches</h2>
   <table>
-    <tr><th>Date</th><th>Opponent</th><th>Venue</th><th>Score</th><th>Result</th></tr>
-    {% for m in last_home %}
+    <tbody><tr><th>Date</th><th>Opponent</th><th>Venue</th><th>Score</th><th>Result</th></tr>
+    
     <tr>
-      <td>{{ m.date }}</td>
-      <td>{{ m.opponent }}</td>
-      <td>{{ m.venue }}</td>
-      <td>{{ m.score }}</td>
-      <td class="{{ 'win' if m.result=='W' else 'draw' if m.result=='D' else 'loss' }}">{{ m.result }}</td>
+      <td>2025-11-08 00:00</td>
+      <td>Tottenham Hotspur Fc</td>
+      <td>Away</td>
+      <td>2-2</td>
+      <td class="draw">D</td>
     </tr>
-    {% endfor %}
-  </table>
+    
+    <tr>
+      <td>2025-11-01 00:00</td>
+      <td>Nottingham Forest Fc</td>
+      <td>Away</td>
+      <td>2-2</td>
+      <td class="draw">D</td>
+    </tr>
+    
+    <tr>
+      <td>2025-10-25 00:00</td>
+      <td>Brighton &amp; Hove Albion Fc</td>
+      <td>Home</td>
+      <td>4-2</td>
+      <td class="win">W</td>
+    </tr>
+    
+    <tr>
+      <td>2025-10-19 00:00</td>
+      <td>Liverpool Fc</td>
+      <td>Away</td>
+      <td>2-1</td>
+      <td class="win">W</td>
+    </tr>
+    
+    <tr>
+      <td>2025-10-04 00:00</td>
+      <td>Sunderland Afc</td>
+      <td>Home</td>
+      <td>2-0</td>
+      <td class="win">W</td>
+    </tr>
+    
+  </tbody></table>
 
   <!-- Last 5 Matches Away -->
-  <h2>{{ away_team }} – Last 5 Matches</h2>
+  <h2>Everton Fc – Last 5 Matches</h2>
   <table>
-    <tr><th>Date</th><th>Opponent</th><th>Venue</th><th>Score</th><th>Result</th></tr>
-    {% for m in last_away %}
+    <tbody><tr><th>Date</th><th>Opponent</th><th>Venue</th><th>Score</th><th>Result</th></tr>
+    
     <tr>
-      <td>{{ m.date }}</td>
-      <td>{{ m.opponent }}</td>
-      <td>{{ m.venue }}</td>
-      <td>{{ m.score }}</td>
-      <td class="{{ 'win' if m.result=='W' else 'draw' if m.result=='D' else 'loss' }}">{{ m.result }}</td>
+      <td>2025-11-08 00:00</td>
+      <td>Fulham Fc</td>
+      <td>Home</td>
+      <td>2-0</td>
+      <td class="win">W</td>
     </tr>
-    {% endfor %}
-  </table>
+    
+    <tr>
+      <td>2025-11-03 00:00</td>
+      <td>Sunderland Afc</td>
+      <td>Away</td>
+      <td>1-1</td>
+      <td class="draw">D</td>
+    </tr>
+    
+    <tr>
+      <td>2025-10-26 00:00</td>
+      <td>Tottenham Hotspur Fc</td>
+      <td>Home</td>
+      <td>0-3</td>
+      <td class="loss">L</td>
+    </tr>
+    
+    <tr>
+      <td>2025-10-18 00:00</td>
+      <td>Manchester City Fc</td>
+      <td>Away</td>
+      <td>0-2</td>
+      <td class="loss">L</td>
+    </tr>
+    
+    <tr>
+      <td>2025-10-05 00:00</td>
+      <td>Crystal Palace Fc</td>
+      <td>Home</td>
+      <td>2-1</td>
+      <td class="win">W</td>
+    </tr>
+    
+  </tbody></table>
 
   <!-- Head-to-Head -->
   <h2>Head-to-Head</h2>
   <table>
-    <tr><th>Date</th><th>Home</th><th>Away</th><th>Score</th><th>Result</th></tr>
-    {% for m in h2h %}
-    <tr>
-      <td>{{ m.date }}</td>
-      <td>{{ m.home }}</td>
-      <td>{{ m.away }}</td>
-      <td>{{ m.score }}</td>
-      <td class="{{ 'win' if m.result=='W' else 'draw' if m.result=='D' else 'loss' }}">{{ m.result }}</td>
-    </tr>
-    {% endfor %}
-  </table>
+    <tbody><tr><th>Date</th><th>Home</th><th>Away</th><th>Score</th><th>Result</th></tr>
+    
+  </tbody></table>
 
 </div>
-</body>
-</html>
+
+</body></html>
