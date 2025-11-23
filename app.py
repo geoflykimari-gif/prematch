@@ -1,9 +1,14 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
 import pandas as pd
 from datetime import datetime
 import numpy as np
 
 app = Flask(__name__)
+
+# --- Serve robots.txt for Google indexing ---
+@app.route("/robots.txt")
+def robots_txt():
+    return Response("User-agent: *\nDisallow:", mimetype="text/plain")
 
 # CSV paths
 MASTER_CSV = "master_matches.csv"
