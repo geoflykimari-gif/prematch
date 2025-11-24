@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, Response
 import pandas as pd
-from datetime import datetime
 import numpy as np
+from datetime import datetime
+import os
+import re
 
 app = Flask(__name__)
 
@@ -14,60 +16,51 @@ def robots_txt():
 MASTER_CSV = "master_matches.csv"
 UPCOMING_CSV = "upcoming_matches.csv"
 
-LEAGUE_ORDER = ["EPL","Championship","La Liga","Serie A","Bundesliga","Ligue 1"]
-
 # --- CSV Loader ---
 def load_csv(path, is_master=False):
     df = pd.read_csv(path)
 
-    # Detect date column
-    date_col = None
-    for col in ['datetime','date']:
-        if col in df.columns:
-            date_col = col
-            break
+    date_col = next((col for col in ['datetime','date'] if col in df.columns), None)
     if date_col is None:
         raise ValueError(f"CSV {path} must have 'datetime' or 'date' column")
 
-    # Strip strings
     for c in df.select_dtypes(include='object').columns:
         df[c] = df[c].astype(str).str.strip()
 
-    # Lowercase team names
-    df['home'] = df['home'].str.lower()
-    df['away'] = df['away'].str.lower()
+    df['home'] = df['home'].str.lower().str.strip()
+    df['away'] = df['away'].str.lower().str.strip()
     if 'league' in df.columns:
         df['league'] = df['league'].str.strip()
 
-    # Parse datetime safely
-    df[date_col] = pd.to_datetime(df[date_col].str.strip(), errors='coerce')
-
-    # Rename to datetime
+    df[date_col] = pd.to_datetime(df[date_col].str.strip(), errors='coerce', utc=True)
     if date_col != 'datetime':
         df.rename(columns={date_col:'datetime'}, inplace=True)
 
-    # Ensure numeric goals
     if is_master:
         df['fthg'] = pd.to_numeric(df.get('fthg',0), errors='coerce').fillna(0).astype(int)
         df['ftag'] = pd.to_numeric(df.get('ftag',0), errors='coerce').fillna(0).astype(int)
 
     return df
 
-df_master = load_csv(MASTER_CSV, is_master=True)
-df_upcoming = load_csv(UPCOMING_CSV)
-
 # --- Normalize teams ---
+def normalize_team_name(team):
+    team = str(team).lower().strip()
+    team = re.sub(r'[^a-z0-9 ]','', team)
+    team = re.sub(r'\b(fc|cf)\b','', team)
+    return team.strip()
+
 def normalize_teams(df):
-    df['home'] = df['home'].str.strip().str.lower()
-    df['away'] = df['away'].str.strip().str.lower()
+    df['home'] = df['home'].apply(normalize_team_name)
+    df['away'] = df['away'].apply(normalize_team_name)
     return df
 
-df_master = normalize_teams(df_master)
-df_upcoming = normalize_teams(df_upcoming)
+DATA_PATH = os.path.join(os.path.dirname(__file__), '')
+df_master = normalize_teams(load_csv(os.path.join(DATA_PATH, MASTER_CSV), is_master=True))
+df_upcoming = normalize_teams(load_csv(os.path.join(DATA_PATH, UPCOMING_CSV)))
 
 # --- Helpers ---
 def get_last_n_matches(team, n=5):
-    team = team.lower().strip()
+    team = normalize_team_name(team)
     df = df_master[(df_master['home']==team)|(df_master['away']==team)]
     df = df.sort_values('datetime', ascending=False).head(n)
     matches = []
@@ -77,7 +70,6 @@ def get_last_n_matches(team, n=5):
 
         home_goals = int(row.get('fthg',0))
         away_goals = int(row.get('ftag',0))
-
         score = f"{home_goals}-{away_goals}" if venue=='Home' else f"{away_goals}-{home_goals}"
 
         if venue=='Home':
@@ -86,7 +78,7 @@ def get_last_n_matches(team, n=5):
             result = 'W' if away_goals>home_goals else 'D' if away_goals==home_goals else 'L'
 
         matches.append({
-            'date': row['datetime'].strftime('%Y-%m-%d %H:%M'),
+            'date': row['datetime'].strftime('%Y-%m-%d'),
             'opponent': opponent.title(),
             'venue': venue,
             'score': score,
@@ -95,10 +87,9 @@ def get_last_n_matches(team, n=5):
     return matches
 
 def get_head_to_head(team1, team2, n=5):
-    team1 = team1.lower().strip()
-    team2 = team2.lower().strip()
-    df = df_master[((df_master['home']==team1)&(df_master['away']==team2))|
-                   ((df_master['home']==team2)&(df_master['away']==team1))]
+    team1 = normalize_team_name(team1)
+    team2 = normalize_team_name(team2)
+    df = df_master[((df_master['home']==team1)&(df_master['away']==team2))|((df_master['home']==team2)&(df_master['away']==team1))]
     df = df.sort_values('datetime', ascending=False).head(n)
     matches = []
     for _, row in df.iterrows():
@@ -108,7 +99,7 @@ def get_head_to_head(team1, team2, n=5):
         else:
             result = 'W' if row['ftag']>row['fthg'] else 'D' if row['ftag']==row['fthg'] else 'L'
         matches.append({
-            'date': row['datetime'].strftime('%Y-%m-%d %H:%M'),
+            'date': row['datetime'].strftime('%Y-%m-%d'),
             'home': row['home'].title(),
             'away': row['away'].title(),
             'score': score,
@@ -116,26 +107,29 @@ def get_head_to_head(team1, team2, n=5):
         })
     return matches
 
-# --- Prediction ---
+# --- Prediction (upgraded with fractional probabilities, integer scores) ---
 def get_match_prediction(home, away):
     last_home = get_last_n_matches(home, 5)
     last_away = get_last_n_matches(away, 5)
 
-    home_avg = np.mean([int(m['score'].split('-')[0]) for m in last_home]) if last_home else 1
-    away_avg = np.mean([int(m['score'].split('-')[1]) for m in last_away]) if last_away else 1
+    # Use exact averages (floats) internally for probability calculations
+    home_avg_exact = np.mean([int(m['score'].split('-')[0]) for m in last_home]) if last_home else 1
+    away_avg_exact = np.mean([int(m['score'].split('-')[1]) for m in last_away]) if last_away else 1
 
-    exp_home_goals = round(home_avg)
-    exp_away_goals = round(away_avg)
+    # Predicted score rounded to integer
+    exp_home_goals = round(home_avg_exact)
+    exp_away_goals = round(away_avg_exact)
     predicted_score = f"{exp_home_goals}-{exp_away_goals}"
 
-    home_pct = min(max(40 + (exp_home_goals-exp_away_goals)*10,5),90)
-    draw_pct = min(max(100 - home_pct - 10,5),50)
+    # Probabilities use fractional values internally
+    home_pct = min(max(40 + (home_avg_exact - away_avg_exact) * 10, 5), 90)
+    draw_pct = min(max(100 - home_pct - 10, 5), 50)
     away_pct = 100 - home_pct - draw_pct
 
     total_goals = exp_home_goals + exp_away_goals
-    over_25 = 70 if total_goals>2 else 30
+    over_25 = 70 if total_goals > 2 else 30
     under_25 = 100 - over_25
-    btts = 70 if exp_home_goals>0 and exp_away_goals>0 else 30
+    btts = 70 if exp_home_goals > 0 and exp_away_goals > 0 else 30
 
     return {
         'home_pct': int(home_pct),
@@ -152,16 +146,24 @@ def get_match_prediction(home, away):
 # --- Routes ---
 @app.route("/")
 def index():
-    now = datetime.now()
-    df_up = df_upcoming[df_upcoming['datetime']>=now].copy()
-    df_up['league_order'] = df_up['league'].apply(lambda x: LEAGUE_ORDER.index(x) if x in LEAGUE_ORDER else 99)
-    df_up = df_up.sort_values(['league_order','datetime'])
-    matches_by_league = {}
-    for league in LEAGUE_ORDER:
-        league_matches = df_up[df_up['league']==league].head(5)
-        if not league_matches.empty:
-            matches_by_league[league] = league_matches.to_dict('records')
-    return render_template("index.html", matches_by_league=matches_by_league)
+    df_up = df_upcoming.copy()
+
+    # Strict future matches only
+    now = pd.Timestamp.utcnow()
+    df_up = df_up[pd.notnull(df_up['datetime'])]
+    df_up = df_up[df_up['datetime'] >= now]
+
+    league_sections = []
+    for league in df_up['league'].unique():
+        subset = df_up[df_up['league'] == league].sort_values('datetime').head(5)
+        if not subset.empty:
+            league_sections.append({
+                'league': subset.iloc[0]['league'],
+                'matches': subset.to_dict('records')
+            })
+
+    matches_by_league = league_sections
+    return render_template('index.html', league_sections=league_sections, matches_by_league=matches_by_league)
 
 @app.route("/match")
 def match_detail():
@@ -202,7 +204,6 @@ def privacy():
 def terms():
     return render_template("terms.html")
 
-# Optional: simple ping route to keep Render awake
 @app.route("/ping")
 def ping():
     return "pong"

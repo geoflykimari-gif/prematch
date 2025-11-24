@@ -13,7 +13,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-KT407XHG98');
   </script>
 
@@ -35,204 +34,18 @@
 <body>
   <h1>Upcoming Matches</h1>
   
-    <h2>EPL</h2>
+  {% for league_section in league_sections %}
+    <h2>{{ league_section.league }}</h2>
     <ul>
-      
+      {% for match in league_section.matches %}
         <li>
-          2025-11-24 00:00 - 
-          <a href="/match?home=manchester united fc&amp;away=everton fc&amp;league=EPL&amp;date=2025-11-24 00:00:00">
-            manchester united fc vs everton fc
+          {{ match.datetime }} - 
+          <a href="/match?home={{ match.home|urlencode }}&away={{ match.away|urlencode }}&league={{ match.league|urlencode }}&date={{ match.datetime }}">
+            {{ match.home }} vs {{ match.away }}
           </a>
         </li>
-      
-        <li>
-          2025-11-29 00:00 - 
-          <a href="/match?home=sunderland afc&amp;away=afc bournemouth&amp;league=EPL&amp;date=2025-11-29 00:00:00">
-            sunderland afc vs afc bournemouth
-          </a>
-        </li>
-      
-        <li>
-          2025-11-29 00:00 - 
-          <a href="/match?home=brentford fc&amp;away=burnley fc&amp;league=EPL&amp;date=2025-11-29 00:00:00">
-            brentford fc vs burnley fc
-          </a>
-        </li>
-      
-        <li>
-          2025-11-29 00:00 - 
-          <a href="/match?home=manchester city&amp;away=leeds united fc&amp;league=EPL&amp;date=2025-11-29 00:00:00">
-            manchester city vs leeds united fc
-          </a>
-        </li>
-      
-        <li>
-          2025-11-29 00:00 - 
-          <a href="/match?home=everton fc&amp;away=newcastle united fc&amp;league=EPL&amp;date=2025-11-29 00:00:00">
-            everton fc vs newcastle united fc
-          </a>
-        </li>
-      
+      {% endfor %}
     </ul>
-  
-    <h2>Championship</h2>
-    <ul>
-      
-        <li>
-          2025-11-23 12:00 - 
-          <a href="/match?home=sheffield wednesday fc&amp;away=sheffield united&amp;league=Championship&amp;date=2025-11-23 12:00:00">
-            sheffield wednesday fc vs sheffield united
-          </a>
-        </li>
-      
-        <li>
-          2025-11-25 02:00 - 
-          <a href="/match?home=middlesbrough&amp;away=coventry city fc&amp;league=Championship&amp;date=2025-11-25 02:00:00">
-            middlesbrough vs coventry city fc
-          </a>
-        </li>
-      
-        <li>
-          2025-11-25 02:00 - 
-          <a href="/match?home=stoke city&amp;away=charlton athletic fc&amp;league=Championship&amp;date=2025-11-25 02:00:00">
-            stoke city vs charlton athletic fc
-          </a>
-        </li>
-      
-        <li>
-          2025-11-25 02:00 - 
-          <a href="/match?home=swansea city&amp;away=derby county fc&amp;league=Championship&amp;date=2025-11-25 02:00:00">
-            swansea city vs derby county fc
-          </a>
-        </li>
-      
-        <li>
-          2025-11-25 02:00 - 
-          <a href="/match?home=watford&amp;away=preston north end&amp;league=Championship&amp;date=2025-11-25 02:00:00">
-            watford vs preston north end
-          </a>
-        </li>
-      
-    </ul>
-  
-    <h2>Serie A</h2>
-    <ul>
-      
-        <li>
-          2025-11-23 12:30 - 
-          <a href="/match?home=hellas verona fc&amp;away=parma calcio 1913&amp;league=Serie A&amp;date=2025-11-23 12:30:00">
-            hellas verona fc vs parma calcio 1913
-          </a>
-        </li>
-      
-        <li>
-          2025-11-23 15:00 - 
-          <a href="/match?home=cremonese&amp;away=as roma&amp;league=Serie A&amp;date=2025-11-23 15:00:00">
-            cremonese vs as roma
-          </a>
-        </li>
-      
-        <li>
-          2025-11-23 18:00 - 
-          <a href="/match?home=ss lazio&amp;away=us lecce&amp;league=Serie A&amp;date=2025-11-23 18:00:00">
-            ss lazio vs us lecce
-          </a>
-        </li>
-      
-        <li>
-          2025-11-23 20:45 - 
-          <a href="/match?home=fc internazionale milano&amp;away=ac milan&amp;league=Serie A&amp;date=2025-11-23 20:45:00">
-            fc internazionale milano vs ac milan
-          </a>
-        </li>
-      
-        <li>
-          2025-11-24 18:30 - 
-          <a href="/match?home=torino&amp;away=como 1907&amp;league=Serie A&amp;date=2025-11-24 18:30:00">
-            torino vs como 1907
-          </a>
-        </li>
-      
-    </ul>
-  
-    <h2>Bundesliga</h2>
-    <ul>
-      
-        <li>
-          2025-11-23 14:30 - 
-          <a href="/match?home=rb leipzig&amp;away=sv werder bremen&amp;league=Bundesliga&amp;date=2025-11-23 14:30:00">
-            rb leipzig vs sv werder bremen
-          </a>
-        </li>
-      
-        <li>
-          2025-11-23 16:30 - 
-          <a href="/match?home=st pauli&amp;away=1. fc union berlin&amp;league=Bundesliga&amp;date=2025-11-23 16:30:00">
-            st pauli vs 1. fc union berlin
-          </a>
-        </li>
-      
-        <li>
-          2025-11-28 19:30 - 
-          <a href="/match?home=borussia mönchengladbach&amp;away=rb leipzig&amp;league=Bundesliga&amp;date=2025-11-28 19:30:00">
-            borussia mönchengladbach vs rb leipzig
-          </a>
-        </li>
-      
-        <li>
-          2025-11-29 14:30 - 
-          <a href="/match?home=hoffenheim&amp;away=fc augsburg&amp;league=Bundesliga&amp;date=2025-11-29 14:30:00">
-            hoffenheim vs fc augsburg
-          </a>
-        </li>
-      
-        <li>
-          2025-11-29 14:30 - 
-          <a href="/match?home=1. fc union berlin&amp;away=1. fc heidenheim 1846&amp;league=Bundesliga&amp;date=2025-11-29 14:30:00">
-            1. fc union berlin vs 1. fc heidenheim 1846
-          </a>
-        </li>
-      
-    </ul>
-  
-    <h2>Ligue 1</h2>
-    <ul>
-      
-        <li>
-          2025-11-23 14:00 - 
-          <a href="/match?home=aj auxerre&amp;away=olympique lyonnais&amp;league=Ligue 1&amp;date=2025-11-23 14:00:00">
-            aj auxerre vs olympique lyonnais
-          </a>
-        </li>
-      
-        <li>
-          2025-11-23 16:15 - 
-          <a href="/match?home=stade brestois 29&amp;away=fc metz&amp;league=Ligue 1&amp;date=2025-11-23 16:15:00">
-            stade brestois 29 vs fc metz
-          </a>
-        </li>
-      
-        <li>
-          2025-11-23 16:15 - 
-          <a href="/match?home=fc nantes&amp;away=fc lorient&amp;league=Ligue 1&amp;date=2025-11-23 16:15:00">
-            fc nantes vs fc lorient
-          </a>
-        </li>
-      
-        <li>
-          2025-11-23 16:15 - 
-          <a href="/match?home=toulouse fc&amp;away=angers sco&amp;league=Ligue 1&amp;date=2025-11-23 16:15:00">
-            toulouse fc vs angers sco
-          </a>
-        </li>
-      
-        <li>
-          2025-11-23 19:45 - 
-          <a href="/match?home=losc lille&amp;away=paris fc&amp;league=Ligue 1&amp;date=2025-11-23 19:45:00">
-            losc lille vs paris fc
-          </a>
-        </li>
-      
-    </ul>
+  {% endfor %}
 </body>
 </html>
