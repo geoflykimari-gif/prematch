@@ -107,26 +107,29 @@ def get_head_to_head(team1, team2, n=5):
         })
     return matches
 
-# --- Prediction ---
+# --- Prediction (upgraded with fractional probabilities, integer scores) ---
 def get_match_prediction(home, away):
     last_home = get_last_n_matches(home, 5)
     last_away = get_last_n_matches(away, 5)
 
-    home_avg = np.mean([int(m['score'].split('-')[0]) for m in last_home]) if last_home else 1
-    away_avg = np.mean([int(m['score'].split('-')[1]) for m in last_away]) if last_away else 1
+    # Use exact averages (floats) internally for probability calculations
+    home_avg_exact = np.mean([int(m['score'].split('-')[0]) for m in last_home]) if last_home else 1
+    away_avg_exact = np.mean([int(m['score'].split('-')[1]) for m in last_away]) if last_away else 1
 
-    exp_home_goals = round(home_avg)
-    exp_away_goals = round(away_avg)
+    # Predicted score rounded to integer
+    exp_home_goals = round(home_avg_exact)
+    exp_away_goals = round(away_avg_exact)
     predicted_score = f"{exp_home_goals}-{exp_away_goals}"
 
-    home_pct = min(max(40 + (exp_home_goals-exp_away_goals)*10,5),90)
-    draw_pct = min(max(100 - home_pct - 10,5),50)
+    # Probabilities use fractional values internally
+    home_pct = min(max(40 + (home_avg_exact - away_avg_exact) * 10, 5), 90)
+    draw_pct = min(max(100 - home_pct - 10, 5), 50)
     away_pct = 100 - home_pct - draw_pct
 
     total_goals = exp_home_goals + exp_away_goals
-    over_25 = 70 if total_goals>2 else 30
+    over_25 = 70 if total_goals > 2 else 30
     under_25 = 100 - over_25
-    btts = 70 if exp_home_goals>0 and exp_away_goals>0 else 30
+    btts = 70 if exp_home_goals > 0 and exp_away_goals > 0 else 30
 
     return {
         'home_pct': int(home_pct),
@@ -140,38 +143,6 @@ def get_match_prediction(home, away):
         'under_25_pct': under_25
     }
 
-# --- Smart datetime formatter ---
-def format_match_datetime(dt):
-    """
-    dt: pandas.Timestamp or convertible value (tz-aware)
-    Returns: string like "YYYY-MM-DD" (if midnight) or "YYYY-MM-DD HH:MM"
-    """
-    if pd.isnull(dt):
-        return "TBD"
-
-    # Ensure pandas Timestamp
-    try:
-        ts = pd.to_datetime(dt, utc=True)
-    except Exception:
-        # fallback to str
-        return str(dt)
-
-    # Drop timezone info safely
-    try:
-        if getattr(ts, 'tz', None) is not None:
-            ts = ts.tz_convert(None)
-    except Exception:
-        # if tz_convert fails, try tz_localize
-        try:
-            ts = ts.tz_localize(None)
-        except Exception:
-            pass
-
-    # If time is midnight, show only date
-    if ts.hour == 0 and ts.minute == 0 and ts.second == 0:
-        return ts.strftime('%Y-%m-%d')
-    return ts.strftime('%Y-%m-%d %H:%M')
-
 # --- Routes ---
 @app.route("/")
 def index():
@@ -183,36 +154,13 @@ def index():
     df_up = df_up[df_up['datetime'] >= now]
 
     league_sections = []
-    # iterate leagues in natural CSV order
     for league in df_up['league'].unique():
-        group = df_up[df_up['league'] == league].sort_values('datetime')
-        if group.empty:
-            continue
-
-        matches = []
-        for _, row in group.iterrows():
-            # Format datetime into a pretty string for the homepage
-            pretty_dt = None
-            try:
-                pretty_dt = format_match_datetime(row['datetime'])
-            except Exception:
-                # fallback to raw value as string
-                pretty_dt = str(row['datetime'])
-
-            matches.append({
-                'league': row.get('league', league),
-                'home': row.get('home', ''),
-                'away': row.get('away', ''),
-                'datetime': pretty_dt
+        subset = df_up[df_up['league'] == league].sort_values('datetime').head(5)
+        if not subset.empty:
+            league_sections.append({
+                'league': subset.iloc[0]['league'],
+                'matches': subset.to_dict('records')
             })
-
-        # keep top 5 matches per league (natural order by datetime)
-        matches = matches[:5]
-
-        league_sections.append({
-            'league': group.iloc[0]['league'],
-            'matches': matches
-        })
 
     matches_by_league = league_sections
     return render_template('index.html', league_sections=league_sections, matches_by_league=matches_by_league)
@@ -222,24 +170,15 @@ def match_detail():
     home_team = request.args.get('home','').strip().lower()
     away_team = request.args.get('away','').strip().lower()
     league = request.args.get('league','')
-    match_date = request.args.get('date', None)
+    match_date = request.args.get('date','TBD')
 
     if not home_team or not away_team:
-        return "Missing home or away team", 400
+        return "Missing home or away team",400
 
     pred = get_match_prediction(home_team, away_team)
-    last_home = get_last_n_matches(home_team, 5)
-    last_away = get_last_n_matches(away_team, 5)
-    h2h = get_head_to_head(home_team, away_team, 5)
-
-    # Smart format match_date (for match detail page)
-    if match_date:
-        try:
-            dt = pd.to_datetime(match_date, utc=True)
-            match_date = format_match_datetime(dt)
-        except Exception:
-            # leave match_date as-is if parsing fails
-            pass
+    last_home = get_last_n_matches(home_team,5)
+    last_away = get_last_n_matches(away_team,5)
+    h2h = get_head_to_head(home_team, away_team,5)
 
     return render_template(
         "match_detail.html",

@@ -34,18 +34,19 @@
 <body>
   <h1>Upcoming Matches</h1>
   
-  {% for league_section in league_sections %}
-    <h2>{{ league_section.league }}</h2>
+  {% for section in league_sections %}
+    <h2>{{ section.league }}</h2>
     <ul>
-      {% for match in league_section.matches %}
+      {% for match in section.matches %}
         <li>
           {{ match.datetime }} - 
-          <a href="/match?home={{ match.home|urlencode }}&away={{ match.away|urlencode }}&league={{ match.league|urlencode }}&date={{ match.datetime }}">
+          <a href="/match?home={{ match.home|lower|replace(' ', '+') }}&away={{ match.away|lower|replace(' ', '+') }}&league={{ match.league }}&date={{ match.datetime }}">
             {{ match.home }} vs {{ match.away }}
           </a>
         </li>
       {% endfor %}
     </ul>
   {% endfor %}
+
 </body>
 </html>
